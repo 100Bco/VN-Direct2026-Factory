@@ -2,13 +2,14 @@ import { Section } from './Section';
 
 const STATS = [
   { value: '$2,6T', detail: 'Tổng sản phẩm nội địa Texas — xếp thứ 8 toàn cầu' },
-  { value: 'Số 1', detail: 'Bang có tốc độ phát triển nhanh nhất tại Hoa Kỳ' },
+  { value: '#1', detail: 'Bang có tốc độ phát triển nhanh nhất tại Hoa Kỳ' },
   {
-    value: '6 tập đoàn',
-    detail: 'Tesla • SpaceX • Oracle • Apple • Google • Samsung đặt đại bản doanh',
+    value: '6',
+    detail:
+      'Tập đoàn toàn cầu đặt đại bản doanh — Tesla, SpaceX, Oracle, Apple, Google, Samsung',
   },
   {
-    value: 'Không ngừng',
+    value: '24/7',
     detail: 'Nhà ở, bất động sản thương mại và hạ tầng tăng trưởng liên tục',
   },
 ];
