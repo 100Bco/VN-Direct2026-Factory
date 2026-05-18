@@ -1,16 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Calendar, Users, LineChart, Building, ArrowRight } from 'lucide-react';
-
-const MAILTO =
-  'mailto:global@100b.co?subject=VN%20Direct%202026%20-%20%C4%90%C4%83ng%20k%C3%BD%20nh%C3%A0%20m%C3%A1y';
+import { Calendar, Users, LineChart, Building } from 'lucide-react';
 
 const STATS = [
-  { icon: Calendar, value: '7 ngày', sub: 'thực địa tại Việt Nam' },
-  { icon: Users, value: '5 nhà phát triển', sub: 'bất động sản hàng đầu từ Hoa Kỳ' },
-  { icon: LineChart, value: 'Hơn $500M', sub: 'tổng danh mục dự án đang triển khai' },
-  { icon: Building, value: '10–13', sub: 'nhà máy được tuyển chọn tham gia' },
+  { icon: Calendar, num: '7', text: 'ngày thực địa tại Việt Nam' },
+  { icon: Users, num: '5', text: 'nhà phát triển bất động sản hàng đầu từ Hoa Kỳ' },
+  { icon: LineChart, num: '$500M+', text: 'tổng danh mục dự án đang triển khai' },
+  { icon: Building, num: '10–13', text: 'nhà máy được tuyển chọn tham gia' },
 ];
 
 export function Hero() {
@@ -93,40 +90,23 @@ export function Hero() {
           </p>
 
           {/* Stat row */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
-            {STATS.map(({ icon: Icon, value, sub }) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            {STATS.map(({ icon: Icon, num, text }) => (
               <div
-                key={value}
+                key={num + text}
                 className="bg-bg-card/70 backdrop-blur-md rounded-2xl border border-white/10
                            hover:border-brand-gold/50 transition-colors p-5 lg:p-6
-                           flex flex-col gap-3"
+                           flex flex-col gap-4"
               >
                 <Icon size={22} className="text-brand-gold shrink-0" strokeWidth={1.5} />
-                <div className="text-2xl lg:text-3xl font-display text-text-heading leading-none">
-                  {value}
+                <div className="text-4xl lg:text-5xl font-display text-text-heading leading-none">
+                  {num}
                 </div>
-                <p className="text-[11px] lg:text-xs text-text-muted leading-snug">{sub}</p>
+                <p className="text-sm lg:text-base font-sans font-light text-text-body leading-snug">
+                  {text}
+                </p>
               </div>
             ))}
-
-            <a
-              href={MAILTO}
-              className="group bg-bg-card/70 backdrop-blur-md rounded-2xl
-                         border border-brand-gold/40 hover:border-brand-gold transition-colors
-                         p-5 lg:p-6 flex flex-col justify-between gap-3
-                         col-span-2 md:col-span-3 lg:col-span-1"
-            >
-              <span className="text-[11px] uppercase tracking-[0.18em] text-brand-gold font-semibold">
-                Liên Hệ 100B
-              </span>
-              <span className="flex items-center justify-between text-text-heading">
-                <span className="font-serif text-xl lg:text-2xl">Đăng ký</span>
-                <ArrowRight
-                  size={22}
-                  className="text-brand-gold group-hover:translate-x-1 transition-transform"
-                />
-              </span>
-            </a>
           </div>
         </div>
     </header>
