@@ -37,11 +37,11 @@ export function Benefits() {
   return (
     <Section id="loi-ich" eyebrow="Lợi ích">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-14
+        className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] tracking-tight mb-12
                    max-w-4xl"
       >
         Khi nhà máy của Quý vị{' '}
-        <em className="font-serif italic text-gradient-gold">có tên trong chương trình</em>.
+        <em className="italic text-gradient-gold">có tên trong chương trình</em>.
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
@@ -58,7 +58,7 @@ export function Benefits() {
               </span>
               <span className="h-px flex-1 bg-border-subtle group-hover:bg-brand-gold/30 transition-colors" />
             </div>
-            <h3 className="text-lg lg:text-xl font-serif text-text-heading leading-snug">
+            <h3 className="text-lg lg:text-xl font-semibold text-text-heading leading-snug">
               {b.title}
             </h3>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">

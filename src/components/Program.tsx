@@ -32,14 +32,14 @@ export function Program() {
   return (
     <Section id="chuong-trinh" eyebrow="Chương trình">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
+        className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] tracking-tight mb-6
                    max-w-4xl"
       >
         7 ngày. 10–13 nhà máy được tuyển chọn.{' '}
-        <em className="font-serif italic text-gradient-gold">Hợp tác có chiều sâu.</em>
+        <em className="italic text-gradient-gold">Hợp tác có chiều sâu.</em>
       </h2>
 
-      <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
+      <p className="text-base md:text-lg text-text-body font-light leading-relaxed max-w-3xl mb-14">
         VN Direct 2026 là chương trình{' '}
         <span className="text-text-heading font-normal">Build Better Series</span> của 100B — đưa
         đoàn nhà phát triển chiến lược từ Texas đến trực tiếp các nhà máy hàng đầu Việt Nam trong
@@ -47,20 +47,20 @@ export function Program() {
         đổi kỹ thuật chuyên sâu và đối thoại trực tiếp về nhu cầu thực tế.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-12">
         {FORMATS.map(({ icon: Icon, title, detail }) => (
           <div
             key={title}
-            className="bg-bg-card rounded-3xl p-8 lg:p-10 border border-border-subtle
-                       hover:border-brand-gold/40 transition-colors flex flex-col gap-5"
+            className="bg-bg-card rounded-2xl p-7 lg:p-8 border border-border-subtle
+                       hover:border-brand-gold/40 transition-colors flex flex-col gap-4"
           >
             <div
-              className="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30
-                            flex items-center justify-center"
+              className="w-11 h-11 rounded-xl bg-brand-gold/10 border border-brand-gold/30
+                            flex items-center justify-center shrink-0"
             >
-              <Icon size={22} className="text-brand-gold" strokeWidth={1.5} />
+              <Icon size={20} className="text-brand-gold" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl lg:text-2xl font-serif text-text-heading leading-snug">
+            <h3 className="text-lg lg:text-xl font-semibold text-text-heading leading-snug">
               {title}
             </h3>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
@@ -70,16 +70,16 @@ export function Program() {
         ))}
       </div>
 
-      <div className="relative p-8 lg:p-10 rounded-3xl bg-bg-card border border-border-subtle overflow-hidden">
-        <span className="absolute top-0 left-0 w-1.5 h-full bg-brand-gold rounded-l-3xl" />
-        <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-5">
+      <div className="relative p-7 lg:p-10 rounded-2xl bg-bg-card border border-border-subtle overflow-hidden">
+        <span className="absolute top-0 left-0 w-1 h-full bg-brand-gold" />
+        <p className="text-[10px] uppercase tracking-[0.22em] font-semibold text-brand-gold mb-5">
           Mục tiêu của chuyến đi
         </p>
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8">
           {OBJECTIVES.map((o) => (
             <li key={o} className="flex items-start gap-3">
-              <div className="w-6 h-6 icon-silver-gradient shrink-0">
-                <Check className="text-[#111]" size={14} strokeWidth={3} />
+              <div className="w-6 h-6 icon-silver-gradient shrink-0 mt-0.5">
+                <Check className="text-[#111]" size={13} strokeWidth={3} />
               </div>
               <span className="text-sm lg:text-base text-text-body font-light leading-relaxed">
                 {o}

@@ -66,7 +66,7 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="font-serif italic text-base md:text-lg text-text-body mb-3 md:mb-4">
+          <p className="italic font-light text-sm md:text-base text-text-body mb-3 md:mb-4">
             30 tháng 05 – 06 tháng 06, 2026
           </p>
 

@@ -15,11 +15,11 @@ export function Industries() {
   return (
     <Section id="nganh-uu-tien" eyebrow="Ngành ưu tiên">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-14
+        className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] tracking-tight mb-12
                    max-w-4xl"
       >
         Vật liệu xây dựng và{' '}
-        <em className="font-serif italic text-gradient-gold">nội thất cao cấp</em>.
+        <em className="italic text-gradient-gold">nội thất cao cấp</em>.
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
