@@ -6,10 +6,10 @@ import { Menu, X } from 'lucide-react';
 const NAV_ITEMS = [
   { label: 'Vấn đề', anchor: '#van-de' },
   { label: 'Cơ hội', anchor: '#co-hoi' },
-  { label: 'Đoàn buyers', anchor: '#doan-buyers' },
+  { label: 'Đoàn khách mua', anchor: '#doan-khach-mua' },
   { label: 'Chương trình', anchor: '#chuong-trinh' },
   { label: 'Lợi ích', anchor: '#loi-ich' },
-  { label: 'Tiêu chí', anchor: '#tieu-chi' },
+  { label: 'Ngành ưu tiên', anchor: '#nganh-uu-tien' },
   { label: 'Về 100B', anchor: '#ve-100b' },
 ];
 

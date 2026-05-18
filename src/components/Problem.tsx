@@ -3,18 +3,18 @@ import { Section } from './Section';
 const PAINS = [
   {
     n: '01',
-    title: 'Margin bị nén 30–50%',
-    body: 'Trung gian ăn 3–4 lớp. Nhà máy chịu áp lực giảm giá, nhưng end customer vẫn trả giá cao.',
+    title: 'Lợi nhuận bị nén 30–50%',
+    body: 'Trung gian ăn vào từng lớp. Nhà máy chịu áp lực hạ giá, trong khi khách hàng cuối vẫn phải trả mức cao.',
   },
   {
     n: '02',
-    title: 'Brand không vượt được biên giới',
-    body: 'Sản phẩm "Made in Vietnam" bị tái nhãn hoặc ẩn dưới thương hiệu nhập khẩu. Năng lực sản xuất không được công nhận đúng giá trị.',
+    title: 'Thương hiệu không vượt được biên giới',
+    body: 'Sản phẩm "Made in Vietnam" bị dán nhãn lại hoặc khuất sau thương hiệu nhập khẩu. Năng lực sản xuất thực sự không được ghi nhận đúng mức.',
   },
   {
     n: '03',
-    title: 'Quan hệ một chiều, ngắn hạn',
-    body: 'Đa số deal xuất khẩu hiện tại là single-batch order. Không có pipeline dự án dài hạn để tối ưu sản xuất, đầu tư R&D, planning capacity.',
+    title: 'Quan hệ một chiều, thiếu bền vững',
+    body: 'Phần lớn đơn hàng xuất khẩu hiện tại chỉ là giao dịch đơn lẻ. Không có luồng dự án dài hạn để tối ưu sản xuất, đầu tư nghiên cứu phát triển hay lập kế hoạch năng lực.',
   },
 ];
 
@@ -26,14 +26,15 @@ export function Problem() {
                    max-w-4xl"
       >
         Sản phẩm chất lượng — nhưng đang{' '}
-        <em className="font-serif italic text-gradient-gold">bán dưới giá trị</em>.
+        <em className="font-serif italic text-gradient-gold">bán dưới giá trị thực</em>.
       </h2>
 
       <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
-        Nhà máy Việt Nam đang sản xuất ra vật liệu xây dựng & nội thất đạt chuẩn quốc tế. Nhưng khi
-        xuất khẩu, biên lợi nhuận bị nén qua 3–4 lớp trung gian: distributors → wholesalers →
-        retailers → contractors. Thương hiệu nhà máy không đến được tay người ra quyết định cuối —
-        các nhà phát triển BĐS, contractor, kiến trúc sư.
+        Các nhà máy Việt Nam đang sản xuất vật liệu xây dựng và nội thất đạt chuẩn quốc tế. Nhưng
+        khi xuất khẩu, lợi nhuận bị bào mòn qua ba đến bốn lớp trung gian — từ nhà phân phối, nhà
+        bán sỉ, nhà bán lẻ, đến nhà thầu — trước khi đến tay người mua cuối cùng. Thương hiệu nhà
+        máy không bao giờ chạm được đến người ra quyết định: các nhà phát triển bất động sản, tổng
+        thầu, kiến trúc sư.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
@@ -57,8 +58,8 @@ export function Problem() {
       </div>
 
       <p className="mt-14 text-lg lg:text-xl font-serif italic text-text-heading leading-relaxed max-w-3xl">
-        Chúng tôi giải quyết bằng cách lược bỏ tất cả các lớp giữa — đưa buyer và factory ngồi cùng
-        bàn, ngay tại nhà máy.
+        Chúng tôi giải quyết bằng cách loại bỏ toàn bộ các lớp trung gian — đưa nhà mua hàng và nhà
+        máy ngồi cùng một bàn, ngay tại xưởng sản xuất.
       </p>
     </Section>
   );

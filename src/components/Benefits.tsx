@@ -3,33 +3,33 @@ import { Section } from './Section';
 const BENEFITS = [
   {
     n: '01',
-    title: 'Visit trực tiếp tại nhà máy',
-    body: 'Không phải 1-1 meeting trong booth hội chợ. Buyers đến tận factory floor, thấy dây chuyền, kiểm tra QC, gặp đội kỹ thuật.',
+    title: 'Thăm quan thực địa tại nhà máy',
+    body: 'Không phải gặp gỡ trong gian hàng hội chợ. Các nhà phát triển đến tận xưởng sản xuất — tận mắt kiểm tra dây chuyền, quy trình kiểm soát chất lượng, gặp trực tiếp đội ngũ kỹ thuật.',
   },
   {
     n: '02',
-    title: 'Briefing 1-on-1 với buyers',
-    body: 'Mỗi buyer brief riêng về dự án của họ. Bạn nghe trực tiếp spec, volume, timeline — không qua RFQ giấy.',
+    title: 'Trao đổi riêng với từng nhà phát triển',
+    body: 'Mỗi nhà phát triển trình bày trực tiếp nhu cầu của dự án họ. Quý vị nghe trực tiếp về thông số kỹ thuật, sản lượng và tiến độ — không qua bảng yêu cầu báo giá.',
   },
   {
     n: '03',
-    title: 'Pre-vetted leads',
-    body: 'Buyers đã có pipeline active, ngân sách phân bổ, và đang ra quyết định mua trong 6–18 tháng tới. Không phải prospects giai đoạn nghiên cứu.',
+    title: 'Khách hàng tiềm năng đã được thẩm định',
+    body: 'Các nhà phát triển trong đoàn đều có danh mục dự án đang triển khai, ngân sách đã phân bổ và đang trong giai đoạn ra quyết định mua trong vòng 6 đến 18 tháng tới.',
   },
   {
     n: '04',
-    title: 'Direct factory-to-developer',
-    body: 'Không qua agent, không qua distributor, không qua broker. Quan hệ trực tiếp giữa nhà máy và người ra quyết định mua.',
+    title: 'Kết nối trực tiếp từ nhà máy đến người ra quyết định',
+    body: 'Không qua đại lý, không qua nhà phân phối, không qua môi giới. Quan hệ trực tiếp giữa nhà máy và người thực sự ra quyết định mua hàng.',
   },
   {
     n: '05',
-    title: 'Hợp tác dài hạn 3–5 năm',
-    body: 'Mỗi buyer trong đoàn đều tìm partnership lâu dài để đảm bảo consistency. Không phải deal one-off.',
+    title: 'Nền tảng hợp tác dài hạn 3 – 5 năm',
+    body: 'Mỗi nhà phát triển trong đoàn đều tìm kiếm đối tác lâu dài để đảm bảo tính nhất quán trong chuỗi cung ứng — không phải giao dịch đơn lẻ.',
   },
   {
     n: '06',
-    title: 'Marketing exposure',
-    body: 'Nhà máy được feature trên kênh truyền thông 100B, LT Commercial Group, và case study của Build Better Series.',
+    title: 'Hiện diện truyền thông',
+    body: 'Nhà máy được giới thiệu trên các kênh truyền thông của 100B, LT Commercial Group và trong bộ tài liệu nghiên cứu điển hình của chuỗi Build Better Series.',
   },
 ];
 

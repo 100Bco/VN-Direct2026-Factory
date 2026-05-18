@@ -12,119 +12,112 @@ interface Buyer {
 const BUYERS: Buyer[] = [
   {
     name: 'Lezlie Tram Le',
-    role: 'Founder & CEO, LT Commercial Group | Đại diện chính thức 100B tại Texas',
+    role: 'Nhà sáng lập kiêm CEO, LT Commercial Group | Đại diện chính thức của 100B tại Texas',
     intro:
-      '22+ năm trong bất động sản thương mại Texas. Trực tiếp dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang.',
+      'Hơn 22 năm kinh nghiệm trong lĩnh vực bất động sản thương mại Texas. Trực tiếp dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang.',
     bullets: [
       {
-        heading: 'Track record',
+        heading: 'Thành tích tiêu biểu',
         items: [
-          '$55 triệu USD dự án xây dựng mới',
-          '$250+ triệu USD thương vụ M&A',
-          'Hàng trăm tài sản: văn phòng, retail, công nghiệp, nhà ở',
+          '55 triệu đô la dự án xây dựng mới',
+          'Hơn 250 triệu đô la thương vụ mua bán và sáp nhập',
+          'Hàng trăm tài sản văn phòng, bán lẻ, công nghiệp và nhà ở',
         ],
       },
       {
-        heading: 'Công nhận',
+        heading: 'Ghi nhận',
         items: [
-          'Chủ tịch AREAA Austin (2020)',
-          'Chủ tịch Manor Economic Development Corporation (EDC)',
-          'Austin Under 40 Award — hạng mục Bất động sản (2021)',
-          'Trang bìa tạp chí Austin Woman (5/2023)',
-          'Asian Chamber of Commerce — Giải thưởng Doanh nghiệp Nổi bật (2019)',
+          'Chủ tịch Hiệp hội Bất động sản Châu Á Mỹ tại Austin (2020)',
+          'Chủ tịch Hội đồng Phát triển Kinh tế Manor',
+          'Giải thưởng Austin Under 40 — hạng mục Bất động sản (2021)',
+          'Trang bìa tạp chí Austin Woman (tháng 5 năm 2023)',
+          'Giải thưởng Doanh nghiệp Nổi bật — Phòng Thương mại Châu Á (2019)',
         ],
       },
     ],
-    interest: 'Phụ trách kết nối nhà máy VN với thị trường Texas, ngành VLXD & nội thất.',
+    interest:
+      'Phụ trách kết nối nhà máy Việt Nam với thị trường Texas trong lĩnh vực vật liệu xây dựng và nội thất.',
     initials: 'LT',
   },
   {
     name: 'Michael Hough',
-    role: 'General Contractor — Austin, Texas',
+    role: 'Tổng thầu xây dựng — Austin, Texas',
     intro:
-      '30 năm kinh nghiệm trong xây dựng. Khởi đầu từ cải tạo nhà ở, mở rộng sang xây mới custom homes, hiện tập trung vào multi-family tax credit & dự án HUD.',
+      '30 năm kinh nghiệm trong ngành xây dựng. Khởi đầu từ cải tạo nhà ở, mở rộng sang xây mới nhà ở đặt riêng, hiện tập trung vào khu căn hộ thuế tín dụng và các dự án do Bộ Gia cư và Phát triển Đô thị Hoa Kỳ tài trợ.',
     bullets: [
       {
-        heading: 'Track record',
+        heading: 'Quy mô dự án',
         items: [
-          'Dự án $10M – $24M quy mô mỗi project',
+          'Từ 10 đến 24 triệu đô la mỗi công trình',
           'Thị trường: Corpus Christi • Houston • Austin • San Antonio',
-          'Chuyên: multi-family, HUD-funded housing',
+          'Chuyên: khu căn hộ thuế tín dụng, dự án nhà ở do Bộ Gia cư Hoa Kỳ tài trợ',
         ],
       },
     ],
     interest:
-      'Quan tâm: vật liệu xây dựng số lượng lớn, đạt chuẩn HUD/local code, supply chain ổn định cho dự án quy mô.',
+      'Vật liệu xây dựng số lượng lớn, đáp ứng tiêu chuẩn kỹ thuật và quy định địa phương, chuỗi cung ứng ổn định cho dự án quy mô.',
     initials: 'MH',
   },
   {
     name: 'Kameron Schram',
-    role: 'Owner & Founder, Cleo Builders — Boutique Luxury Custom Home Builder, Texas',
+    role: 'Chủ sở hữu kiêm Nhà sáng lập, Cleo Builders — Đơn vị xây dựng nhà ở cao cấp đặt riêng tại Texas',
     intro:
-      'Nhà xây dựng nhà ở cao cấp boutique tại Texas. Tập trung vào craftsmanship, chi tiết thiết kế, và sản phẩm có dấu ấn riêng cho từng khách hàng.',
+      'Chuyên về nhà ở cao cấp theo đặt hàng. Tập trung vào tay nghề thủ công, tinh tế trong thiết kế và dấu ấn riêng biệt cho từng khách hàng.',
     bullets: [
       {
-        heading: 'Active pipeline ($15M)',
+        heading: 'Danh mục đang triển khai (15 triệu đô la)',
         items: [
-          '1 dự án 9-unit đang xây dựng',
-          '1 custom home đang xây',
-          '4 custom homes đang thiết kế ($2M – $3.2M)',
-          '1 tenant finish-out giai đoạn lập kế hoạch',
-          '1 custom home cá nhân đang thiết kế',
+          '1 dự án 9 căn hộ đang xây dựng',
+          '1 nhà ở đặt riêng đang xây',
+          '4 nhà ở đặt riêng đang trong giai đoạn thiết kế (2 – 3,2 triệu đô la mỗi căn)',
+          '1 dự án hoàn thiện nội thất thương mại đang lập kế hoạch',
+          '1 nhà ở cá nhân đang thiết kế',
         ],
       },
     ],
     interest:
-      'Quan tâm: long-term partnership với nhà máy chất lượng cao, đảm bảo tính nhất quán, kiểm soát chất lượng, và sản phẩm độc đáo cho khách hàng cao cấp.',
+      'Đối tác nhà máy lâu dài với cam kết nhất quán về chất lượng và sản phẩm độc đáo phục vụ phân khúc cao cấp.',
     initials: 'KS',
   },
   {
     name: 'Ricardo Rubiano',
-    role: 'Real Estate Developer — Rio Grande Valley, Texas | 5 thế hệ phát triển BĐS',
+    role: 'Nhà phát triển bất động sản — Thung lũng Rio Grande, Texas | Năm thế hệ làm bất động sản',
     intro:
-      '23+ năm kinh nghiệm. Cựu sinh viên United States Naval Academy và Texas A&M University. Cựu binh US Marine Corps. Sinh ra ở Texas, lớn lên hai bên biên giới Mỹ–Mexico.',
+      'Hơn 23 năm kinh nghiệm. Cựu sinh viên Học viện Hải quân Hoa Kỳ và Đại học Texas A&M. Cựu sĩ quan Thủy quân Lục chiến Hoa Kỳ. Sinh ra và lớn lên tại vùng biên giới Mỹ — Mexico.',
     bullets: [
       {
-        heading: 'Active & past portfolio',
+        heading: 'Danh mục tiêu biểu',
         items: [
-          'Class-A developments tại Brownsville, Weslaco, San Juan, Harlingen, Pharr, Edinburg, Laredo',
-          'Tenants: Olive Garden, Longhorn Steakhouse, AT&T, T-Mobile, Sprint, Panda Express, Dunkin Donuts, McAlister\'s Deli',
-          '320-unit apartment complex tại Weslaco (đã sở hữu)',
-          '168-unit + 275-unit multi-family đang lên kế hoạch tại Pharr & Edinburg',
-          'Single-family developments quy mô 100+ acres: Water\'s Edge (Harlingen), Pecan Grove (Weslaco)',
+          'Các dự án thương mại hạng A tại Brownsville, Weslaco, San Juan, Harlingen, Pharr, Edinburg, Laredo',
+          'Khách thuê: Olive Garden, AT&T, T-Mobile, Panda Express',
+          'Khu căn hộ 320 căn tại Weslaco (đã sở hữu)',
+          'Các dự án 168 và 275 căn đang lên kế hoạch tại Pharr và Edinburg',
+          'Các dự án nhà ở quy mô trên 100 mẫu Anh',
         ],
       },
     ],
     interest:
-      'Mission: "Building a better Valley." Quan tâm: vật liệu cho multi-family và retail Class-A quy mô lớn.',
+      'Vật liệu xây dựng cho các dự án căn hộ và mặt bằng thương mại hạng A quy mô lớn.',
     initials: 'RR',
   },
   {
     name: 'Mick Hawton',
-    role: 'Partner, Headwater (Real Estate Developer) | Bắc Mỹ',
+    role: 'Đối tác điều hành, Headwater | Nhà phát triển bất động sản — Bắc Mỹ',
     intro:
-      '30+ năm kinh nghiệm trong phát triển kinh doanh và vận hành. Background trải dài qua bất động sản thương mại, leadership development, capital markets, group health insurance và công nghệ. Mang góc nhìn toàn diện từ phát triển dự án đến chiến lược tài chính.',
+      'Hơn 30 năm kinh nghiệm trong phát triển kinh doanh và vận hành. Nền tảng chuyên môn trải rộng qua bất động sản thương mại, phát triển lãnh đạo, thị trường vốn, bảo hiểm sức khỏe doanh nghiệp và công nghệ.',
     bullets: [
       {
-        heading: 'Track record & vai trò',
+        heading: 'Vai trò tiêu biểu',
         items: [
-          'Partner & cựu Chief Strategy Officer tại Headwater — phát triển BĐS thương mại đầu cuối',
-          'Vice President, Capital Markets tại Avison Young (Canada)',
-          'Vice President, Operations tại Trig Life Services',
-          'Managing Principal tại OneDigital — employee benefits quy mô lớn',
-          'Founder Roco Racing và Hawton Print Management',
-        ],
-      },
-      {
-        heading: 'Học vấn',
-        items: [
-          'Master of Public Affairs — Humphrey School of Public Affairs',
-          'Bachelor of Arts — University of Minnesota',
+          'Đối tác kiêm cựu Giám đốc Chiến lược tại Headwater',
+          'Phó Chủ tịch Thị trường Vốn tại Avison Young (Canada)',
+          'Phó Chủ tịch Vận hành tại Trig Life Services',
+          'Giám đốc điều hành tại OneDigital',
         ],
       },
     ],
     interest:
-      'Quan tâm: vật liệu cho commercial real estate development, góc nhìn capital markets về chuỗi cung ứng & long-term supply partnership.',
+      'Vật liệu cho các dự án bất động sản thương mại; góc nhìn thị trường vốn về chuỗi cung ứng và hợp tác cung cấp dài hạn.',
     initials: 'MH',
   },
 ];
@@ -193,26 +186,27 @@ function BuyerCard({ buyer, index }: { buyer: Buyer; index: number }) {
 export function Buyers() {
   return (
     <Section
-      id="doan-buyers"
-      eyebrow="Đoàn buyers chiến lược"
+      id="doan-khach-mua"
+      eyebrow="Đoàn khách mua chiến lược"
       className="bg-bg-alt border-y border-border-subtle"
     >
       <h2
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"
       >
-        Năm nhà phát triển BĐS hàng đầu —{' '}
+        Năm nhà phát triển bất động sản hàng đầu —{' '}
         <em className="font-serif italic text-gradient-gold">cùng một chuyến đi</em>.
       </h2>
 
       <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
-        Quý Nhà máy không gặp 1 khách hàng. Quý vị gặp một nhóm buyers với{' '}
+        Quý vị sẽ ngồi trực tiếp với một nhóm nhà phát triển có{' '}
         <span className="text-text-heading font-normal">
-          combined active pipeline trên $500 triệu USD
+          tổng danh mục dự án đang triển khai vượt 500 triệu đô la Mỹ
         </span>{' '}
-        — đang xây dựng, đang thiết kế, đang phát triển ở Mỹ và Bắc Mỹ ngay tại thời điểm này. Mỗi
-        người mang theo một profile dự án riêng: từ luxury custom home, multi-family 320-unit,
-        retail Class-A, đến commercial development & capital markets advisory.
+        — đang xây dựng, đang thiết kế, đang phát triển tại Hoa Kỳ và Bắc Mỹ ngay tại thời điểm này.
+        Mỗi người mang đến một hồ sơ dự án khác biệt: từ nhà ở cao cấp đặt riêng, khu căn hộ 320
+        căn, mặt bằng thương mại hạng A, đến phát triển bất động sản thương mại và tư vấn thị
+        trường vốn.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -221,16 +215,14 @@ export function Buyers() {
         ))}
       </div>
 
-      <div className="mt-16 text-center">
-        <div className="inline-flex flex-col items-center gap-3">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold leading-none">
-            Combined pipeline: $500M+
-          </p>
-          <p className="text-sm lg:text-base text-text-muted italic font-serif">
-            Luxury custom homes • Multi-family • Retail Class-A • Commercial development • Capital
-            markets advisory
-          </p>
-        </div>
+      <div className="mt-16 text-center max-w-4xl mx-auto">
+        <p className="text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold leading-none mb-4">
+          Tổng danh mục đang triển khai: hơn $500M
+        </p>
+        <p className="text-sm lg:text-base text-text-muted italic font-serif leading-relaxed">
+          Nhà ở cao cấp đặt riêng • Khu căn hộ • Mặt bằng thương mại hạng A • Phát triển bất động
+          sản thương mại • Tư vấn thị trường vốn
+        </p>
       </div>
     </Section>
   );

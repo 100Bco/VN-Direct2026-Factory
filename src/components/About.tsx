@@ -8,7 +8,7 @@ const SERVICES = [
   {
     icon: Handshake,
     title: 'Xúc tiến thương mại',
-    body: 'Kết nối doanh nghiệp Việt với các đối tác toàn cầu — buyers, distributors, contractors, developers.',
+    body: 'Kết nối doanh nghiệp Việt Nam với các đối tác toàn cầu — nhà mua hàng, nhà phân phối, tổng thầu và nhà phát triển.',
   },
   {
     icon: TrendingUp,
@@ -17,18 +17,18 @@ const SERVICES = [
   },
   {
     icon: Megaphone,
-    title: 'Marketing & Branding',
-    body: 'Thực thi chiến lược truyền thông giúp doanh nghiệp định vị thương hiệu, khẳng định vị thế, mở rộng tầm ảnh hưởng tại thị trường mục tiêu.',
+    title: 'Tiếp thị và Xây dựng thương hiệu',
+    body: 'Triển khai chiến lược truyền thông giúp doanh nghiệp định vị thương hiệu, khẳng định vị thế và mở rộng tầm ảnh hưởng tại thị trường mục tiêu.',
   },
   {
     icon: Truck,
     title: 'Phân phối hàng hóa',
-    body: 'Cung cấp và phân phối hàng hóa từ các thương hiệu Việt uy tín thông qua hệ thống đại lý, nhà phân phối tại Việt Nam và nước ngoài.',
+    body: 'Cung cấp và phân phối sản phẩm từ các thương hiệu Việt uy tín thông qua mạng lưới đại lý và nhà phân phối trong và ngoài nước.',
   },
   {
     icon: Compass,
     title: 'Tư vấn chiến lược thâm nhập thị trường',
-    body: 'Hỗ trợ doanh nghiệp trong toàn bộ quá trình thâm nhập từng thị trường cụ thể — pháp lý, logistics, certification, sales channel.',
+    body: 'Đồng hành cùng doanh nghiệp trong toàn bộ quá trình thâm nhập từng thị trường cụ thể — từ pháp lý, vận chuyển, chứng nhận đến kênh phân phối và bán hàng.',
   },
 ];
 
@@ -44,9 +44,10 @@ export function About() {
       </h2>
 
       <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
-        100B Holding là nền tảng chiến lược giúp doanh nghiệp Việt có sản phẩm mạnh vươn ra toàn
-        cầu. Chúng tôi là cánh cổng kết nối — cung cấp các giải pháp toàn diện để giúp doanh nghiệp
-        Việt chinh phục thị trường quốc tế, ưu tiên Mỹ và châu Âu trong giai đoạn 2025–2026.
+        100B Holding là nền tảng chiến lược giúp các doanh nghiệp Việt Nam có sản phẩm mạnh vươn ra
+        thị trường toàn cầu. Chúng tôi là cầu nối — cung cấp giải pháp toàn diện để doanh nghiệp
+        Việt chinh phục các thị trường quốc tế, với trọng tâm là Hoa Kỳ và châu Âu trong giai đoạn
+        2025–2026.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-14">
@@ -56,8 +57,10 @@ export function About() {
             className="bg-bg-card rounded-3xl p-7 lg:p-8 border border-border-subtle
                        hover:border-brand-gold/40 transition-colors flex flex-col gap-4"
           >
-            <div className="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30
-                            flex items-center justify-center">
+            <div
+              className="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30
+                            flex items-center justify-center"
+            >
               <Icon size={22} className="text-brand-gold" strokeWidth={1.5} />
             </div>
             <h3 className="text-lg lg:text-xl font-serif text-text-heading leading-snug">
@@ -80,7 +83,7 @@ export function About() {
             Made in Vietnam — Đi khắp năm châu.
           </p>
           <footer className="mt-5 text-xs uppercase tracking-[0.2em] text-text-muted">
-            — Tú Mạc, Co-Founder 100B
+            — Tú Mạc, Đồng sáng lập 100B
           </footer>
         </blockquote>
 
