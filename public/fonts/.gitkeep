@@ -1,0 +1,9 @@
+# Đặt file font tại đây
+#
+# Cần upload:
+#   - UTM-Classizism-Antiqua.ttf  (copy từ repo VN-Direct-v2: /public/fonts/)
+#
+# Đường dẫn import trong src/app/globals.css:
+#   src: url('/fonts/UTM-Classizism-Antiqua.ttf')
+#
+# Sau khi up, có thể xoá file .gitkeep này.

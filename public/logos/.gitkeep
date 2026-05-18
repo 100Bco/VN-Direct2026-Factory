@@ -1,0 +1,18 @@
+# Đặt logo và ảnh tại đây
+#
+# Cần upload:
+#   - 100b.svg                    (logo 100B Beyond Borders — dùng cho favicon + nav)
+#   - lezlie.jpg                  (400x400 min, headshot Lezlie Tram Le)
+#   - michael-hough.jpg           (400x400 min, headshot Michael Hough)
+#   - kameron-schram.jpg          (400x400 min, headshot Kameron Schram)
+#   - ricardo-rubiano.jpg         (400x400 min, headshot Ricardo Rubiano)
+#   - mick-hawton.jpg             (400x400 min, headshot Mick Hawton)
+#
+# Đường dẫn truy cập trong code:
+#   <img src="/logos/100b.svg" />
+#   <img src="/logos/lezlie.jpg" />
+#
+# Sau khi up đủ 5 ảnh buyer, mở src/components/Buyers.tsx và thay
+# initials avatar bằng <img /> thực.
+#
+# Có thể xoá file .gitkeep này sau khi đã có ít nhất 1 file thật.
