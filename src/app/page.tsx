@@ -5,7 +5,7 @@ import { Opportunity } from '@/components/Opportunity';
 import { Buyers } from '@/components/Buyers';
 import { Program } from '@/components/Program';
 import { Benefits } from '@/components/Benefits';
-import { Criteria } from '@/components/Criteria';
+import { Industries } from '@/components/Industries';
 import { About } from '@/components/About';
 import { Footer } from '@/components/Footer';
 
@@ -19,7 +19,7 @@ export default function Page() {
       <Buyers />
       <Program />
       <Benefits />
-      <Criteria />
+      <Industries />
       <About />
       <Footer />
     </main>

@@ -4,28 +4,28 @@ import { Section } from './Section';
 const FORMATS = [
   {
     icon: Building2,
-    title: 'Factory Visit',
+    title: 'Thăm quan thực địa',
     detail:
-      'Đoàn đến tận nhà máy, tham quan dây chuyền, kho thành phẩm, showroom. 90–120 phút mỗi nhà máy.',
+      'Đoàn đến tận nhà máy, tham quan dây chuyền sản xuất, kho thành phẩm và khu trưng bày sản phẩm. Thời lượng từ 90 đến 120 phút mỗi nhà máy.',
   },
   {
     icon: MessageSquare,
-    title: '1-on-1 Briefing',
+    title: 'Trao đổi trực tiếp',
     detail:
-      'Hội đàm trực tiếp với từng buyer về spec, volume, certifications, lead time, MOQ, payment terms.',
+      'Hội đàm riêng với từng nhà phát triển về thông số kỹ thuật, sản lượng, chứng nhận, thời gian giao hàng, đơn hàng tối thiểu và điều kiện thanh toán.',
   },
   {
     icon: Package,
-    title: 'Sample & Documentation',
+    title: 'Hồ sơ kỹ thuật và mẫu sản phẩm',
     detail:
-      'Mỗi nhà máy chuẩn bị bộ sample + tech sheet tiếng Anh. 100B hỗ trợ dịch & format.',
+      'Mỗi nhà máy chuẩn bị bộ mẫu sản phẩm kèm tài liệu kỹ thuật bằng tiếng Anh. 100B hỗ trợ biên dịch và chuẩn hóa định dạng.',
   },
 ];
 
 const OBJECTIVES = [
-  'Tìm hiểu năng lực sản xuất, sản phẩm và quy trình của Quý Nhà máy.',
-  'Trao đổi nhu cầu thực tế từ thị trường Texas (spec, volume, certification).',
-  'Đặt nền móng cho hợp tác xuất khẩu bền vững, lâu dài.',
+  'Tìm hiểu năng lực sản xuất, sản phẩm và quy trình của Quý nhà máy.',
+  'Trao đổi nhu cầu thực tế từ thị trường Texas về thông số kỹ thuật, sản lượng và chứng nhận.',
+  'Đặt nền móng cho quan hệ hợp tác xuất khẩu bền vững và lâu dài.',
 ];
 
 export function Program() {
@@ -36,15 +36,15 @@ export function Program() {
                    max-w-4xl"
       >
         7 ngày. 10–13 nhà máy được tuyển chọn.{' '}
-        <em className="font-serif italic text-gradient-gold">Hợp tác thực chất.</em>
+        <em className="font-serif italic text-gradient-gold">Hợp tác có chiều sâu.</em>
       </h2>
 
       <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
         VN Direct 2026 là chương trình{' '}
         <span className="text-text-heading font-normal">Build Better Series</span> của 100B — đưa
-        đoàn buyers chiến lược từ Texas đến trực tiếp các nhà máy hàng đầu Việt Nam trong ngành
-        VLXD & nội thất. Mỗi nhà máy được visit tại địa điểm sản xuất, briefing kỹ thuật, đối
-        thoại nhu cầu thực tế.
+        đoàn nhà phát triển chiến lược từ Texas đến trực tiếp các nhà máy hàng đầu Việt Nam trong
+        lĩnh vực vật liệu xây dựng và nội thất. Mỗi nhà máy được thăm tại địa điểm sản xuất, trao
+        đổi kỹ thuật chuyên sâu và đối thoại trực tiếp về nhu cầu thực tế.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-16">
@@ -54,8 +54,10 @@ export function Program() {
             className="bg-bg-card rounded-3xl p-8 lg:p-10 border border-border-subtle
                        hover:border-brand-gold/40 transition-colors flex flex-col gap-5"
           >
-            <div className="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30
-                            flex items-center justify-center">
+            <div
+              className="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30
+                            flex items-center justify-center"
+            >
               <Icon size={22} className="text-brand-gold" strokeWidth={1.5} />
             </div>
             <h3 className="text-xl lg:text-2xl font-serif text-text-heading leading-snug">
@@ -71,7 +73,7 @@ export function Program() {
       <div className="relative p-8 lg:p-10 rounded-3xl bg-bg-card border border-border-subtle overflow-hidden">
         <span className="absolute top-0 left-0 w-1.5 h-full bg-brand-gold rounded-l-3xl" />
         <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-5">
-          Mục tiêu chuyến đi
+          Mục tiêu của chuyến đi
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {OBJECTIVES.map((o) => (

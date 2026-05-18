@@ -3,8 +3,9 @@ import { Mail, Globe, ExternalLink } from 'lucide-react';
 const PROGRAM_LINKS = [
   { label: 'Vấn đề', href: '#van-de' },
   { label: 'Cơ hội', href: '#co-hoi' },
-  { label: 'Đoàn buyers', href: '#doan-buyers' },
+  { label: 'Đoàn khách mua', href: '#doan-khach-mua' },
   { label: 'Chương trình', href: '#chuong-trinh' },
+  { label: 'Ngành ưu tiên', href: '#nganh-uu-tien' },
   { label: 'Về 100B', href: '#ve-100b' },
 ];
 
@@ -99,7 +100,9 @@ export function Footer() {
         <div className="pt-8 border-t border-border-subtle flex flex-col md:flex-row gap-3 justify-between items-start md:items-center">
           <p className="text-sm font-serif italic text-text-muted">
             Trân trọng —{' '}
-            <span className="text-text-body not-italic font-sans">Tú Mạc, Co-Founder 100B</span>
+            <span className="text-text-body not-italic font-sans">
+              Tú Mạc, Đồng sáng lập 100B
+            </span>
           </p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-text-muted">
             Build Better Series · VN Direct 2026

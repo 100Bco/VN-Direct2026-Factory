@@ -7,10 +7,10 @@ const MAILTO =
   'mailto:global@100b.co?subject=VN%20Direct%202026%20-%20%C4%90%C4%83ng%20k%C3%BD%20nh%C3%A0%20m%C3%A1y';
 
 const STATS = [
-  { icon: Calendar, value: '7 ngày', sub: '+ 2 ngày excursion' },
-  { icon: Users, value: '5 buyers', sub: 'nhà phát triển BĐS & developer Mỹ' },
-  { icon: LineChart, value: '$500M+', sub: 'combined active pipeline' },
-  { icon: Building, value: '10–13', sub: 'nhà máy được tuyển chọn' },
+  { icon: Calendar, value: '7 ngày', sub: 'thực địa tại Việt Nam' },
+  { icon: Users, value: '5 nhà phát triển', sub: 'bất động sản hàng đầu từ Hoa Kỳ' },
+  { icon: LineChart, value: 'Hơn $500M', sub: 'tổng danh mục dự án đang triển khai' },
+  { icon: Building, value: '10–13', sub: 'nhà máy được tuyển chọn tham gia' },
 ];
 
 export function Hero() {
@@ -27,10 +27,10 @@ export function Hero() {
       <header
         id="top"
         className="relative min-h-[100svh] md:min-h-screen flex items-center
-                   pt-24 pb-10 md:pt-32 md:pb-20 overflow-hidden bg-black"
+                   pt-28 pb-10 md:pt-32 md:pb-20 overflow-hidden bg-black"
       >
-        {/* Full Screen Background Video — Wistia web component */}
-        <div className="absolute top-20 md:top-0 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
+        {/* Full-bleed background video — chạy hết viewport, sau nav */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                        pointer-events-none
@@ -56,8 +56,9 @@ export function Hero() {
               plays-inline="true"
             />
           </div>
+          {/* Gradient overlay — tối nhẹ trên (cho nav), tối đậm dưới (cho stat cards) */}
           <div
-            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40
+            className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/85
                        pointer-events-none"
           />
         </div>
@@ -70,7 +71,7 @@ export function Hero() {
                          px-3 py-1.5 border border-brand-gold/60 text-brand-gold
                          font-medium rounded-full whitespace-nowrap bg-black/30 backdrop-blur-sm"
             >
-              Build Better Series — Thư mời nhà máy
+              Build Better Series — Thư mời tham quan nhà máy
             </span>
             <span
               className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em]
@@ -82,7 +83,7 @@ export function Hero() {
           </div>
 
           <p className="font-serif italic text-base md:text-lg text-text-body mb-4 md:mb-6">
-            Ngày 30 tháng 05 – 06 tháng 06, 2026
+            30 tháng 05 – 06 tháng 06, 2026
           </p>
 
           {/* H1 — 3 dòng */}
@@ -100,11 +101,10 @@ export function Hero() {
             className="text-lg md:text-xl lg:text-2xl text-text-body font-light leading-relaxed
                        max-w-3xl mb-12 md:mb-16"
           >
-            Đưa nhà máy của Quý vị đến tận tay buyers chiến lược tại Texas.{' '}
             <span className="text-text-heading font-normal">
-              Không trung gian. Không hội chợ. Không môi giới.
+              Đưa nhà máy đến tận tay các nhà phát triển chiến lược tại Texas.
             </span>{' '}
-            Trực tiếp factory-to-developer.
+            Trực tiếp từ nhà máy đến tay người ra quyết định.
           </p>
 
           {/* Stat row */}
