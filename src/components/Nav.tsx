@@ -36,10 +36,14 @@ export function Nav() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group">
-          <span className="font-display text-2xl text-text-heading tracking-wide">
-            100<span className="text-brand-gold">B</span>
-          </span>
+        <a href="#top" className="flex items-center gap-3 group" aria-label="100B Beyond Borders">
+          <img
+            src="/logos/100B%20-%20TACH%20NEN%20-1.png"
+            alt="100B Beyond Borders"
+            className="h-9 md:h-10 w-auto"
+            width={120}
+            height={40}
+          />
           <span className="hidden md:inline text-[10px] uppercase tracking-[0.25em] text-text-muted">
             Beyond Borders
           </span>

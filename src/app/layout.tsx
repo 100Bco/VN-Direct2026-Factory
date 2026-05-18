@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Build Better Series 30/05 – 06/06/2026. Đón đoàn 5 buyers chiến lược từ Texas đến trực tiếp các nhà máy VLXD & nội thất Việt Nam. Combined pipeline $500M+. Đăng ký vòng tuyển chọn 10–13 nhà máy.',
   icons: {
-    icon: '/logos/100b.svg',
+    icon: '/logos/Favicon%20100B.png',
   },
   openGraph: {
     type: 'website',

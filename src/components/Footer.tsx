@@ -17,9 +17,13 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <span className="font-display text-3xl text-text-heading tracking-wide">
-                100<span className="text-brand-gold">B</span>
-              </span>
+              <img
+                src="/logos/100B%20-%20TACH%20NEN%20-1.png"
+                alt="100B Beyond Borders"
+                className="h-12 w-auto"
+                width={144}
+                height={48}
+              />
               <span className="text-[10px] uppercase tracking-[0.25em] text-text-muted">
                 Beyond Borders
               </span>
