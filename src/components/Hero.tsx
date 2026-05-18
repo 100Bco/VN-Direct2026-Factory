@@ -19,8 +19,8 @@ export function Hero() {
       className="relative min-h-[100svh] md:min-h-screen flex items-center
                  pt-20 pb-4 md:pt-32 md:pb-20 overflow-hidden bg-black"
     >
-      {/* Background video container — top:80px mobile, top:0 desktop (match site mẹ) */}
-      <div className="absolute top-20 md:top-0 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
+      {/* Background video container — full bleed mọi breakpoint, nav floating đè trên */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
         <div
           className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                       pointer-events-none transition-opacity duration-700
@@ -38,12 +38,12 @@ export function Hero() {
             frameBorder={0}
           />
         </div>
-        {/* Gradient overlay — to top: 60% bottom, 10% middle, 20% top (match site mẹ) */}
+        {/* Gradient overlay — đậm dưới (stat cards), trong suốt trên (nav floating đẹp) */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2) 100%)',
+              'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)',
           }}
         />
       </div>
