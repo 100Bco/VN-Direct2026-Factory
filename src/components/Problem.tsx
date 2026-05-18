@@ -22,14 +22,14 @@ export function Problem() {
   return (
     <Section id="van-de" eyebrow="Vấn đề">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] tracking-tight mb-6
+        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"
       >
         Sản phẩm chất lượng — nhưng đang{' '}
-        <em className="italic text-gradient-gold">bán dưới giá trị thực</em>.
+        <em className="font-serif italic text-gradient-gold">bán dưới giá trị thực</em>.
       </h2>
 
-      <p className="text-base md:text-lg text-text-body font-light leading-relaxed max-w-3xl mb-14">
+      <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
         Các nhà máy Việt Nam đang sản xuất vật liệu xây dựng và nội thất đạt chuẩn quốc tế. Nhưng
         khi xuất khẩu, lợi nhuận bị bào mòn qua ba đến bốn lớp trung gian — từ nhà phân phối, nhà
         bán sỉ, nhà bán lẻ, đến nhà thầu — trước khi đến tay người mua cuối cùng. Thương hiệu nhà
@@ -45,10 +45,10 @@ export function Problem() {
                        hover:border-brand-gold/40 hover:bg-bg-card-hover transition-colors
                        flex flex-col gap-4"
           >
-            <div className="text-4xl lg:text-5xl font-display text-gradient-gold leading-none font-medium">
+            <div className="text-[40px] font-display text-gradient-gold leading-none font-medium">
               {p.n}
             </div>
-            <h3 className="text-lg lg:text-xl font-semibold text-text-heading leading-snug">
+            <h3 className="text-lg lg:text-xl font-bold font-sans text-text-heading leading-snug">
               {p.title}
             </h3>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
@@ -58,7 +58,7 @@ export function Problem() {
         ))}
       </div>
 
-      <p className="mt-12 text-base md:text-lg italic text-text-heading font-light leading-relaxed max-w-3xl">
+      <p className="mt-12 text-lg lg:text-xl font-serif italic text-text-heading font-light leading-relaxed max-w-3xl">
         Chúng tôi giải quyết bằng cách loại bỏ toàn bộ các lớp trung gian — đưa nhà mua hàng và nhà
         máy ngồi cùng một bàn, ngay tại xưởng sản xuất.
       </p>

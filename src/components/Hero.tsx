@@ -66,24 +66,30 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="italic font-light text-sm md:text-base text-text-body mb-3 md:mb-4">
+          <p className="font-serif italic font-light text-base md:text-lg text-text-body mb-3 md:mb-4">
             30 tháng 05 – 06 tháng 06, 2026
           </p>
 
-          {/* H1 — 3 dòng */}
+          {/* H1 — 3 dòng (VIETNAM trắng / DIRECT gradient gold / 2026 italic 15%) */}
           <h1
-            className="font-display tracking-tight leading-[0.92]
-                       text-[48px] md:text-7xl lg:text-[96px] mb-6 md:mb-8"
+            className="font-display tracking-tight leading-[0.95]
+                       text-[44px] md:text-8xl lg:text-[120px] mb-8 md:mb-10"
           >
             <span className="block text-text-heading">VIETNAM</span>
             <span className="block text-gradient-gold">DIRECT</span>
-            <span className="block italic opacity-15 text-text-heading">2026</span>
+            <em
+              className="block mt-1 md:mt-2 font-display italic font-light
+                         text-[44px] md:text-8xl lg:text-[120px] leading-[0.7]
+                         text-text-heading opacity-[0.15]"
+            >
+              2026
+            </em>
           </h1>
 
           {/* Lead */}
           <p
-            className="text-base md:text-lg lg:text-xl text-text-body font-light leading-relaxed
-                       max-w-3xl mb-8 md:mb-10"
+            className="text-lg lg:text-xl text-text-body font-light leading-relaxed
+                       max-w-3xl mb-10 md:mb-12"
           >
             <span className="text-text-heading font-normal">
               Đưa nhà máy đến tận tay các nhà phát triển chiến lược tại Texas.

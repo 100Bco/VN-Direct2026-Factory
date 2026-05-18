@@ -32,14 +32,14 @@ export function Program() {
   return (
     <Section id="chuong-trinh" eyebrow="Chương trình">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] tracking-tight mb-6
+        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"
       >
         7 ngày. 10–13 nhà máy được tuyển chọn.{' '}
-        <em className="italic text-gradient-gold">Hợp tác có chiều sâu.</em>
+        <em className="font-serif italic text-gradient-gold">Hợp tác có chiều sâu.</em>
       </h2>
 
-      <p className="text-base md:text-lg text-text-body font-light leading-relaxed max-w-3xl mb-14">
+      <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
         VN Direct 2026 là chương trình{' '}
         <span className="text-text-heading font-normal">Build Better Series</span> của 100B — đưa
         đoàn nhà phát triển chiến lược từ Texas đến trực tiếp các nhà máy hàng đầu Việt Nam trong
@@ -60,7 +60,7 @@ export function Program() {
             >
               <Icon size={20} className="text-brand-gold" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg lg:text-xl font-semibold text-text-heading leading-snug">
+            <h3 className="text-lg lg:text-xl font-bold font-sans text-text-heading leading-snug">
               {title}
             </h3>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
@@ -72,7 +72,7 @@ export function Program() {
 
       <div className="relative p-7 lg:p-10 rounded-2xl bg-bg-card border border-border-subtle overflow-hidden">
         <span className="absolute top-0 left-0 w-1 h-full bg-brand-gold" />
-        <p className="text-[10px] uppercase tracking-[0.22em] font-semibold text-brand-gold mb-5">
+        <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-5">
           Mục tiêu của chuyến đi
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-8">

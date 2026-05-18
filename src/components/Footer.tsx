@@ -29,7 +29,7 @@ export function Footer() {
                 Beyond Borders
               </span>
             </div>
-            <p className="text-sm italic font-light text-text-body">
+            <p className="text-sm font-serif italic font-light text-text-body">
               Made in Vietnam — Đi khắp năm châu.
             </p>
             <p className="text-xs text-text-muted mt-auto pt-4">
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border-subtle flex flex-col md:flex-row gap-3 justify-between items-start md:items-center">
-          <p className="text-sm italic font-light text-text-muted">Trân trọng.</p>
+          <p className="text-sm font-serif italic font-light text-text-muted">Trân trọng.</p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-text-muted">
             Build Better Series · VN Direct 2026
           </p>

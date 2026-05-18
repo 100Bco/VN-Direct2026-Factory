@@ -146,14 +146,14 @@ export function Buyers() {
       className="bg-bg-alt border-y border-border-subtle"
     >
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.15] tracking-tight mb-6
+        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"
       >
         Năm nhà phát triển bất động sản hàng đầu —{' '}
-        <em className="italic text-gradient-gold">cùng một chuyến đi</em>.
+        <em className="font-serif italic text-gradient-gold">cùng một chuyến đi</em>.
       </h2>
 
-      <p className="text-base md:text-lg text-text-body font-light leading-relaxed max-w-3xl mb-14">
+      <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
         Quý vị sẽ ngồi trực tiếp với một nhóm nhà phát triển có{' '}
         <span className="text-text-heading font-normal">
           tổng danh mục dự án đang triển khai vượt 500 triệu đô la Mỹ
@@ -181,13 +181,13 @@ export function Buyers() {
             </span>
           </div>
 
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-text-heading leading-[1.15] tracking-tight mb-3">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-text-heading leading-snug mb-3">
             {buyer.name}
           </h3>
           <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-2">
             {buyer.role}
           </p>
-          <p className="text-xs lg:text-sm text-text-muted italic font-light mb-6 leading-relaxed">
+          <p className="text-xs lg:text-sm text-text-muted font-serif italic font-light mb-6 leading-relaxed">
             {buyer.subtitle}
           </p>
 
@@ -198,7 +198,7 @@ export function Buyers() {
           <div className="flex flex-col gap-6 mb-8">
             {buyer.bullets.map((group) => (
               <div key={group.heading}>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-text-muted font-semibold mb-3">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-text-muted font-semibold mb-3">
                   {group.heading}
                 </p>
                 <ul className="space-y-2.5">
@@ -217,7 +217,10 @@ export function Buyers() {
           </div>
 
           <div className="mt-auto pt-6 border-t border-border-subtle">
-            <p className="text-sm text-text-muted italic font-light leading-relaxed">
+            <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-2">
+              Quan tâm
+            </p>
+            <p className="text-sm lg:text-base text-text-muted font-serif italic font-light leading-relaxed">
               {buyer.interest}
             </p>
           </div>
@@ -290,13 +293,13 @@ export function Buyers() {
 
       {/* Pipeline footer tag */}
       <div className="mt-16 text-center max-w-4xl mx-auto">
-        <p className="text-xs uppercase tracking-[0.22em] text-text-muted font-semibold mb-3">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-semibold mb-4">
           Tổng danh mục đang triển khai
         </p>
-        <p className="text-4xl md:text-5xl lg:text-6xl font-display text-gradient-gold leading-none mb-4">
+        <p className="text-5xl md:text-6xl lg:text-7xl font-display text-gradient-gold leading-none mb-4">
           $500M+
         </p>
-        <p className="text-sm lg:text-base text-text-muted font-light leading-relaxed">
+        <p className="text-sm lg:text-base text-text-muted font-serif italic font-light leading-relaxed">
           Nhà ở cao cấp đặt riêng · Khu căn hộ · Mặt bằng thương mại hạng A · Phát triển bất động
           sản thương mại · Tư vấn thị trường vốn
         </p>
