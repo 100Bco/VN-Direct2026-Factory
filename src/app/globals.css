@@ -94,3 +94,20 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
+
+/* Wistia web component — blurred swatch fallback trong khi player load */
+wistia-player[media-id='9hbymhvynw']:not(:defined) {
+  background: center / cover no-repeat
+    url('https://fast.wistia.com/embed/medias/9hbymhvynw/swatch');
+  display: block;
+  filter: blur(8px);
+  width: 100%;
+  height: 100%;
+}
+
+/* Khi player đã defined, fill container và xoá padding-top mặc định của aspect */
+wistia-player[media-id='9hbymhvynw'] {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
