@@ -36,7 +36,7 @@ export function Nav() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group" aria-label="100B Beyond Borders">
+        <a href="#top" className="flex items-center group" aria-label="100B Beyond Borders">
           <img
             src="/logos/100B%20-%20TACH%20NEN%20-1.png"
             alt="100B Beyond Borders"
@@ -44,9 +44,6 @@ export function Nav() {
             width={120}
             height={40}
           />
-          <span className="hidden md:inline text-[10px] uppercase tracking-[0.25em] text-text-muted">
-            Beyond Borders
-          </span>
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
