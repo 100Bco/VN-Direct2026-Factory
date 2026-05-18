@@ -2,13 +2,14 @@ import { Section } from './Section';
 
 const STATS = [
   { value: '$2,6T', detail: 'Tổng sản phẩm nội địa Texas — xếp thứ 8 toàn cầu' },
-  { value: 'Số 1', detail: 'Bang có tốc độ phát triển nhanh nhất tại Hoa Kỳ' },
+  { value: '#1', detail: 'Bang có tốc độ phát triển nhanh nhất tại Hoa Kỳ' },
   {
-    value: '6 tập đoàn',
-    detail: 'Tesla • SpaceX • Oracle • Apple • Google • Samsung đặt đại bản doanh',
+    value: '6',
+    detail:
+      'Tập đoàn toàn cầu đặt đại bản doanh — Tesla, SpaceX, Oracle, Apple, Google, Samsung',
   },
   {
-    value: 'Không ngừng',
+    value: '24/7',
     detail: 'Nhà ở, bất động sản thương mại và hạ tầng tăng trưởng liên tục',
   },
 ];
@@ -32,14 +33,14 @@ export function Opportunity() {
         nhà ở và hạ tầng bùng nổ theo.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
         {STATS.map((s) => (
           <div
             key={s.value}
-            className="bg-bg-card rounded-3xl p-8 border border-border-subtle
+            className="bg-bg-card rounded-2xl p-7 lg:p-8 border border-border-subtle
                        hover:border-brand-gold/40 transition-colors flex flex-col gap-4"
           >
-            <div className="text-4xl lg:text-5xl font-display text-gradient-gold leading-none">
+            <div className="text-5xl lg:text-6xl font-display text-gradient-gold leading-none">
               {s.value}
             </div>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
@@ -49,11 +50,9 @@ export function Opportunity() {
         ))}
       </div>
 
-      <p className="mt-14 text-lg lg:text-xl font-serif italic text-text-heading leading-relaxed max-w-3xl">
+      <p className="mt-12 text-lg lg:text-xl font-serif italic text-text-heading font-light leading-relaxed max-w-3xl">
         Đây không phải thị trường ngắn hạn. Đây là{' '}
-        <span className="text-gradient-gold not-italic font-serif">
-          con đường dài 10 đến 20 năm
-        </span>{' '}
+        <span className="font-serif italic text-gradient-gold">con đường dài 10 đến 20 năm</span>{' '}
         cho ngành vật liệu xây dựng và nội thất chất lượng cao từ Việt Nam.
       </p>
     </Section>

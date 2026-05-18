@@ -184,26 +184,28 @@ export function Buyers() {
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-text-heading leading-snug mb-3">
             {buyer.name}
           </h3>
-          <p className="text-sm lg:text-base text-brand-gold uppercase tracking-[0.15em] leading-snug mb-1">
+          <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-2">
             {buyer.role}
           </p>
-          <p className="text-xs lg:text-sm text-text-muted italic mb-6">{buyer.subtitle}</p>
+          <p className="text-xs lg:text-sm text-text-muted font-serif italic font-light mb-6 leading-relaxed">
+            {buyer.subtitle}
+          </p>
 
-          <p className="text-base lg:text-lg text-text-body font-light leading-relaxed mb-6">
+          <p className="text-base lg:text-lg text-text-body font-light leading-relaxed mb-8">
             {buyer.intro}
           </p>
 
-          <div className="flex flex-col gap-5 mb-6">
+          <div className="flex flex-col gap-6 mb-8">
             {buyer.bullets.map((group) => (
               <div key={group.heading}>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-text-muted font-semibold mb-3">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-text-muted font-semibold mb-3">
                   {group.heading}
                 </p>
                 <ul className="space-y-2.5">
                   {group.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-3 text-sm lg:text-base text-text-body leading-relaxed"
+                      className="flex items-start gap-3 text-sm lg:text-base text-text-body font-light leading-relaxed"
                     >
                       <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
                       <span>{item}</span>
@@ -214,8 +216,13 @@ export function Buyers() {
             ))}
           </div>
 
-          <div className="mt-auto pt-5 border-t border-border-subtle">
-            <p className="text-sm text-text-muted italic leading-relaxed">{buyer.interest}</p>
+          <div className="mt-auto pt-6 border-t border-border-subtle">
+            <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-2">
+              Quan tâm
+            </p>
+            <p className="text-sm lg:text-base text-text-muted font-serif italic font-light leading-relaxed">
+              {buyer.interest}
+            </p>
           </div>
         </div>
 
@@ -286,12 +293,15 @@ export function Buyers() {
 
       {/* Pipeline footer tag */}
       <div className="mt-16 text-center max-w-4xl mx-auto">
-        <p className="text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold leading-none mb-4">
-          Tổng danh mục đang triển khai: hơn $500M
+        <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-semibold mb-4">
+          Tổng danh mục đang triển khai
         </p>
-        <p className="text-sm lg:text-base text-text-muted italic font-serif leading-relaxed">
-          Nhà ở cao cấp đặt riêng • Khu căn hộ • Mặt bằng thương mại hạng A • Phát triển bất động
-          sản thương mại • Tư vấn thị trường vốn
+        <p className="text-5xl md:text-6xl lg:text-7xl font-display text-gradient-gold leading-none mb-4">
+          $500M+
+        </p>
+        <p className="text-sm lg:text-base text-text-muted font-serif italic font-light leading-relaxed">
+          Nhà ở cao cấp đặt riêng · Khu căn hộ · Mặt bằng thương mại hạng A · Phát triển bất động
+          sản thương mại · Tư vấn thị trường vốn
         </p>
       </div>
     </Section>

@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Calendar, Users, LineChart, Building } from 'lucide-react';
 
 const STATS = [
-  { icon: Calendar, num: '7', text: 'ngày thực địa tại Việt Nam' },
-  { icon: Users, num: '5', text: 'nhà phát triển bất động sản hàng đầu từ Hoa Kỳ' },
-  { icon: LineChart, num: '$500M+', text: 'tổng danh mục dự án đang triển khai' },
-  { icon: Building, num: '10–13', text: 'nhà máy được tuyển chọn tham gia' },
+  { num: '7', text: 'ngày thực địa tại Việt Nam' },
+  { num: '5', text: 'nhà phát triển bất động sản hàng đầu từ Hoa Kỳ' },
+  { num: '$500M+', text: 'tổng danh mục dự án đang triển khai' },
+  { num: '10–13', text: 'nhà máy được tuyển chọn tham gia' },
 ];
 
 export function Hero() {
@@ -19,8 +18,8 @@ export function Hero() {
       className="relative min-h-[100svh] md:min-h-screen flex items-center
                  pt-20 pb-4 md:pt-32 md:pb-20 overflow-hidden bg-black"
     >
-      {/* Background video container — top:80px mobile, top:0 desktop (match site mẹ) */}
-      <div className="absolute top-20 md:top-0 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
+      {/* Background video container — full bleed mọi breakpoint, nav floating đè trên */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
         <div
           className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                       pointer-events-none transition-opacity duration-700
@@ -38,19 +37,19 @@ export function Hero() {
             frameBorder={0}
           />
         </div>
-        {/* Gradient overlay — to top: 60% bottom, 10% middle, 20% top (match site mẹ) */}
+        {/* Gradient overlay — đậm dưới (stat cards), trong suốt trên (nav floating đẹp) */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.2) 100%)',
+              'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)',
           }}
         />
       </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           {/* Eyebrow pills */}
-          <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-10 md:mb-14">
+          <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-6 md:mb-8">
             <span
               className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em]
                          px-3 py-1.5 border border-brand-gold/60 text-brand-gold
@@ -67,24 +66,30 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="font-serif italic text-base md:text-lg text-text-body mb-4 md:mb-6">
+          <p className="font-serif italic font-light text-base md:text-lg text-text-body mb-3 md:mb-4">
             30 tháng 05 – 06 tháng 06, 2026
           </p>
 
-          {/* H1 — 3 dòng */}
+          {/* H1 — 3 dòng (VIETNAM trắng / DIRECT gradient gold / 2026 italic 15%) */}
           <h1
             className="font-display tracking-tight leading-[0.95]
-                       text-[52px] md:text-8xl lg:text-[120px] mb-8 md:mb-10"
+                       text-[44px] md:text-8xl lg:text-[120px] mb-8 md:mb-10"
           >
             <span className="block text-text-heading">VIETNAM</span>
             <span className="block text-gradient-gold">DIRECT</span>
-            <span className="block italic opacity-15 text-text-heading">2026</span>
+            <em
+              className="block mt-1 md:mt-2 font-display italic font-light
+                         text-[44px] md:text-8xl lg:text-[120px] leading-[0.7]
+                         text-text-heading opacity-[0.15]"
+            >
+              2026
+            </em>
           </h1>
 
           {/* Lead */}
           <p
-            className="text-lg md:text-xl lg:text-2xl text-text-body font-light leading-relaxed
-                       max-w-3xl mb-12 md:mb-16"
+            className="text-lg lg:text-xl text-text-body font-light leading-relaxed
+                       max-w-3xl mb-10 md:mb-12"
           >
             <span className="text-text-heading font-normal">
               Đưa nhà máy đến tận tay các nhà phát triển chiến lược tại Texas.
@@ -92,22 +97,21 @@ export function Hero() {
             Trực tiếp từ nhà máy đến tay người ra quyết định.
           </p>
 
-          {/* Stat row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-            {STATS.map(({ icon: Icon, num, text }) => (
+          {/* Stat row — compact pills, không icon */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
+            {STATS.map(({ num, text }) => (
               <div
                 key={num + text}
-                className="bg-bg-card/70 backdrop-blur-md rounded-2xl border border-white/10
-                           hover:border-brand-gold/50 transition-colors p-5 lg:p-6
-                           flex flex-col gap-4"
+                className="bg-bg-card/70 backdrop-blur-md rounded-xl border border-white/10
+                           hover:border-brand-gold/50 transition-colors px-4 py-3 md:px-5 md:py-4
+                           flex items-baseline gap-3"
               >
-                <Icon size={22} className="text-brand-gold shrink-0" strokeWidth={1.5} />
-                <div className="text-4xl lg:text-5xl font-display text-text-heading leading-none">
+                <span className="text-2xl md:text-3xl font-display text-text-heading leading-none whitespace-nowrap shrink-0">
                   {num}
-                </div>
-                <p className="text-sm lg:text-base font-sans font-light text-text-body leading-snug">
+                </span>
+                <span className="text-xs md:text-sm font-light text-text-body leading-snug">
                   {text}
-                </p>
+                </span>
               </div>
             ))}
           </div>

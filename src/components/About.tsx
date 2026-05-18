@@ -54,16 +54,16 @@ export function About() {
         {SERVICES.map(({ icon: Icon, title, body }) => (
           <div
             key={title}
-            className="bg-bg-card rounded-3xl p-7 lg:p-8 border border-border-subtle
+            className="bg-bg-card rounded-2xl p-6 lg:p-8 border border-border-subtle
                        hover:border-brand-gold/40 transition-colors flex flex-col gap-4"
           >
             <div
-              className="w-12 h-12 rounded-2xl bg-brand-gold/10 border border-brand-gold/30
-                            flex items-center justify-center"
+              className="w-11 h-11 rounded-xl bg-brand-gold/10 border border-brand-gold/30
+                            flex items-center justify-center shrink-0"
             >
-              <Icon size={22} className="text-brand-gold" strokeWidth={1.5} />
+              <Icon size={20} className="text-brand-gold" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg lg:text-xl font-serif text-text-heading leading-snug">
+            <h3 className="text-lg lg:text-xl font-bold font-sans text-text-heading leading-snug">
               {title}
             </h3>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
@@ -74,17 +74,14 @@ export function About() {
       </div>
 
       <div
-        className="relative rounded-3xl border border-border-subtle p-10 lg:p-16
+        className="relative rounded-2xl border border-border-subtle p-10 lg:p-16
                    bg-[radial-gradient(ellipse_at_center,rgba(195,163,116,0.12),transparent_70%)]
                    text-center flex flex-col items-center gap-8"
       >
         <blockquote className="max-w-3xl">
-          <p className="text-2xl md:text-3xl lg:text-4xl font-serif italic text-text-heading leading-snug">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-serif italic font-light text-text-heading leading-snug">
             Made in Vietnam — Đi khắp năm châu.
           </p>
-          <footer className="mt-5 text-xs uppercase tracking-[0.2em] text-text-muted">
-            — Tú Mạc, Đồng sáng lập 100B
-          </footer>
         </blockquote>
 
         <a

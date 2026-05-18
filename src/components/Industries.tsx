@@ -15,7 +15,7 @@ export function Industries() {
   return (
     <Section id="nganh-uu-tien" eyebrow="Ngành ưu tiên">
       <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-14
+        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"
       >
         Vật liệu xây dựng và{' '}
@@ -30,7 +30,7 @@ export function Industries() {
                        hover:border-brand-gold/40 hover:bg-bg-card-hover transition-colors
                        flex items-start gap-4"
           >
-            <span className="text-sm font-display text-gradient-gold leading-none font-medium pt-1 shrink-0">
+            <span className="text-2xl font-display text-gradient-gold leading-none font-medium shrink-0 pt-0.5">
               {String(i + 1).padStart(2, '0')}
             </span>
             <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">{ind}</p>
