@@ -27,10 +27,10 @@ export function Hero() {
       <header
         id="top"
         className="relative min-h-[100svh] md:min-h-screen flex items-center
-                   pt-24 pb-10 md:pt-32 md:pb-20 overflow-hidden bg-black"
+                   pt-28 pb-10 md:pt-32 md:pb-20 overflow-hidden bg-black"
       >
-        {/* Full Screen Background Video — Wistia web component */}
-        <div className="absolute top-20 md:top-0 inset-x-0 bottom-0 z-0 overflow-hidden bg-black">
+        {/* Full-bleed background video — chạy hết viewport, sau nav */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                        pointer-events-none
@@ -56,8 +56,9 @@ export function Hero() {
               plays-inline="true"
             />
           </div>
+          {/* Gradient overlay — tối nhẹ trên (cho nav), tối đậm dưới (cho stat cards) */}
           <div
-            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40
+            className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/85
                        pointer-events-none"
           />
         </div>
