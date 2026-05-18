@@ -97,14 +97,14 @@ export function Hero() {
             Trực tiếp từ nhà máy đến tay người ra quyết định.
           </p>
 
-          {/* Stat row — compact pills, không icon */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
+          {/* Stat row — compact pills, căn giữa cả ngang lẫn dọc */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 auto-rows-fr">
             {STATS.map(({ num, text }) => (
               <div
                 key={num + text}
                 className="bg-bg-card/70 backdrop-blur-md rounded-xl border border-white/10
-                           hover:border-brand-gold/50 transition-colors px-4 py-3 md:px-5 md:py-4
-                           flex items-baseline gap-3"
+                           hover:border-brand-gold/50 transition-colors px-5 py-4 md:px-6 md:py-5
+                           flex items-center justify-center text-center gap-3"
               >
                 <span className="text-2xl md:text-3xl font-display text-text-heading leading-none whitespace-nowrap shrink-0">
                   {num}

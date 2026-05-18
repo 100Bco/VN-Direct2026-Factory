@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-14">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img
                 src="/logos/100B%20-%20TACH%20NEN%20-1.png"
                 alt="100B Beyond Borders"
@@ -25,9 +25,6 @@ export function Footer() {
                 width={144}
                 height={48}
               />
-              <span className="text-[10px] uppercase tracking-[0.25em] text-text-muted">
-                Beyond Borders
-              </span>
             </div>
             <p className="text-sm font-serif italic font-light text-text-body">
               Made in Vietnam — Đi khắp năm châu.
