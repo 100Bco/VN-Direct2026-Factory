@@ -1,6 +1,6 @@
 'use client';
 
-import Script from 'next/script';
+import { useState } from 'react';
 import { Calendar, Users, LineChart, Building, ArrowRight } from 'lucide-react';
 
 const MAILTO =
@@ -14,54 +14,39 @@ const STATS = [
 ];
 
 export function Hero() {
-  return (
-    <>
-      <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" async />
-      <Script
-        src="https://fast.wistia.com/embed/9hbymhvynw.js"
-        strategy="afterInteractive"
-        type="module"
-        async
-      />
+  const [videoReady, setVideoReady] = useState(false);
 
-      <header
-        id="top"
-        className="relative min-h-[100svh] md:min-h-screen flex items-center
-                   pt-28 pb-10 md:pt-32 md:pb-20 overflow-hidden bg-black"
-      >
-        {/* Full-bleed background video — chạy hết viewport, sau nav */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-          <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                       pointer-events-none
-                       w-[max(356vh,100vw)] h-[max(200vh,56.25vw)]
-                       md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)]"
-          >
-            <wistia-player
-              media-id="9hbymhvynw"
-              aspect="1.7777777777777777"
-              autoplay="true"
-              muted="true"
-              silent-auto-play="allow"
-              end-video-behavior="loop"
-              controls-visible-on-load="false"
-              play-button="false"
-              small-play-button="false"
-              playbar="false"
-              fullscreen-button="false"
-              settings-control="false"
-              volume-control="false"
-              playback-rate-control="false"
-              captions="false"
-              plays-inline="true"
-            />
-          </div>
-          {/* Gradient overlay — tối nhẹ trên (cho nav), tối đậm dưới (cho stat cards) */}
-          <div
-            className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/85
-                       pointer-events-none"
+  return (
+    <header
+      id="top"
+      className="relative min-h-[100svh] md:min-h-screen flex items-center
+                 pt-28 pb-10 md:pt-32 md:pb-20 overflow-hidden bg-black"
+    >
+      {/* Full-bleed background video — iframe pattern từ site mẹ (uncropped) */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+        <div
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                      pointer-events-none transition-opacity duration-700
+                      w-[max(356vh,100vw)] h-[max(200vh,56.25vw)]
+                      md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)]
+                      ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <iframe
+            src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=true&silentAutoPlay=allow&playsinline=true&playsInline=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&wmode=transparent"
+            title="Vietnam Direct 2026 hero reel"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            onLoad={() => setVideoReady(true)}
+            className="absolute inset-0 w-full h-full"
+            frameBorder={0}
           />
         </div>
+        {/* Gradient overlay — bottom tối cho stat cards, top gần như trong suốt */}
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/85
+                     pointer-events-none"
+        />
+      </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           {/* Eyebrow pills */}
@@ -144,7 +129,6 @@ export function Hero() {
             </a>
           </div>
         </div>
-      </header>
-    </>
+    </header>
   );
 }
