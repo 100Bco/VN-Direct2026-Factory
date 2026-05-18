@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Section } from './Section';
 
 interface Buyer {
@@ -7,12 +11,14 @@ interface Buyer {
   bullets: { heading: string; items: string[] }[];
   interest: string;
   initials: string;
+  subtitle: string;
 }
 
 const BUYERS: Buyer[] = [
   {
     name: 'Lezlie Tram Le',
-    role: 'Nhà sáng lập kiêm CEO, LT Commercial Group | Đại diện chính thức của 100B tại Texas',
+    role: 'Nhà sáng lập kiêm CEO, LT Commercial Group',
+    subtitle: 'Đại diện chính thức của 100B tại Texas',
     intro:
       'Hơn 22 năm kinh nghiệm trong lĩnh vực bất động sản thương mại Texas. Trực tiếp dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang.',
     bullets: [
@@ -31,7 +37,6 @@ const BUYERS: Buyer[] = [
           'Chủ tịch Hội đồng Phát triển Kinh tế Manor',
           'Giải thưởng Austin Under 40 — hạng mục Bất động sản (2021)',
           'Trang bìa tạp chí Austin Woman (tháng 5 năm 2023)',
-          'Giải thưởng Doanh nghiệp Nổi bật — Phòng Thương mại Châu Á (2019)',
         ],
       },
     ],
@@ -41,7 +46,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Michael Hough',
-    role: 'Tổng thầu xây dựng — Austin, Texas',
+    role: 'Tổng thầu xây dựng',
+    subtitle: 'Austin, Texas',
     intro:
       '30 năm kinh nghiệm trong ngành xây dựng. Khởi đầu từ cải tạo nhà ở, mở rộng sang xây mới nhà ở đặt riêng, hiện tập trung vào khu căn hộ thuế tín dụng và các dự án do Bộ Gia cư và Phát triển Đô thị Hoa Kỳ tài trợ.',
     bullets: [
@@ -60,7 +66,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Kameron Schram',
-    role: 'Chủ sở hữu kiêm Nhà sáng lập, Cleo Builders — Đơn vị xây dựng nhà ở cao cấp đặt riêng tại Texas',
+    role: 'Chủ sở hữu kiêm Nhà sáng lập, Cleo Builders',
+    subtitle: 'Đơn vị xây dựng nhà ở cao cấp đặt riêng tại Texas',
     intro:
       'Chuyên về nhà ở cao cấp theo đặt hàng. Tập trung vào tay nghề thủ công, tinh tế trong thiết kế và dấu ấn riêng biệt cho từng khách hàng.',
     bullets: [
@@ -81,7 +88,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Ricardo Rubiano',
-    role: 'Nhà phát triển bất động sản — Thung lũng Rio Grande, Texas | Năm thế hệ làm bất động sản',
+    role: 'Nhà phát triển bất động sản',
+    subtitle: 'Thung lũng Rio Grande, Texas | Năm thế hệ làm bất động sản',
     intro:
       'Hơn 23 năm kinh nghiệm. Cựu sinh viên Học viện Hải quân Hoa Kỳ và Đại học Texas A&M. Cựu sĩ quan Thủy quân Lục chiến Hoa Kỳ. Sinh ra và lớn lên tại vùng biên giới Mỹ — Mexico.',
     bullets: [
@@ -102,7 +110,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Mick Hawton',
-    role: 'Đối tác điều hành, Headwater | Nhà phát triển bất động sản — Bắc Mỹ',
+    role: 'Đối tác điều hành, Headwater',
+    subtitle: 'Nhà phát triển bất động sản — Bắc Mỹ',
     intro:
       'Hơn 30 năm kinh nghiệm trong phát triển kinh doanh và vận hành. Nền tảng chuyên môn trải rộng qua bất động sản thương mại, phát triển lãnh đạo, thị trường vốn, bảo hiểm sức khỏe doanh nghiệp và công nghệ.',
     bullets: [
@@ -122,68 +131,14 @@ const BUYERS: Buyer[] = [
   },
 ];
 
-function BuyerCard({ buyer, index }: { buyer: Buyer; index: number }) {
-  return (
-    <div
-      className="relative bg-bg-card rounded-3xl p-8 lg:p-10 border border-border-subtle
-                 hover:border-brand-gold/30 transition-colors flex flex-col gap-6"
-    >
-      <div className="absolute top-6 right-8 text-[36px] font-display text-gradient-gold leading-none font-medium opacity-70">
-        {String(index + 1).padStart(2, '0')}
-      </div>
-
-      <div className="flex items-start gap-4 pr-12">
-        <div
-          className="w-16 h-16 rounded-full border border-brand-gold/40
-                     bg-gradient-to-br from-bg-card-hover to-bg-alt
-                     flex items-center justify-center shrink-0
-                     font-display text-brand-gold text-xl"
-        >
-          {buyer.initials}
-        </div>
-        <div>
-          <h3 className="text-xl lg:text-2xl font-serif text-text-heading leading-snug mb-1">
-            {buyer.name}
-          </h3>
-          <p className="text-[11px] text-brand-gold uppercase tracking-[0.15em] leading-snug">
-            {buyer.role}
-          </p>
-        </div>
-      </div>
-
-      <p className="text-base text-text-body font-light leading-relaxed">{buyer.intro}</p>
-
-      <div className="flex flex-col gap-5">
-        {buyer.bullets.map((group) => (
-          <div key={group.heading}>
-            <p className="text-[11px] uppercase tracking-[0.18em] text-text-muted font-semibold mb-3">
-              {group.heading}
-            </p>
-            <ul className="space-y-2.5">
-              {group.items.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 text-sm text-text-body leading-relaxed"
-                >
-                  <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-auto pt-5 border-t border-border-subtle">
-        <p className="text-xs lg:text-sm text-text-muted italic leading-relaxed">
-          {buyer.interest}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export function Buyers() {
+  const [index, setIndex] = useState(0);
+  const buyer = BUYERS[index];
+
+  const goTo = (i: number) => setIndex(((i % BUYERS.length) + BUYERS.length) % BUYERS.length);
+  const prev = () => goTo(index - 1);
+  const next = () => goTo(index + 1);
+
   return (
     <Section
       id="doan-khach-mua"
@@ -204,17 +159,132 @@ export function Buyers() {
           tổng danh mục dự án đang triển khai vượt 500 triệu đô la Mỹ
         </span>{' '}
         — đang xây dựng, đang thiết kế, đang phát triển tại Hoa Kỳ và Bắc Mỹ ngay tại thời điểm này.
-        Mỗi người mang đến một hồ sơ dự án khác biệt: từ nhà ở cao cấp đặt riêng, khu căn hộ 320
-        căn, mặt bằng thương mại hạng A, đến phát triển bất động sản thương mại và tư vấn thị
-        trường vốn.
+        Mỗi người mang đến một hồ sơ dự án khác biệt.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {BUYERS.map((b, i) => (
-          <BuyerCard key={b.name} buyer={b} index={i} />
-        ))}
+      {/* Carousel */}
+      <div
+        className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Đoàn khách mua chiến lược"
+      >
+        {/* Text panel */}
+        <div className="lg:col-span-7 order-2 lg:order-1 min-h-[520px] flex flex-col">
+          {/* Slide counter */}
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
+              {String(index + 1).padStart(2, '0')}
+            </span>
+            <span className="text-xs uppercase tracking-[0.2em] text-text-muted">
+              / {String(BUYERS.length).padStart(2, '0')}
+            </span>
+          </div>
+
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-text-heading leading-snug mb-3">
+            {buyer.name}
+          </h3>
+          <p className="text-sm lg:text-base text-brand-gold uppercase tracking-[0.15em] leading-snug mb-1">
+            {buyer.role}
+          </p>
+          <p className="text-xs lg:text-sm text-text-muted italic mb-6">{buyer.subtitle}</p>
+
+          <p className="text-base lg:text-lg text-text-body font-light leading-relaxed mb-6">
+            {buyer.intro}
+          </p>
+
+          <div className="flex flex-col gap-5 mb-6">
+            {buyer.bullets.map((group) => (
+              <div key={group.heading}>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-text-muted font-semibold mb-3">
+                  {group.heading}
+                </p>
+                <ul className="space-y-2.5">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm lg:text-base text-text-body leading-relaxed"
+                    >
+                      <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-auto pt-5 border-t border-border-subtle">
+            <p className="text-sm text-text-muted italic leading-relaxed">{buyer.interest}</p>
+          </div>
+        </div>
+
+        {/* Photo panel */}
+        <div className="lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-28">
+          <div
+            className="relative aspect-square w-full max-w-md mx-auto lg:max-w-none
+                       rounded-3xl overflow-hidden
+                       bg-gradient-to-br from-bg-card-hover via-bg-alt to-bg-dark
+                       border border-border-subtle
+                       shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
+          >
+            {/* Initials avatar fallback — sẽ thay <img> khi có ảnh buyer */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-display text-[clamp(80px,18vw,180px)] text-gradient-gold leading-none opacity-80">
+                {buyer.initials}
+              </span>
+            </div>
+            {/* Soft gold glow */}
+            <div className="absolute -bottom-1/3 -right-1/3 w-2/3 h-2/3 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none" />
+            {/* Inner highlight ring */}
+            <div className="absolute inset-2 rounded-3xl border border-white/5 pointer-events-none" />
+          </div>
+        </div>
       </div>
 
+      {/* Carousel controls — arrows + dots */}
+      <div className="mt-12 flex items-center justify-center gap-6">
+        <button
+          type="button"
+          onClick={prev}
+          aria-label="Khách mua trước"
+          className="w-12 h-12 rounded-full border border-border-subtle text-text-heading
+                     hover:border-brand-gold hover:text-brand-gold transition-colors
+                     flex items-center justify-center"
+        >
+          <ChevronLeft size={20} />
+        </button>
+
+        <div className="flex items-center gap-2.5">
+          {BUYERS.map((b, i) => (
+            <button
+              key={b.name}
+              type="button"
+              onClick={() => goTo(i)}
+              aria-label={`Đến slide ${i + 1}: ${b.name}`}
+              aria-current={i === index ? 'true' : undefined}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === index
+                  ? 'w-10 bg-brand-gold'
+                  : 'w-1.5 bg-border-subtle hover:bg-brand-gold/40'
+              }`}
+            />
+          ))}
+        </div>
+
+        <button
+          type="button"
+          onClick={next}
+          aria-label="Khách mua tiếp theo"
+          className="w-12 h-12 rounded-full border border-border-subtle text-text-heading
+                     hover:border-brand-gold hover:text-brand-gold transition-colors
+                     flex items-center justify-center"
+        >
+          <ChevronRight size={20} />
+        </button>
+      </div>
+
+      {/* Pipeline footer tag */}
       <div className="mt-16 text-center max-w-4xl mx-auto">
         <p className="text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold leading-none mb-4">
           Tổng danh mục đang triển khai: hơn $500M
