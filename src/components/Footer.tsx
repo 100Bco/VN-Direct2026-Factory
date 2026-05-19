@@ -62,7 +62,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
-                  href="mailto:global@100b.co?subject=VN%20Direct%202026%20-%20%C4%90%C4%83ng%20k%C3%BD%20nh%C3%A0%20m%C3%A1y"
+                  href="mailto:global@100b.co?subject=Vietnam%20Direct%20-%20%C4%90%C4%83ng%20k%C3%BD%20nh%C3%A0%20m%C3%A1y"
                   className="group inline-flex items-center gap-3 text-sm text-text-body hover:text-brand-gold transition-colors"
                 >
                   <Mail size={14} className="text-brand-gold" />
@@ -88,7 +88,7 @@ export function Footer() {
                   className="group inline-flex items-center gap-3 text-sm text-text-body hover:text-brand-gold transition-colors"
                 >
                   <ExternalLink size={14} className="text-brand-gold" />
-                  VN Direct 2026
+                  Vietnam Direct
                 </a>
               </li>
             </ul>
@@ -98,7 +98,11 @@ export function Footer() {
         <div className="pt-8 border-t border-border-subtle flex flex-col md:flex-row gap-3 justify-between items-start md:items-center">
           <p className="text-sm font-serif italic font-light text-text-body">Trân trọng.</p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-text-body">
-            Build Better Series · VN Direct 2026
+            Build Better Series · Vietnam Direct
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-text-body">
+            Powered by{' '}
+            <span className="text-brand-gold font-semibold">100Bold</span>
           </p>
         </div>
       </div>

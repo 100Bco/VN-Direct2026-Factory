@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 ];
 
 const MAILTO =
-  'mailto:global@100b.co?subject=VN%20Direct%202026%20-%20%C4%90%C4%83ng%20k%C3%BD%20nh%C3%A0%20m%C3%A1y';
+  'mailto:global@100b.co?subject=Vietnam%20Direct%20-%20%C4%90%C4%83ng%20k%C3%BD%20nh%C3%A0%20m%C3%A1y';
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
