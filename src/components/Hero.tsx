@@ -1,5 +1,7 @@
 'use client';
 
+import Script from 'next/script';
+
 const STATS = [
   { num: '7', text: 'ngày thực địa tại Việt Nam' },
   { num: '5', text: 'nhà phát triển bất động sản hàng đầu từ Hoa Kỳ' },
@@ -14,7 +16,20 @@ export function Hero() {
       className="relative min-h-[100svh] md:min-h-screen flex items-center
                  pt-20 pb-4 md:pt-32 md:pb-20 overflow-hidden bg-black"
     >
-      {/* Background video container — full bleed mọi breakpoint, nav floating đè trên */}
+      {/* Wistia modern web component scripts */}
+      <Script
+        src="https://fast.wistia.com/player.js"
+        strategy="afterInteractive"
+        async
+      />
+      <Script
+        src="https://fast.wistia.com/embed/9hbymhvynw.js"
+        strategy="afterInteractive"
+        type="module"
+        async
+      />
+
+      {/* Background video container — full bleed mọi breakpoint */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
@@ -22,19 +37,31 @@ export function Hero() {
                      w-[max(356vh,100vw)] h-[max(200vh,56.25vw)]
                      md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)]"
         >
-          <iframe
-            src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=1&silentAutoPlay=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&muteButton=false&playbackRateControl=false&captions=false&chromeless=true&playsinline=1&playsInline=1&preload=auto&wmode=transparent"
-            title="Vietnam Direct 2026 hero reel"
-            allow="autoplay; fullscreen; encrypted-media; picture-in-picture; accelerometer"
-            allowFullScreen
-            loading="eager"
-            className="absolute inset-0 w-full h-full"
-            frameBorder={0}
+          <wistia-player
+            media-id="9hbymhvynw"
+            aspect="1.7777777777777777"
+            autoplay="true"
+            muted="true"
+            silent-auto-play="true"
+            end-video-behavior="loop"
+            controls-visible-on-load="false"
+            play-button="false"
+            small-play-button="false"
+            playbar="false"
+            fullscreen-button="false"
+            settings-control="false"
+            volume-control="false"
+            playback-rate-control="false"
+            captions="false"
+            chromeless="true"
+            plays-inline="true"
+            seo="false"
           />
         </div>
-        {/* Gradient overlay — đậm dưới (stat cards), trong suốt trên (nav floating đẹp) */}
+
+        {/* Gradient overlay — đậm dưới (stat cards), trong suốt trên */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none z-[1]"
           style={{
             background:
               'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%)',
