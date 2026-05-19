@@ -18,14 +18,14 @@ export function About() {
 
         <p className="text-base lg:text-lg text-text-heading font-light leading-relaxed mb-5">
           Chúng tôi kết nối trực tiếp nhà sản xuất Việt với nhà mua hàng, nhà phân phối và nhà
-          phát triển bất động sản tại Hoa Kỳ và châu Âu — bỏ qua các lớp trung gian, mở thị
+          phát triển bất động sản tại Hoa Kỳ và châu Âu - bỏ qua các lớp trung gian, mở thị
           trường thực chất, xây dựng quan hệ hợp tác dài hạn.
         </p>
 
         <p className="text-base lg:text-lg text-text-heading font-light leading-relaxed">
           <em className="font-serif italic text-brand-gold">Build Better Series</em> là chuỗi
           chương trình thường niên của 100B đưa đoàn khách mua chiến lược quốc tế đến tận xưởng
-          sản xuất Việt Nam. Vietnam Direct là chuyến đầu tiên trong loạt — tập trung vào ngành
+          sản xuất Việt Nam. Vietnam Direct 2026 là chuyến đầu tiên trong loạt - tập trung vào ngành
           vật liệu xây dựng và nội thất cao cấp.
         </p>
       </div>
