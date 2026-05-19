@@ -1,4 +1,4 @@
-import { Building2, Users, ShieldCheck, ArrowRight, Handshake, Megaphone } from 'lucide-react';
+import { Building2, Users, ShieldCheck, ArrowRight, Handshake } from 'lucide-react';
 import { Section } from './Section';
 
 const BENEFITS = [
@@ -26,11 +26,6 @@ const BENEFITS = [
     icon: Handshake,
     title: 'Hợp tác dài hạn 3 – 5 năm',
     body: 'Đối tác bền vững, không phải giao dịch đơn lẻ.',
-  },
-  {
-    icon: Megaphone,
-    title: 'Hiện diện truyền thông',
-    body: '100B · LT Commercial · tài liệu điển hình Build Better Series.',
   },
 ];
 
