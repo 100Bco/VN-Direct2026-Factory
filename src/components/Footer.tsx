@@ -5,6 +5,8 @@ const PROGRAM_LINKS = [
   { label: 'Texas', href: '#co-hoi' },
   { label: 'Đoàn khách mua', href: '#doan-khach-mua' },
   { label: 'Quy trình', href: '#quy-trinh' },
+  { label: 'Quyền lợi', href: '#quyen-loi' },
+  { label: 'Tiêu chí', href: '#tieu-chi' },
   { label: 'Về 100B', href: '#ve-100b' },
 ];
 

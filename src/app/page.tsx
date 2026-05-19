@@ -4,6 +4,8 @@ import { Problem } from '@/components/Problem';
 import { Opportunity } from '@/components/Opportunity';
 import { Buyers } from '@/components/Buyers';
 import { Process } from '@/components/Process';
+import { Benefits } from '@/components/Benefits';
+import { Criteria } from '@/components/Criteria';
 import { About } from '@/components/About';
 import { Footer } from '@/components/Footer';
 
@@ -16,6 +18,8 @@ export default function Page() {
       <Opportunity />
       <Buyers />
       <Process />
+      <Benefits />
+      <Criteria />
       <About />
       <Footer />
     </main>
