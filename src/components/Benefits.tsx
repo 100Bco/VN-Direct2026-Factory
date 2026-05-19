@@ -4,18 +4,18 @@ import { Section } from './Section';
 const BENEFITS = [
   {
     icon: Building2,
-    title: 'Visit trực tiếp tại xưởng',
-    body: 'Dây chuyền · QC · đội kỹ thuật.',
+    title: 'Tham quan trực tiếp tại xưởng',
+    body: 'Dây chuyền · kiểm soát chất lượng · đội kỹ thuật.',
   },
   {
     icon: Users,
-    title: 'Đối thoại 1-on-1 với buyers',
-    body: 'Spec · sản lượng · tiến độ.',
+    title: 'Đối thoại trực tiếp với khách mua',
+    body: 'Quy cách kỹ thuật · sản lượng · tiến độ.',
   },
   {
     icon: ShieldCheck,
     title: 'Khách hàng đã thẩm định',
-    body: 'Pipeline active · ngân sách sẵn · quyết định trong 6–18 tháng.',
+    body: 'Danh mục đang triển khai · ngân sách đã có · quyết định trong 6–18 tháng.',
   },
   {
     icon: ArrowRight,
@@ -25,12 +25,12 @@ const BENEFITS = [
   {
     icon: Handshake,
     title: 'Hợp tác dài hạn 3 – 5 năm',
-    body: 'Đối tác bền vững, không phải deal đơn lẻ.',
+    body: 'Đối tác bền vững, không phải giao dịch đơn lẻ.',
   },
   {
     icon: Megaphone,
     title: 'Hiện diện truyền thông',
-    body: '100B · LT Commercial · case study Build Better Series.',
+    body: '100B · LT Commercial · tài liệu điển hình Build Better Series.',
   },
 ];
 
