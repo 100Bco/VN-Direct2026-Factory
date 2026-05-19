@@ -3,7 +3,7 @@ import { Section } from './Section';
 
 export function About() {
   return (
-    <Section id="ve-100b" eyebrow="Về 100B" className="bg-bg-alt border-t border-border-subtle">
+    <Section id="ve-100b" className="bg-bg-alt border-t border-border-subtle">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
         <div className="lg:col-span-8">
           <h2

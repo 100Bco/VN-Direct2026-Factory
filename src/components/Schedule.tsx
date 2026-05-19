@@ -27,7 +27,7 @@ const TRIPS: Trip[] = [
 
 export function Schedule() {
   return (
-    <Section id="lich-trinh" eyebrow="Lịch trình · 2 đợt">
+    <Section id="lich-trinh">
       <h2
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"

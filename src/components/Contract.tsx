@@ -33,7 +33,7 @@ const ACTIONS = [
 
 export function Contract() {
   return (
-    <Section id="hop-tac" eyebrow="Hợp tác · Bước tiếp theo">
+    <Section id="hop-tac">
       <h2
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"

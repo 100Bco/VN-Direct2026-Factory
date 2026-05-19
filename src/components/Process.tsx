@@ -167,7 +167,7 @@ function PhaseBlock({ phase, isLast }: { phase: Phase; isLast: boolean }) {
 
 export function Process() {
   return (
-    <Section id="quy-trinh" eyebrow="Quy trình hợp tác">
+    <Section id="quy-trinh">
       <h2
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"

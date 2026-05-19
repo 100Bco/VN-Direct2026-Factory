@@ -12,7 +12,7 @@ const TEXAS_STATS = [
 
 export function Opportunity() {
   return (
-    <Section id="co-hoi" eyebrow="Cơ hội · Texas">
+    <Section id="co-hoi">
       <h2
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"

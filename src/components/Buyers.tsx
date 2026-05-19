@@ -147,7 +147,6 @@ export function Buyers() {
   return (
     <Section
       id="doan-khach-mua"
-      eyebrow="Đoàn khách mua chiến lược"
       className="bg-bg-alt border-y border-border-subtle"
     >
       <h2
