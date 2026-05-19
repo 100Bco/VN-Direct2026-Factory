@@ -3,7 +3,7 @@
 import Script from 'next/script';
 
 const STATS = [
-  { num: '7', text: 'ngày thực địa tại Việt Nam' },
+  { num: '7', text: 'ngày tham quan thực tế tại Việt Nam' },
   { num: '5', text: 'nhà phát triển bất động sản hàng đầu từ Hoa Kỳ' },
   { num: '$500M+', text: 'tổng danh mục dự án đang triển khai' },
   { num: '10–13', text: 'nhà máy được tuyển chọn tham gia' },
