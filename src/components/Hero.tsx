@@ -16,10 +16,16 @@ export function Hero() {
       className="relative min-h-[100svh] md:min-h-screen flex items-center
                  pt-20 pb-4 md:pt-32 md:pb-20 overflow-hidden bg-black"
     >
-      {/* Wistia E-v1 player.js — respects silentAutoPlay=true (iframe URL doesn't) */}
+      {/* Wistia modern web component scripts */}
       <Script
-        src="https://fast.wistia.com/assets/external/E-v1.js"
+        src="https://fast.wistia.com/player.js"
         strategy="afterInteractive"
+        async
+      />
+      <Script
+        src="https://fast.wistia.com/embed/9hbymhvynw.js"
+        strategy="afterInteractive"
+        type="module"
         async
       />
 
@@ -31,10 +37,25 @@ export function Hero() {
                      w-[max(356vh,100vw)] h-[max(200vh,56.25vw)]
                      md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)]"
         >
-          {/* JS embed — options appended as class suffixes */}
-          <div
-            className="wistia_embed wistia_async_9hbymhvynw videoFoam=true autoPlay=true muted=true silentAutoPlay=true endVideoBehavior=loop chromeless=true playsinline=true seo=false playerColor=000000 controlsVisibleOnLoad=false playButton=false smallPlayButton=false playbar=false fullscreenButton=false settingsControl=false volumeControl=false playbackRateControl=false captions=false"
-            style={{ width: '100%', height: '100%', position: 'relative' }}
+          <wistia-player
+            media-id="9hbymhvynw"
+            aspect="1.7777777777777777"
+            autoplay="true"
+            muted="true"
+            silent-auto-play="true"
+            end-video-behavior="loop"
+            controls-visible-on-load="false"
+            play-button="false"
+            small-play-button="false"
+            playbar="false"
+            fullscreen-button="false"
+            settings-control="false"
+            volume-control="false"
+            playback-rate-control="false"
+            captions="false"
+            chromeless="true"
+            plays-inline="true"
+            seo="false"
           />
         </div>
 
