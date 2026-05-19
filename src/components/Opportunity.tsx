@@ -38,7 +38,8 @@ export function Opportunity() {
         >
           Cánh cổng vào thị trường Mỹ{' '}
           <em className="font-serif italic text-gradient-gold">
-            trị giá 2,6 nghìn tỷ đô
+            trị giá{' '}
+            <span className="font-display not-italic">2,6</span> nghìn tỷ đô
           </em>
           .
         </h2>
