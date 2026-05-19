@@ -5,12 +5,12 @@ import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
   { label: 'Vấn đề', anchor: '#van-de' },
-  { label: 'Cơ hội', anchor: '#co-hoi' },
-  { label: 'Đoàn khách mua', anchor: '#doan-khach-mua' },
-  { label: 'Chương trình', anchor: '#chuong-trinh' },
-  { label: 'Lợi ích', anchor: '#loi-ich' },
-  { label: 'Ngành ưu tiên', anchor: '#nganh-uu-tien' },
+  { label: 'Texas', anchor: '#co-hoi' },
+  { label: 'Đoàn khách', anchor: '#doan-khach-mua' },
+  { label: 'Lịch trình', anchor: '#lich-trinh' },
+  { label: 'Quy trình', anchor: '#quy-trinh' },
   { label: 'Về 100B', anchor: '#ve-100b' },
+  { label: 'Hợp tác', anchor: '#hop-tac' },
 ];
 
 const MAILTO =

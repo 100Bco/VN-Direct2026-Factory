@@ -1,22 +1,74 @@
+import { ArrowRight } from 'lucide-react';
 import { Section } from './Section';
 
-const PAINS = [
-  {
-    n: '01',
-    title: 'Lợi nhuận bị nén 30–50%',
-    body: 'Trung gian ăn vào từng lớp. Nhà máy chịu áp lực hạ giá, trong khi khách hàng cuối vẫn phải trả mức cao.',
-  },
-  {
-    n: '02',
-    title: 'Thương hiệu không vượt được biên giới',
-    body: 'Sản phẩm "Made in Vietnam" bị dán nhãn lại hoặc khuất sau thương hiệu nhập khẩu. Năng lực sản xuất thực sự không được ghi nhận đúng mức.',
-  },
-  {
-    n: '03',
-    title: 'Quan hệ một chiều, thiếu bền vững',
-    body: 'Phần lớn đơn hàng xuất khẩu hiện tại chỉ là giao dịch đơn lẻ. Không có luồng dự án dài hạn để tối ưu sản xuất, đầu tư nghiên cứu phát triển hay lập kế hoạch năng lực.',
-  },
+const TRADITIONAL_STEPS = [
+  'Nhà máy',
+  'Nhà phân phối',
+  'Nhà bán sỉ',
+  'Nhà bán lẻ',
+  'Người mua',
 ];
+
+const DIRECT_STEPS = ['Nhà máy', 'Người mua'];
+
+function FlowDiagram({
+  label,
+  steps,
+  tone,
+}: {
+  label: string;
+  steps: string[];
+  tone: 'pain' | 'gain';
+}) {
+  const isGain = tone === 'gain';
+  return (
+    <div
+      className={`relative rounded-2xl p-6 lg:p-8 border ${
+        isGain
+          ? 'bg-bg-card border-brand-gold/40'
+          : 'bg-bg-card border-border-subtle opacity-80'
+      }`}
+    >
+      <div className="flex items-center gap-3 mb-6">
+        <span
+          className={`text-[11px] uppercase tracking-[0.2em] font-semibold ${
+            isGain ? 'text-brand-gold' : 'text-text-muted'
+          }`}
+        >
+          {label}
+        </span>
+        {!isGain && (
+          <span className="text-[10px] uppercase tracking-[0.2em] text-text-muted/70 font-medium">
+            — biên lợi nhuận bị nén
+          </span>
+        )}
+      </div>
+      <div className="flex flex-wrap items-center gap-2 md:gap-3">
+        {steps.map((step, i) => (
+          <div key={step} className="flex items-center gap-2 md:gap-3">
+            <div
+              className={`px-3 py-2 md:px-4 md:py-3 rounded-lg text-xs md:text-sm font-medium
+                          whitespace-nowrap ${
+                            isGain && (i === 0 || i === steps.length - 1)
+                              ? 'bg-brand-gold/10 border border-brand-gold/40 text-brand-gold'
+                              : 'bg-bg-alt border border-border-subtle text-text-body'
+                          }`}
+            >
+              {step}
+            </div>
+            {i < steps.length - 1 && (
+              <ArrowRight
+                size={16}
+                strokeWidth={1.5}
+                className={isGain ? 'text-brand-gold' : 'text-text-muted'}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function Problem() {
   return (
@@ -25,43 +77,20 @@ export function Problem() {
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                    max-w-4xl"
       >
-        Sản phẩm chất lượng — nhưng đang{' '}
+        Nhà máy Việt đang{' '}
         <em className="font-serif italic text-gradient-gold">bán dưới giá trị thực</em>.
       </h2>
 
-      <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-14">
-        Các nhà máy Việt Nam đang sản xuất vật liệu xây dựng và nội thất đạt chuẩn quốc tế. Nhưng
-        khi xuất khẩu, lợi nhuận bị bào mòn qua ba đến bốn lớp trung gian — từ nhà phân phối, nhà
-        bán sỉ, nhà bán lẻ, đến nhà thầu — trước khi đến tay người mua cuối cùng. Thương hiệu nhà
-        máy không bao giờ chạm được đến người ra quyết định: các nhà phát triển bất động sản, tổng
-        thầu, kiến trúc sư.
+      <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-3xl mb-12">
+        Trung Quốc đã làm chủ cuộc chơi D2C + logistics. Mô hình phân phối truyền thống đang bị bóp
+        chết — và biên lợi nhuận của nhà máy đi cùng với nó.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-        {PAINS.map((p) => (
-          <div
-            key={p.n}
-            className="relative bg-bg-card rounded-2xl p-7 lg:p-8 border border-border-subtle
-                       hover:border-brand-gold/40 hover:bg-bg-card-hover transition-colors
-                       flex flex-col gap-4"
-          >
-            <div className="text-[40px] font-display text-gradient-gold leading-none font-medium">
-              {p.n}
-            </div>
-            <h3 className="text-lg lg:text-xl font-bold font-sans text-text-heading leading-snug">
-              {p.title}
-            </h3>
-            <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
-              {p.body}
-            </p>
-          </div>
-        ))}
+      {/* Visual: D2C vs Traditional Retail */}
+      <div className="flex flex-col gap-4 lg:gap-6">
+        <FlowDiagram label="Truyền thống" steps={TRADITIONAL_STEPS} tone="pain" />
+        <FlowDiagram label="D2C — Vietnam Direct" steps={DIRECT_STEPS} tone="gain" />
       </div>
-
-      <p className="mt-12 text-lg lg:text-xl font-serif italic text-text-heading font-light leading-relaxed max-w-3xl">
-        Chúng tôi giải quyết bằng cách loại bỏ toàn bộ các lớp trung gian — đưa nhà mua hàng và nhà
-        máy ngồi cùng một bàn, ngay tại xưởng sản xuất.
-      </p>
     </Section>
   );
 }

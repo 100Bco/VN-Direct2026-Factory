@@ -3,10 +3,10 @@ import { Hero } from '@/components/Hero';
 import { Problem } from '@/components/Problem';
 import { Opportunity } from '@/components/Opportunity';
 import { Buyers } from '@/components/Buyers';
-import { Program } from '@/components/Program';
-import { Benefits } from '@/components/Benefits';
-import { Industries } from '@/components/Industries';
+import { Schedule } from '@/components/Schedule';
+import { Process } from '@/components/Process';
 import { About } from '@/components/About';
+import { Contract } from '@/components/Contract';
 import { Footer } from '@/components/Footer';
 
 export default function Page() {
@@ -17,10 +17,10 @@ export default function Page() {
       <Problem />
       <Opportunity />
       <Buyers />
-      <Program />
-      <Benefits />
-      <Industries />
+      <Schedule />
+      <Process />
       <About />
+      <Contract />
       <Footer />
     </main>
   );
