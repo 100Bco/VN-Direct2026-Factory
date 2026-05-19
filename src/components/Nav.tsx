@@ -7,8 +7,9 @@ const NAV_ITEMS = [
   { label: 'Vấn đề', anchor: '#van-de' },
   { label: 'Texas', anchor: '#co-hoi' },
   { label: 'Đoàn khách', anchor: '#doan-khach-mua' },
-  { label: 'Lịch trình', anchor: '#lich-trinh' },
   { label: 'Quy trình', anchor: '#quy-trinh' },
+  { label: 'Quyền lợi', anchor: '#quyen-loi' },
+  { label: 'Tiêu chí', anchor: '#tieu-chi' },
   { label: 'Về 100B', anchor: '#ve-100b' },
 ];
 

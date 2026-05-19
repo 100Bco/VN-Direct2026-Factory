@@ -105,7 +105,11 @@ export function Process() {
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"
       >
-        Lộ trình <em className="font-serif italic text-gradient-gold">hợp tác cùng 100B</em>.
+        Lộ trình{' '}
+        <em className="font-serif italic text-gradient-gold">
+          từ xưởng đến Container đầu tiên
+        </em>
+        .
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 items-stretch">

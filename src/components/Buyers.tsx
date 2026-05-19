@@ -16,6 +16,23 @@ interface Buyer {
 
 const BUYERS: Buyer[] = [
   {
+    name: 'Lezlie Tram Le',
+    role: 'CEO, LT Commercial · Đại diện 100B tại Texas',
+    subtitle: '22+ năm bất động sản thương mại Texas',
+    intro:
+      'Dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas — và là cầu nối 100B với thị trường Mỹ.',
+    bullets: [
+      '$55 triệu USD dự án xây dựng mới',
+      'Hơn $250 triệu USD thương vụ M&A',
+      'Chủ tịch AREAA Austin (2020)',
+      'Austin Under 40 — Bất động sản (2021)',
+    ],
+    interest:
+      'Phụ trách kết nối nhà máy Việt với thị trường Texas — VLXD và nội thất.',
+    initials: 'LT',
+    photo: '/logos/Lezlie%20Tram.jpg',
+  },
+  {
     name: 'Michael Hough',
     role: 'Tổng thầu xây dựng — Austin, Texas',
     subtitle: '30 năm xây dựng · Multi-family & HUD specialist',
@@ -64,23 +81,6 @@ const BUYERS: Buyer[] = [
       'Vật liệu cho multi-family và mặt bằng thương mại hạng A quy mô lớn.',
     initials: 'RR',
     photo: '/logos/Ricardo%20Rubiano.jpg',
-  },
-  {
-    name: 'Lezlie Tram Le',
-    role: 'CEO, LT Commercial · Đại diện 100B tại Texas',
-    subtitle: '22+ năm bất động sản thương mại Texas',
-    intro:
-      'Dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas — và là cầu nối 100B với thị trường Mỹ.',
-    bullets: [
-      '$55 triệu USD dự án xây dựng mới',
-      'Hơn $250 triệu USD thương vụ M&A',
-      'Chủ tịch AREAA Austin (2020)',
-      'Austin Under 40 — Bất động sản (2021)',
-    ],
-    interest:
-      'Phụ trách kết nối nhà máy Việt với thị trường Texas — VLXD và nội thất.',
-    initials: 'LT',
-    photo: '/logos/Lezlie%20Tram.jpg',
   },
   {
     name: 'Kameron Schram',
