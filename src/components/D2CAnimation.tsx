@@ -61,12 +61,22 @@ export function D2CAnimation() {
             <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#000" floodOpacity="0.8" />
           </filter>
 
-          <symbol id="iconFactory" viewBox="0 0 40 40">
-            <rect x="6" y="14" width="28" height="22" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <path d="M6 14 L14 6 L22 14 M22 14 L30 6 L38 14" fill="none" stroke="currentColor" strokeWidth="1.5" />
-            <rect x="11" y="22" width="4" height="6" fill="currentColor" opacity="0.8" />
-            <rect x="18" y="22" width="4" height="6" fill="currentColor" opacity="0.8" />
-            <rect x="25" y="22" width="4" height="6" fill="currentColor" opacity="0.8" />
+          <symbol id="iconFactory" viewBox="0 0 24 24">
+            {/* lucide Factory — 3 ascending bays with rounded base */}
+            <path
+              d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V8L2 13Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
+            <path
+              d="M17 18h1M12 18h1M7 18h1"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
           </symbol>
           <symbol id="iconBox" viewBox="0 0 40 40">
             <path d="M8 14 L20 8 L32 14 L20 20 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />

@@ -122,7 +122,7 @@ export function Hero() {
               key={num + text}
               className="bg-bg-card/70 backdrop-blur-md rounded-xl border border-white/10
                          hover:border-brand-gold/50 transition-colors px-5 py-4 md:px-6 md:py-5
-                         flex items-center justify-center text-center gap-3"
+                         flex items-center justify-start text-left gap-3"
             >
               <span className="text-2xl md:text-3xl font-display text-text-heading leading-none whitespace-nowrap shrink-0">
                 {num}

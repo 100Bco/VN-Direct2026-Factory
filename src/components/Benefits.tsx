@@ -14,7 +14,7 @@ const BENEFITS = [
   },
   {
     icon: ArrowRight,
-    title: 'Kết nối trực tiếp',
+    title: 'Kết nối trực tiếp 1-1 với buyer',
     body: 'Không trung gian · không môi giới.',
   },
   {

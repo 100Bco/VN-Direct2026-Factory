@@ -25,7 +25,7 @@ export function About() {
         <p className="text-base lg:text-lg text-text-heading font-light leading-relaxed">
           <em className="font-serif italic text-brand-gold">Build Better Series</em> là chuỗi
           chương trình thường niên của 100B đưa đoàn khách mua chiến lược quốc tế đến tận xưởng
-          sản xuất Việt Nam. VN Direct 2026 là chuyến đầu tiên trong loạt — tập trung vào ngành
+          sản xuất Việt Nam. Vietnam Direct là chuyến đầu tiên trong loạt — tập trung vào ngành
           vật liệu xây dựng và nội thất cao cấp.
         </p>
       </div>
