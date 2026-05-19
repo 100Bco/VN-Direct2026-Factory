@@ -122,43 +122,43 @@ export function Buyers() {
 
       {/* Carousel — relative wrapper for side arrows */}
       <div className="relative">
-        {/* PREV arrow — left side */}
+        {/* PREV arrow — left side (desktop only) */}
         <button
           type="button"
           onClick={prev}
           aria-label="Khách mua trước"
-          className="absolute top-1/2 -translate-y-1/2 left-0 lg:-left-4 z-10
-                     w-12 h-12 lg:w-14 lg:h-14 rounded-full
+          className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -left-4 z-10
+                     w-14 h-14 rounded-full
                      bg-bg-dark/70 hover:bg-bg-dark border border-border-subtle
                      hover:border-brand-gold transition-colors
-                     flex items-center justify-center backdrop-blur-sm"
+                     items-center justify-center backdrop-blur-sm"
         >
           <img
             src="/logos/carbon_next-filled-1.png"
             alt=""
             width={24}
             height={24}
-            className="w-5 h-5 lg:w-6 lg:h-6 object-contain"
+            className="w-6 h-6 object-contain"
           />
         </button>
 
-        {/* NEXT arrow — right side */}
+        {/* NEXT arrow — right side (desktop only) */}
         <button
           type="button"
           onClick={next}
           aria-label="Khách mua tiếp theo"
-          className="absolute top-1/2 -translate-y-1/2 right-0 lg:-right-4 z-10
-                     w-12 h-12 lg:w-14 lg:h-14 rounded-full
+          className="hidden lg:flex absolute top-1/2 -translate-y-1/2 -right-4 z-10
+                     w-14 h-14 rounded-full
                      bg-bg-dark/70 hover:bg-bg-dark border border-border-subtle
                      hover:border-brand-gold transition-colors
-                     flex items-center justify-center backdrop-blur-sm"
+                     items-center justify-center backdrop-blur-sm"
         >
           <img
             src="/logos/carbon_next-filled.png"
             alt=""
             width={24}
             height={24}
-            className="w-5 h-5 lg:w-6 lg:h-6 object-contain"
+            className="w-6 h-6 object-contain"
           />
         </button>
 
@@ -251,6 +251,45 @@ export function Buyers() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Mobile arrows row — below content (hidden on lg+) */}
+        <div className="lg:hidden mt-10 flex items-center justify-center gap-4">
+          <button
+            type="button"
+            onClick={prev}
+            aria-label="Khách mua trước"
+            className="w-12 h-12 rounded-full border border-border-subtle
+                       hover:border-brand-gold transition-colors
+                       flex items-center justify-center bg-bg-dark/70 backdrop-blur-sm"
+          >
+            <img
+              src="/logos/carbon_next-filled-1.png"
+              alt=""
+              width={20}
+              height={20}
+              className="w-5 h-5 object-contain"
+            />
+          </button>
+          <span className="text-xs uppercase tracking-[0.2em] text-text-heading font-semibold">
+            {String(index + 1).padStart(2, '0')} / {String(BUYERS.length).padStart(2, '0')}
+          </span>
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Khách mua tiếp theo"
+            className="w-12 h-12 rounded-full border border-border-subtle
+                       hover:border-brand-gold transition-colors
+                       flex items-center justify-center bg-bg-dark/70 backdrop-blur-sm"
+          >
+            <img
+              src="/logos/carbon_next-filled.png"
+              alt=""
+              width={20}
+              height={20}
+              className="w-5 h-5 object-contain"
+            />
+          </button>
         </div>
       </div>
     </Section>
