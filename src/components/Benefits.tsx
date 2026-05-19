@@ -5,32 +5,32 @@ const BENEFITS = [
   {
     icon: Building2,
     title: 'Visit trực tiếp tại xưởng',
-    body: 'Buyers đến tận nhà máy — quan sát dây chuyền, kiểm tra QC, gặp đội kỹ thuật. Không phải gặp gỡ trong gian hàng hội chợ.',
+    body: 'Dây chuyền · QC · đội kỹ thuật.',
   },
   {
     icon: Users,
     title: 'Đối thoại 1-on-1 với buyers',
-    body: 'Mỗi nhà phát triển trình bày trực tiếp nhu cầu dự án. Quý nhà máy nghe được spec, sản lượng, tiến độ — không qua bảng báo giá giấy.',
+    body: 'Spec · sản lượng · tiến độ.',
   },
   {
     icon: ShieldCheck,
     title: 'Khách hàng đã thẩm định',
-    body: 'Buyers có danh mục dự án đang triển khai, ngân sách phân bổ và quyết định mua trong 6–18 tháng tới.',
+    body: 'Pipeline active · ngân sách sẵn · quyết định trong 6–18 tháng.',
   },
   {
     icon: ArrowRight,
     title: 'Kết nối trực tiếp',
-    body: 'Không qua đại lý, không qua nhà phân phối, không qua môi giới. Quan hệ trực tiếp với người ra quyết định mua hàng.',
+    body: 'Không trung gian · không môi giới.',
   },
   {
     icon: Handshake,
     title: 'Hợp tác dài hạn 3 – 5 năm',
-    body: 'Mỗi buyer đều tìm đối tác lâu dài, đảm bảo tính nhất quán trong chuỗi cung ứng — không phải giao dịch đơn lẻ.',
+    body: 'Đối tác bền vững, không phải deal đơn lẻ.',
   },
   {
     icon: Megaphone,
     title: 'Hiện diện truyền thông',
-    body: 'Nhà máy được giới thiệu trên kênh truyền thông 100B, LT Commercial Group và bộ tài liệu nghiên cứu điển hình Build Better Series.',
+    body: '100B · LT Commercial · case study Build Better Series.',
   },
 ];
 
