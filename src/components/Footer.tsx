@@ -102,7 +102,14 @@ export function Footer() {
           </p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-text-body">
             Powered by{' '}
-            <span className="text-brand-gold font-semibold">100Bold</span>
+            <a
+              href="https://100bold.co"
+              target="_blank"
+              rel="noreferrer"
+              className="text-brand-gold font-semibold hover:text-brand-gold-hover transition-colors"
+            >
+              100Bold
+            </a>
           </p>
         </div>
       </div>
