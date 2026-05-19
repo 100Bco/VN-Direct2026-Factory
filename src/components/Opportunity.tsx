@@ -44,7 +44,7 @@ export function Opportunity() {
           {/* Left — Subtitle + quote + Texas image */}
           <div className="flex flex-col">
             <p className="font-serif text-xl md:text-2xl text-text-heading mb-3 leading-snug">
-              Thị trường thông minh nhất Bắc Mỹ.
+              Thị trường phát triển nhất Bắc Mỹ.
             </p>
             <blockquote className="border-l-2 border-brand-gold/40 pl-4 mb-6 lg:mb-8">
               <p className="text-sm lg:text-base text-text-muted italic font-serif font-light leading-relaxed">
