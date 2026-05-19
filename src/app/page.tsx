@@ -6,7 +6,6 @@ import { Buyers } from '@/components/Buyers';
 import { Schedule } from '@/components/Schedule';
 import { Process } from '@/components/Process';
 import { About } from '@/components/About';
-import { Contract } from '@/components/Contract';
 import { Footer } from '@/components/Footer';
 
 export default function Page() {
@@ -20,7 +19,6 @@ export default function Page() {
       <Schedule />
       <Process />
       <About />
-      <Contract />
       <Footer />
     </main>
   );

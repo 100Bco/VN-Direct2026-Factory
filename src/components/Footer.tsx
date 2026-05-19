@@ -6,7 +6,7 @@ const PROGRAM_LINKS = [
   { label: 'Đoàn khách mua', href: '#doan-khach-mua' },
   { label: 'Lịch trình', href: '#lich-trinh' },
   { label: 'Quy trình', href: '#quy-trinh' },
-  { label: 'Hợp tác', href: '#hop-tac' },
+  { label: 'Về 100B', href: '#ve-100b' },
 ];
 
 export function Footer() {

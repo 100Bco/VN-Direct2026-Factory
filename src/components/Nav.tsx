@@ -10,7 +10,6 @@ const NAV_ITEMS = [
   { label: 'Lịch trình', anchor: '#lich-trinh' },
   { label: 'Quy trình', anchor: '#quy-trinh' },
   { label: 'Về 100B', anchor: '#ve-100b' },
-  { label: 'Hợp tác', anchor: '#hop-tac' },
 ];
 
 const MAILTO =
