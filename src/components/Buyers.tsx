@@ -253,24 +253,6 @@ export function Buyers() {
           </div>
         </div>
       </div>
-
-      {/* Dot indicators — below carousel, centered */}
-      <div className="mt-8 flex items-center justify-center gap-2.5">
-        {BUYERS.map((b, i) => (
-          <button
-            key={b.name}
-            type="button"
-            onClick={() => goTo(i)}
-            aria-label={`Đến slide ${i + 1}: ${b.name}`}
-            aria-current={i === index ? 'true' : undefined}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === index
-                ? 'w-10 bg-brand-gold'
-                : 'w-1.5 bg-border-subtle hover:bg-brand-gold/40'
-            }`}
-          />
-        ))}
-      </div>
     </Section>
   );
 }

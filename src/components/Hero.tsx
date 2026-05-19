@@ -23,7 +23,7 @@ export function Hero() {
                      md:w-[max(177.77vh,100vw)] md:h-[max(56.25vw,100vh)]"
         >
           <iframe
-            src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=1&silentAutoPlay=allow&playsinline=1&playsInline=1&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&playbackRateControl=false&captions=false&preload=auto&wmode=transparent"
+            src="https://fast.wistia.net/embed/iframe/9hbymhvynw?autoPlay=true&muted=1&silentAutoPlay=true&endVideoBehavior=loop&videoFoam=true&controlsVisibleOnLoad=false&playButton=false&smallPlayButton=false&playbar=false&fullscreenButton=false&settingsControl=false&volumeControl=false&muteButton=false&playbackRateControl=false&captions=false&chromeless=true&playsinline=1&playsInline=1&preload=auto&wmode=transparent"
             title="Vietnam Direct 2026 hero reel"
             allow="autoplay; fullscreen; encrypted-media; picture-in-picture; accelerometer"
             allowFullScreen
