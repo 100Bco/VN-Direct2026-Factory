@@ -105,8 +105,7 @@ export function Process() {
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"
       >
-        <span className="font-display text-gradient-gold">8</span> bước —{' '}
-        <em className="font-serif italic text-gradient-gold">hợp tác cùng 100B</em>.
+        Lộ trình <em className="font-serif italic text-gradient-gold">hợp tác cùng 100B</em>.
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 items-stretch">
