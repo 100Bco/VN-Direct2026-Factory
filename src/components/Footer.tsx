@@ -71,18 +71,18 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://100b.co/goglobal"
+                  href="https://100b.co"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex items-center gap-3 text-sm text-text-body hover:text-brand-gold transition-colors"
                 >
                   <Globe size={14} className="text-brand-gold" />
-                  100b.co/goglobal
+                  100b.co
                 </a>
               </li>
               <li>
                 <a
-                  href="https://vndirect2026.com"
+                  href="https://vietnamdirect2026.100b.co/"
                   target="_blank"
                   rel="noreferrer"
                   className="group inline-flex items-center gap-3 text-sm text-text-body hover:text-brand-gold transition-colors"
