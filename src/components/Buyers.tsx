@@ -18,16 +18,16 @@ const BUYERS: Buyer[] = [
   {
     name: 'Michael Hough',
     role: 'Tổng thầu xây dựng — Austin, Texas',
-    subtitle: '5 thế hệ làm bất động sản · 600 căn/năm đang phát triển',
+    subtitle: '30 năm xây dựng · Multi-family & HUD specialist',
     intro:
       '30 năm kinh nghiệm trong ngành xây dựng. Khởi đầu từ cải tạo nhà ở, mở rộng sang xây mới nhà ở đặt riêng, hiện tập trung vào khu căn hộ thuế tín dụng và dự án do Bộ Gia cư & Phát triển Đô thị Hoa Kỳ tài trợ.',
     bullets: [
       {
         heading: 'Danh mục đang triển khai',
         items: [
-          '600 căn/năm đang phát triển',
           'Quy mô $10M – $24M mỗi công trình',
-          'Multi-family & HUD-funded housing',
+          'Multi-family tax credit specialist',
+          'HUD-funded housing portfolio',
         ],
       },
       {
@@ -65,24 +65,32 @@ const BUYERS: Buyer[] = [
     initials: 'MH',
   },
   {
-    name: 'Michael Houghton',
-    role: 'Tổng thầu — Austin, Texas',
-    subtitle: 'Multi-family & HUD-funded housing scale',
+    name: 'Ricardo Rubiano',
+    role: 'Nhà phát triển bất động sản — Rio Grande Valley, Texas',
+    subtitle: '5 thế hệ làm bất động sản từ 1908 · 760+ căn multi-family đang triển khai',
     intro:
-      '30 năm trong ngành xây dựng, chuyên sâu multi-family tax credit và dự án nhà ở do Bộ Gia cư Hoa Kỳ tài trợ.',
+      '23 năm kinh nghiệm trong phát triển bất động sản. Cựu sinh viên U.S. Naval Academy và Texas A&M University. Cựu binh U.S. Marine Corps. Sinh ra ở Texas, lớn lên hai bên biên giới Mỹ – Mexico. Sứ mệnh: "Building a better Valley."',
     bullets: [
       {
-        heading: 'Track record',
+        heading: 'Danh mục đang triển khai',
         items: [
-          'Quy mô $10M – $24M mỗi project',
-          'Multi-family tax credit specialist',
-          'HUD-funded housing portfolio',
+          '320-unit apartment complex tại Weslaco (đã sở hữu)',
+          '168-unit multi-family tại Pharr (đang lên kế hoạch)',
+          '275-unit multi-family tại Edinburg (đang lên kế hoạch)',
+          "Single-family scale 100+ acres — Water's Edge & Pecan Grove",
+        ],
+      },
+      {
+        heading: 'Class-A retail · 7 thành phố',
+        items: [
+          'Brownsville · Weslaco · San Juan · Harlingen · Pharr · Edinburg · Laredo',
+          'Khách thuê: Olive Garden · Longhorn · AT&T · T-Mobile · Panda Express · Dunkin Donuts',
         ],
       },
     ],
     interest:
-      'Vật liệu lớn, đạt chuẩn kỹ thuật và quy định địa phương, supply chain ổn định.',
-    initials: 'MH',
+      'Vật liệu cho dự án căn hộ multi-family và mặt bằng thương mại hạng A quy mô lớn — góc nhìn 5 thế hệ về thị trường biên giới Mỹ – Mexico.',
+    initials: 'RR',
   },
   {
     name: 'Lezlie Tram Le',

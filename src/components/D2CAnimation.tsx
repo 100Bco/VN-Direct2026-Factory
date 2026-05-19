@@ -216,7 +216,7 @@ export function D2CAnimation() {
           {/* TRADITIONAL ROW */}
           <div className="mb-4">
             <div className="flex items-center gap-4 mb-6">
-              <div className="text-[11px] tracking-[0.2em] uppercase text-[#B84A3E] font-medium">
+              <div className="text-[11px] tracking-[0.2em] uppercase text-text-muted font-medium">
                 Truyền thống
               </div>
               <div className="flex-1 h-px bg-border-subtle"></div>
@@ -275,20 +275,20 @@ export function D2CAnimation() {
               <g className="trad-node delay-5">
                 <text x="1010" y="50" textAnchor="middle" fill="#8F8B82" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="0.2em">LỢI NHUẬN</text>
                 <g className="squeeze-left">
-                  <path d="M 942 90 L 962 78 M 942 90 L 962 102 M 942 90 L 980 90" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <path d="M 942 90 L 962 78 M 942 90 L 962 102 M 942 90 L 980 90" stroke="#8F8B82" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </g>
                 <g className="squeeze-bar">
-                  <rect x="990" y="74" width="40" height="32" fill="#B84A3E" opacity="0.3" rx="2" />
-                  <rect x="990" y="74" width="40" height="32" fill="none" stroke="#B84A3E" strokeWidth="1" rx="2" />
-                  <line x1="998" y1="80" x2="998" y2="100" stroke="#B84A3E" strokeWidth="0.6" opacity="0.6" />
-                  <line x1="1006" y1="80" x2="1006" y2="100" stroke="#B84A3E" strokeWidth="0.6" opacity="0.6" />
-                  <line x1="1014" y1="80" x2="1014" y2="100" stroke="#B84A3E" strokeWidth="0.6" opacity="0.6" />
-                  <line x1="1022" y1="80" x2="1022" y2="100" stroke="#B84A3E" strokeWidth="0.6" opacity="0.6" />
+                  <rect x="990" y="74" width="40" height="32" fill="#8F8B82" opacity="0.3" rx="2" />
+                  <rect x="990" y="74" width="40" height="32" fill="none" stroke="#8F8B82" strokeWidth="1" rx="2" />
+                  <line x1="998" y1="80" x2="998" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
+                  <line x1="1006" y1="80" x2="1006" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
+                  <line x1="1014" y1="80" x2="1014" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
+                  <line x1="1022" y1="80" x2="1022" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
                 </g>
                 <g className="squeeze-right">
-                  <path d="M 1078 90 L 1058 78 M 1078 90 L 1058 102 M 1078 90 L 1040 90" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <path d="M 1078 90 L 1058 78 M 1078 90 L 1058 102 M 1078 90 L 1040 90" stroke="#8F8B82" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                 </g>
-                <text x="1010" y="132" textAnchor="middle" fill="#B84A3E" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="14">bị nén</text>
+                <text x="1010" y="132" textAnchor="middle" fill="#8F8B82" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="14">bị nén</text>
               </g>
             </svg>
           </div>
@@ -375,42 +375,11 @@ export function D2CAnimation() {
         </div>
       </div>
 
-      {/* Captions Block */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-8 pt-8 border-t border-border-subtle/50">
-        <div className="text-center md:text-left">
-          <div className="text-[10px] tracking-[0.2em] uppercase text-[#B84A3E] font-medium mb-3">
-            Truyền thống
-          </div>
-          <div className="font-serif italic text-xl text-text-heading leading-snug mb-2">
-            5 lớp trung gian.
-            <br />
-            Biên lợi nhuận bị nén.
-          </div>
-          <div className="text-sm text-text-muted leading-relaxed max-w-sm mx-auto md:mx-0">
-            Mỗi mắt xích lấy đi 15–30% giá trị. Nhà máy là người chịu hậu quả cuối cùng.
-          </div>
-        </div>
-        <div className="text-center md:text-left">
-          <div className="text-[10px] tracking-[0.2em] uppercase text-brand-gold font-medium mb-3">
-            D2C — Vietnam Direct
-          </div>
-          <div className="font-serif italic text-xl text-text-heading leading-snug mb-2">
-            Nhà máy ⟶ Người mua.
-            <br />
-            Không qua trung gian.
-          </div>
-          <div className="text-sm text-text-muted leading-relaxed max-w-sm mx-auto md:mx-0">
-            Trung Quốc đã làm chủ. Việc chuyển đổi mô hình là bắt buộc — để không còn bán dưới giá
-            trị thực.
-          </div>
-        </div>
-      </div>
-
       {/* Stats Block */}
       <div className="flex flex-wrap justify-center md:justify-around gap-10 mt-12 pt-10 border-t border-border-subtle/50">
         <div className="text-center max-w-[200px]">
-          <div className="font-serif text-4xl lg:text-5xl text-[#B84A3E] leading-none mb-4">
-            -15% tới 30%
+          <div className="font-display text-4xl lg:text-5xl text-text-muted leading-none mb-4">
+            15–30%
           </div>
           <div className="text-[10px] tracking-[0.15em] uppercase text-text-muted leading-relaxed">
             Hao hụt lợi nhuận tại
