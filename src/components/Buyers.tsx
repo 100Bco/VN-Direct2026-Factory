@@ -198,34 +198,42 @@ export function Buyers() {
 
           {/* Text panel — uniform height across all buyers */}
           <div className="lg:col-span-7 order-2 lg:order-2 flex flex-col">
-            <div className="flex items-center gap-3 mb-4">
+            {/* Slide counter */}
+            <div className="flex items-baseline gap-3 mb-5">
               <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <span className="text-xs uppercase tracking-[0.2em] text-text-body">
+              <span className="text-xs uppercase tracking-[0.2em] text-text-heading font-semibold">
                 / {String(BUYERS.length).padStart(2, '0')}
               </span>
             </div>
 
+            {/* Name */}
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light text-text-heading leading-snug mb-2">
               {buyer.name}
             </h3>
-            <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-2">
+
+            {/* Role eyebrow */}
+            <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-3">
               {buyer.role}
             </p>
-            <p className="text-sm lg:text-base text-text-body font-serif italic font-light leading-relaxed mb-5">
+
+            {/* Subtitle — plain white sans, not italic */}
+            <p className="text-sm lg:text-base text-text-heading font-medium leading-relaxed mb-5">
               {buyer.subtitle}
             </p>
 
+            {/* Intro */}
             <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed mb-5">
               {buyer.intro}
             </p>
 
-            <ul className="space-y-2 mb-5">
+            {/* Bullets */}
+            <ul className="space-y-2.5 mb-6">
               {buyer.bullets.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 text-sm lg:text-base text-text-body font-light leading-relaxed"
+                  className="flex items-start gap-3 text-sm lg:text-base text-text-heading font-light leading-relaxed"
                 >
                   <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
                   <span>{item}</span>
@@ -233,11 +241,12 @@ export function Buyers() {
               ))}
             </ul>
 
+            {/* Quan tâm */}
             <div className="mt-auto pt-4 border-t border-border-subtle">
-              <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-1.5">
+              <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-2">
                 Quan tâm
               </p>
-              <p className="text-sm lg:text-base text-text-body font-serif italic font-light leading-relaxed">
+              <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed">
                 {buyer.interest}
               </p>
             </div>
