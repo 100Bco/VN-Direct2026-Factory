@@ -1,36 +1,26 @@
-import { Building2, Users, ShieldCheck, ArrowRight, Handshake, Megaphone } from 'lucide-react';
+import { Building2, ShieldCheck, ArrowRight, Handshake } from 'lucide-react';
 import { Section } from './Section';
 
 const BENEFITS = [
   {
     icon: Building2,
-    title: 'Visit trực tiếp tại xưởng',
-    body: 'Buyers đến tận nhà máy — quan sát dây chuyền, kiểm tra QC, gặp đội kỹ thuật. Không phải gặp gỡ trong gian hàng hội chợ.',
-  },
-  {
-    icon: Users,
-    title: 'Đối thoại 1-on-1 với buyers',
-    body: 'Mỗi nhà phát triển trình bày trực tiếp nhu cầu dự án. Quý nhà máy nghe được spec, sản lượng, tiến độ — không qua bảng báo giá giấy.',
+    title: 'Tham quan trực tiếp tại xưởng',
+    body: 'Dây chuyền · kiểm soát chất lượng · đội kỹ thuật.',
   },
   {
     icon: ShieldCheck,
     title: 'Khách hàng đã thẩm định',
-    body: 'Buyers có danh mục dự án đang triển khai, ngân sách phân bổ và quyết định mua trong 6–18 tháng tới.',
+    body: 'Danh mục đang triển khai · ngân sách đã có · quyết định trong 6–18 tháng.',
   },
   {
     icon: ArrowRight,
     title: 'Kết nối trực tiếp',
-    body: 'Không qua đại lý, không qua nhà phân phối, không qua môi giới. Quan hệ trực tiếp với người ra quyết định mua hàng.',
+    body: 'Không trung gian · không môi giới.',
   },
   {
     icon: Handshake,
     title: 'Hợp tác dài hạn 3 – 5 năm',
-    body: 'Mỗi buyer đều tìm đối tác lâu dài, đảm bảo tính nhất quán trong chuỗi cung ứng — không phải giao dịch đơn lẻ.',
-  },
-  {
-    icon: Megaphone,
-    title: 'Hiện diện truyền thông',
-    body: 'Nhà máy được giới thiệu trên kênh truyền thông 100B, LT Commercial Group và bộ tài liệu nghiên cứu điển hình Build Better Series.',
+    body: 'Đối tác bền vững, không phải giao dịch đơn lẻ.',
   },
 ];
 
@@ -41,11 +31,10 @@ export function Benefits() {
       className="bg-bg-alt border-y border-border-subtle"
     >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12 max-w-4xl">
-        Khi nhà máy của Quý vị{' '}
-        <em className="font-serif italic text-gradient-gold">có tên trong chương trình</em>.
+        Lợi ích <em className="font-serif italic text-gradient-gold">tham dự</em>.
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
         {BENEFITS.map(({ icon: Icon, title, body }) => (
           <div
             key={title}
