@@ -4,7 +4,6 @@ const PROGRAM_LINKS = [
   { label: 'Vấn đề', href: '#van-de' },
   { label: 'Texas', href: '#co-hoi' },
   { label: 'Đoàn khách mua', href: '#doan-khach-mua' },
-  { label: 'Lịch trình', href: '#lich-trinh' },
   { label: 'Quy trình', href: '#quy-trinh' },
   { label: 'Về 100B', href: '#ve-100b' },
 ];
