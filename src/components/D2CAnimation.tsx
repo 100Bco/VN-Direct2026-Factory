@@ -215,17 +215,15 @@ export function D2CAnimation() {
         <div className="min-w-[900px]">
           {/* TRADITIONAL ROW */}
           <div className="mb-4">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-10 h-px bg-border-subtle"></div>
               <div className="text-[11px] tracking-[0.2em] uppercase text-text-muted font-medium">
                 Truyền thống
               </div>
-              <div className="flex-1 h-px bg-border-subtle"></div>
-              <div className="text-xs text-text-muted italic font-serif">
-                — biên lợi nhuận bị nén
-              </div>
+              <div className="w-10 h-px bg-border-subtle"></div>
             </div>
 
-            <svg viewBox="0 0 1100 180" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 900 180" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
               <line x1="122" y1="90" x2="238" y2="90" className="draw-line delay-0" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
               <line x1="302" y1="90" x2="418" y2="90" className="draw-line delay-1" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
               <line x1="482" y1="90" x2="598" y2="90" className="draw-line delay-2" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
@@ -271,25 +269,6 @@ export function D2CAnimation() {
                 <text x="810" y="148" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Người mua</text>
               </g>
 
-              {/* Squeeze Icon */}
-              <g className="trad-node delay-5">
-                <text x="1010" y="50" textAnchor="middle" fill="#8F8B82" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="0.2em">LỢI NHUẬN</text>
-                <g className="squeeze-left">
-                  <path d="M 942 90 L 962 78 M 942 90 L 962 102 M 942 90 L 980 90" stroke="#8F8B82" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </g>
-                <g className="squeeze-bar">
-                  <rect x="990" y="74" width="40" height="32" fill="#8F8B82" opacity="0.3" rx="2" />
-                  <rect x="990" y="74" width="40" height="32" fill="none" stroke="#8F8B82" strokeWidth="1" rx="2" />
-                  <line x1="998" y1="80" x2="998" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
-                  <line x1="1006" y1="80" x2="1006" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
-                  <line x1="1014" y1="80" x2="1014" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
-                  <line x1="1022" y1="80" x2="1022" y2="100" stroke="#8F8B82" strokeWidth="0.6" opacity="0.6" />
-                </g>
-                <g className="squeeze-right">
-                  <path d="M 1078 90 L 1058 78 M 1078 90 L 1058 102 M 1078 90 L 1040 90" stroke="#8F8B82" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                </g>
-                <text x="1010" y="132" textAnchor="middle" fill="#8F8B82" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="14">bị nén</text>
-              </g>
             </svg>
           </div>
 
@@ -304,17 +283,15 @@ export function D2CAnimation() {
 
           {/* D2C ROW */}
           <div className="mt-4">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-10 h-px bg-brand-gold/40"></div>
               <div className="text-[11px] tracking-[0.2em] uppercase text-brand-gold font-medium">
                 D2C — Vietnam Direct
               </div>
-              <div className="flex-1 h-px bg-border-subtle"></div>
-              <div className="text-xs text-text-muted italic font-serif">
-                — giá trị về tay nhà máy
-              </div>
+              <div className="w-10 h-px bg-brand-gold/40"></div>
             </div>
 
-            <svg viewBox="0 0 1100 180" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 900 180" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="#C3A374" stopOpacity="0.4" />
@@ -352,24 +329,6 @@ export function D2CAnimation() {
                 <line x1="360" y1="70" x2="540" y2="70" stroke="#E0DCD3" strokeWidth="1" opacity="0.6" />
               </g>
 
-              {/* Profit Full Icon */}
-              <g className="d2c-node delay-8">
-                <text x="1010" y="50" textAnchor="middle" fill="#C3A374" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="0.2em">LỢI NHUẬN</text>
-                <g className="check-pulse">
-                  <rect x="960" y="74" width="100" height="32" fill="#C3A374" opacity="0.2" rx="2" />
-                  <rect x="960" y="74" width="100" height="32" fill="none" stroke="#C3A374" strokeWidth="1" rx="2" />
-                  <line x1="970" y1="80" x2="970" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="980" y1="80" x2="980" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="990" y1="80" x2="990" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="1000" y1="80" x2="1000" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="1010" y1="80" x2="1010" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="1020" y1="80" x2="1020" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="1030" y1="80" x2="1030" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="1040" y1="80" x2="1040" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                  <line x1="1050" y1="80" x2="1050" y2="100" stroke="#C3A374" strokeWidth="0.6" opacity="0.7" />
-                </g>
-                <text x="1010" y="132" textAnchor="middle" fill="#C3A374" fontFamily="Cormorant Garamond, serif" fontStyle="italic" fontSize="14">giữ trọn</text>
-              </g>
             </svg>
           </div>
         </div>
