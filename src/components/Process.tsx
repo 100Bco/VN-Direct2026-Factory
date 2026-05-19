@@ -87,7 +87,7 @@ function PhaseCard({ phase }: { phase: Phase }) {
               <p className="text-sm lg:text-base font-bold font-sans text-text-heading leading-snug">
                 {s.title}
               </p>
-              <p className="text-xs lg:text-sm text-text-muted font-light leading-relaxed mt-1">
+              <p className="text-xs lg:text-sm text-text-body font-light leading-relaxed mt-1">
                 {s.detail}
               </p>
             </div>

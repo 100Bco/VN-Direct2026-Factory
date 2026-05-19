@@ -206,7 +206,7 @@ export function Buyers() {
             <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
               {String(index + 1).padStart(2, '0')}
             </span>
-            <span className="text-xs uppercase tracking-[0.2em] text-text-muted">
+            <span className="text-xs uppercase tracking-[0.2em] text-text-body">
               / {String(BUYERS.length).padStart(2, '0')}
             </span>
           </div>
@@ -217,7 +217,7 @@ export function Buyers() {
           <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-2">
             {buyer.role}
           </p>
-          <p className="text-sm lg:text-base text-text-muted font-serif italic font-light mb-8 leading-relaxed">
+          <p className="text-sm lg:text-base text-text-body font-serif italic font-light mb-8 leading-relaxed">
             {buyer.subtitle}
           </p>
 
@@ -228,7 +228,7 @@ export function Buyers() {
           <div className="flex flex-col gap-6 mb-8">
             {buyer.bullets.map((group) => (
               <div key={group.heading}>
-                <p className="text-[11px] uppercase tracking-[0.2em] text-text-muted font-semibold mb-3">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-text-body font-semibold mb-3">
                   {group.heading}
                 </p>
                 <ul className="space-y-2">
@@ -250,7 +250,7 @@ export function Buyers() {
             <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-2">
               Quan tâm
             </p>
-            <p className="text-sm lg:text-base text-text-muted font-serif italic font-light leading-relaxed max-w-2xl">
+            <p className="text-sm lg:text-base text-text-body font-serif italic font-light leading-relaxed max-w-2xl">
               {buyer.interest}
             </p>
           </div>

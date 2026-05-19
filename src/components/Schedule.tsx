@@ -58,7 +58,7 @@ export function Schedule() {
                   {d.n}
                 </span>
               </p>
-              <p className="text-xs uppercase tracking-[0.2em] text-text-muted mt-2 font-semibold">
+              <p className="text-xs uppercase tracking-[0.2em] text-text-body mt-2 font-semibold">
                 {d.date}
               </p>
             </div>
@@ -86,7 +86,7 @@ export function Schedule() {
                   ))}
                 </div>
               ) : (
-                <span className="text-[11px] uppercase tracking-[0.2em] text-text-muted/60 italic font-serif md:ml-auto">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-text-body/60 italic font-serif md:ml-auto">
                   Factory visits TBA
                 </span>
               )}

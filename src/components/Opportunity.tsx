@@ -79,7 +79,7 @@ export function Opportunity() {
                   <h3 className="text-base lg:text-lg font-bold font-sans text-text-heading leading-snug mb-1">
                     {title}
                   </h3>
-                  <p className="text-sm text-text-muted font-light leading-relaxed">{detail}</p>
+                  <p className="text-sm text-text-body font-light leading-relaxed">{detail}</p>
                 </div>
               </li>
             ))}
