@@ -57,22 +57,18 @@ const BUYERS: Buyer[] = [
           'Managing Principal · OneDigital',
         ],
       },
-      {
-        heading: 'Học vấn',
-        items: ['Master of Public Affairs — Humphrey School', 'BA — University of Minnesota'],
-      },
     ],
     interest:
       'Vật liệu cho commercial real estate development; góc nhìn capital markets về chuỗi cung ứng và hợp tác cung cấp dài hạn.',
     initials: 'MH',
-    photo: '/logos/Mick%20Hawton.webp',
+    photo: '/logos/Mick%20Hawton.jpeg',
   },
   {
     name: 'Ricardo Rubiano',
     role: 'Nhà phát triển bất động sản — Rio Grande Valley, Texas',
     subtitle: '5 thế hệ làm bất động sản từ 1908 · 760+ căn multi-family đang triển khai',
     intro:
-      '23 năm kinh nghiệm trong phát triển bất động sản. Cựu sinh viên U.S. Naval Academy và Texas A&M University. Cựu binh U.S. Marine Corps. Sinh ra ở Texas, lớn lên hai bên biên giới Mỹ – Mexico. Sứ mệnh: "Building a better Valley."',
+      '23 năm kinh nghiệm trong phát triển bất động sản. Sinh ra ở Texas, lớn lên hai bên biên giới Mỹ – Mexico. Sứ mệnh: "Building a better Valley."',
     bullets: [
       {
         heading: 'Danh mục đang triển khai',
@@ -117,7 +113,6 @@ const BUYERS: Buyer[] = [
           'Chủ tịch AREAA Austin (2020)',
           'Chủ tịch Manor EDC',
           'Austin Under 40 — Bất động sản (2021)',
-          'Trang bìa Austin Woman (5/2023)',
         ],
       },
     ],
@@ -167,8 +162,8 @@ export function Buyers() {
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"
       >
-        Năm nhà phát triển bất động sản hàng đầu —{' '}
-        <em className="font-serif italic text-gradient-gold">cùng một chuyến đi</em>.
+        Năm <em className="font-serif italic text-gradient-gold">nhà phát triển bất động sản</em>{' '}
+        hàng đầu.
       </h2>
 
       {/* Carousel */}
