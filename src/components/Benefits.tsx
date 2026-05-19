@@ -4,13 +4,13 @@ import { Section } from './Section';
 const BENEFITS = [
   {
     icon: Building2,
-    title: 'Tham quan trực tiếp tại xưởng',
-    body: 'Dây chuyền · kiểm soát chất lượng · đội kỹ thuật.',
+    title: 'Tham quan xưởng trực tiếp',
+    body: 'Xem dây chuyền sản xuất • Kiểm tra quy trình QC • Làm việc với đội kỹ thuật.',
   },
   {
     icon: ShieldCheck,
-    title: 'Khách hàng đã thẩm định',
-    body: 'Danh mục đang triển khai · ngân sách đã có · quyết định trong 6–18 tháng.',
+    title: 'Tiếp cận khách hàng đã thẩm định',
+    body: 'Có dự án triển khai · Ngân sách rõ ràng · Nhu cầu ký kết trong 6–18 tháng.',
   },
   {
     icon: ArrowRight,
