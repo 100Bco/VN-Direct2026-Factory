@@ -74,7 +74,7 @@ function PhaseCard({ phase }: { phase: Phase }) {
       </h3>
 
       {/* Steps */}
-      <ul className="flex flex-col gap-3 lg:gap-4 mt-auto">
+      <ul className="flex flex-col gap-3 lg:gap-4">
         {phase.steps.map((s) => (
           <li
             key={s.n}
