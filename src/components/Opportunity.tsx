@@ -36,7 +36,7 @@ export function Opportunity() {
           className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug
                      mb-10 lg:mb-14 max-w-5xl"
         >
-          Cánh cổng vào thị trường Texas, Mỹ —{' '}
+          Cánh cổng vào thị trường Mỹ{' '}
           <em className="font-serif italic text-gradient-gold">
             trị giá 2,6 nghìn tỷ đô
           </em>
@@ -51,7 +51,7 @@ export function Opportunity() {
             </p>
             <blockquote className="border-l-2 border-brand-gold/40 pl-4 mb-6 lg:mb-8">
               <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed">
-                &ldquo;Texas không phải một bang — đây là nền kinh tế lớn thứ 8 thế giới.&rdquo;
+                &ldquo;Texas không phải một bang. Đây là nền kinh tế lớn thứ 8 thế giới.&rdquo;
               </p>
             </blockquote>
             <div className="relative">
