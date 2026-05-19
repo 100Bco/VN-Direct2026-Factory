@@ -1,27 +1,25 @@
 import { Section } from './Section';
 
-interface Trip {
-  label: string;
-  dates: string;
-  duration: string;
-  buyers: string[];
-  note?: string;
+interface Day {
+  n: number;
+  date: string;
+  title: string;
+  pills?: string[];
 }
 
-const TRIPS: Trip[] = [
+const DAYS: Day[] = [
+  { n: 1, date: 'May 30', title: 'HCMC — Arrive', pills: ['Arrival + Orientation dinner'] },
+  { n: 2, date: 'May 31', title: 'Binh Duong' },
+  { n: 3, date: 'Jun 1', title: 'Binh Duong + Long An' },
+  { n: 4, date: 'Jun 2', title: 'HCMC — Flex', pills: ['Evening flight north'] },
+  { n: 5, date: 'Jun 3', title: 'Fly → Hanoi', pills: ['AM arrival'] },
+  { n: 6, date: 'Jun 4', title: 'Bac Ninh + Vinh Phuc + Hanoi' },
+  { n: 7, date: 'Jun 5', title: 'Hai Phong' },
   {
-    label: 'Đợt 01',
-    dates: 'Cuối tháng 5, 2026',
-    duration: '4 ngày · TP. HCM & Bình Dương',
-    buyers: ['Lezlie Tram Le', 'Kameron Schram', 'Michael Hough'],
-    note: 'Tập trung sàn, cửa, tủ bếp và đá tự nhiên.',
-  },
-  {
-    label: 'Đợt 02',
-    dates: '05 – 13 tháng 6, 2026',
-    duration: '9 ngày · TP. HCM, Bình Dương & Hà Nội',
-    buyers: ['Ricardo Rubiano', 'Mick Hawton'],
-    note: 'Multi-family & commercial development scale.',
+    n: 8,
+    date: 'Jun 6',
+    title: 'Hanoi — Depart / Optional Ha Long Bay',
+    pills: ['Departure', 'Optional: GAACC add-on Jun 6–7'],
   },
 ];
 
@@ -32,60 +30,67 @@ export function Schedule() {
         className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
                    max-w-4xl"
       >
-        Hai đợt đoàn — tách rõ theo{' '}
-        <em className="font-serif italic text-gradient-gold">nhu cầu sản phẩm</em>.
+        Lịch trình 8 ngày —{' '}
+        <em className="font-serif italic text-gradient-gold">30 tháng 5 → 6 tháng 6, 2026</em>.
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-        {TRIPS.map((t) => (
+      <div className="relative rounded-3xl border border-border-subtle bg-bg-card overflow-hidden">
+        {/* Vertical gold accent line */}
+        <div
+          aria-hidden="true"
+          className="absolute left-0 top-0 bottom-0 w-[3px]
+                     bg-gradient-to-b from-brand-gold/0 via-brand-gold to-brand-gold/0"
+        />
+
+        {DAYS.map((d, i) => (
           <div
-            key={t.label}
-            className="relative bg-bg-card rounded-2xl p-8 lg:p-10 border border-border-subtle
-                       hover:border-brand-gold/40 transition-colors flex flex-col gap-6
-                       overflow-hidden"
+            key={d.n}
+            className={`grid grid-cols-12 gap-4 lg:gap-8 items-center
+                        px-6 lg:px-10 py-6 lg:py-7 ${
+                          i > 0 ? 'border-t border-border-subtle' : ''
+                        }`}
           >
-            <span className="absolute top-0 left-0 w-1 h-full bg-brand-gold" />
-
-            <div className="flex items-baseline justify-between gap-4">
-              <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
-                {t.label}
-              </span>
-              <span className="text-[11px] uppercase tracking-[0.2em] text-text-muted font-semibold text-right">
-                {t.duration}
-              </span>
-            </div>
-
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-semibold mb-2">
-                Thời gian
+            {/* Day + Date */}
+            <div className="col-span-12 md:col-span-3 lg:col-span-2">
+              <p className="font-serif text-text-heading leading-none">
+                <span className="text-2xl lg:text-3xl">Day </span>
+                <span className="text-3xl lg:text-4xl font-display italic text-gradient-gold">
+                  {d.n}
+                </span>
               </p>
-              <p className="text-xl lg:text-2xl font-serif font-light text-text-heading leading-snug">
-                {t.dates}
+              <p className="text-xs uppercase tracking-[0.2em] text-text-muted mt-2 font-semibold">
+                {d.date}
               </p>
             </div>
 
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-semibold mb-3">
-                Khách tham gia
-              </p>
-              <ul className="space-y-2">
-                {t.buyers.map((b) => (
-                  <li
-                    key={b}
-                    className="flex items-center gap-3 text-base lg:text-lg text-text-body font-light"
-                  >
-                    <div className="w-1.5 h-1.5 bg-brand-gold rounded-full shrink-0" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
+            {/* Title */}
+            <div className="col-span-12 md:col-span-5 lg:col-span-6">
+              <h3 className="text-lg lg:text-xl font-bold font-sans text-text-heading leading-snug">
+                {d.title}
+              </h3>
             </div>
 
-            {t.note && (
-              <p className="mt-auto pt-4 border-t border-border-subtle text-sm text-text-muted font-serif italic font-light leading-relaxed">
-                {t.note}
-              </p>
-            )}
+            {/* Pills */}
+            <div className="col-span-12 md:col-span-4 lg:col-span-4 flex md:justify-end">
+              {d.pills && d.pills.length > 0 ? (
+                <div className="flex flex-wrap gap-2 md:justify-end">
+                  {d.pills.map((p) => (
+                    <span
+                      key={p}
+                      className="px-3 py-1.5 rounded-full border border-brand-gold/40
+                                 text-brand-gold text-[11px] uppercase tracking-[0.12em]
+                                 font-medium whitespace-nowrap"
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <span className="text-[11px] uppercase tracking-[0.2em] text-text-muted/60 italic font-serif md:ml-auto">
+                  Factory visits TBA
+                </span>
+              )}
+            </div>
           </div>
         ))}
       </div>
