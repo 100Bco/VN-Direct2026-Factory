@@ -95,3 +95,17 @@
   }
 }
 
+/* D2C animation — traveling dot dọc theo arrow segment */
+@keyframes travel-x {
+  0%   { transform: translate(-6px, -50%); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translate(calc(var(--travel-distance, 100%) + 6px), -50%); opacity: 0; }
+}
+
+/* Subtle pulse cho loss labels */
+@keyframes pulse-fade {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
