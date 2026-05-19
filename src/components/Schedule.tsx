@@ -23,7 +23,9 @@ export function Schedule() {
     <Section id="lich-trinh" className="!py-16 lg:!py-20">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12 max-w-5xl">
         <span className="font-display text-gradient-gold">8</span> ngày —{' '}
-        <em className="font-serif italic text-gradient-gold">mở thị trường, định hình thập kỷ</em>
+        <em className="font-serif italic text-gradient-gold">
+          Từ xưởng đến Container đầu tiên
+        </em>
         .
       </h2>
 
