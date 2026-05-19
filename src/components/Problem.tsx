@@ -14,9 +14,9 @@ export function Problem() {
           </h2>
 
           <p className="text-lg lg:text-xl text-text-body font-light leading-relaxed max-w-2xl">
-            Trung Quốc đã nắm thế chủ động trong D2C và logistics. Mô hình phân phối truyền thống
-            đang dần bị thay thế — và biên lợi nhuận của các nhà máy Việt cũng bị bào mòn theo.
-            Mỗi tầng trung gian lấy đi 15–30% giá trị.
+            Trung Quốc đã làm chủ cuộc chơi D2C và logistics. Mô hình phân phối truyền thống đang
+            bị bóp chết và biên lợi nhuận của nhà máy Việt bị bào mòn theo. Mỗi mắt xích trung
+            gian trên đường ra thị trường toàn cầu lấy đi 15–30% giá trị.
           </p>
         </div>
 
