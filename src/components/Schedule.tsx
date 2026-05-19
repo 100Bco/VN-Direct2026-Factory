@@ -64,17 +64,20 @@ export function Schedule() {
               </div>
 
               {/* Location title */}
-              <p className="text-sm lg:text-base font-bold font-sans text-text-heading leading-snug px-1 mb-2 min-h-[2.5em]">
+              <p className="text-sm lg:text-base font-bold font-sans text-text-heading leading-snug px-1 mb-3 min-h-[2.75em]">
                 {d.title}
               </p>
 
-              {/* Activity sub-label */}
-              {d.activity ? (
-                <p className="text-xs text-brand-gold font-medium leading-snug">{d.activity}</p>
-              ) : (
-                <p className="text-xs text-text-body/60 font-light leading-snug">
-                  Factory visits TBA
-                </p>
+              {/* Activity pill */}
+              {d.activity && (
+                <span
+                  className="inline-block px-3 py-1.5 rounded-full
+                             border border-brand-gold/50 bg-brand-gold/10
+                             text-brand-gold text-[11px] font-semibold
+                             leading-snug whitespace-nowrap"
+                >
+                  {d.activity}
+                </span>
               )}
             </li>
           ))}
