@@ -36,7 +36,7 @@ export function Opportunity() {
           className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug
                      mb-10 lg:mb-14 max-w-5xl"
         >
-          Cánh cổng vào thị trường Texas, Mỹ —{' '}
+          Cánh cổng vào thị trường Mỹ{' '}
           <em className="font-serif italic text-gradient-gold">
             trị giá 2,6 nghìn tỷ đô
           </em>
