@@ -12,6 +12,7 @@ interface Buyer {
   bullets: { heading: string; items: string[] }[];
   interest: string;
   initials: string;
+  photo: string;
 }
 
 const BUYERS: Buyer[] = [
@@ -38,6 +39,7 @@ const BUYERS: Buyer[] = [
     interest:
       'Vật liệu xây dựng số lượng lớn, đạt chuẩn HUD/local code, supply chain ổn định cho dự án quy mô.',
     initials: 'MH',
+    photo: '/logos/Michael%20Hough.jpeg',
   },
   {
     name: 'Mick Hawton',
@@ -63,6 +65,7 @@ const BUYERS: Buyer[] = [
     interest:
       'Vật liệu cho commercial real estate development; góc nhìn capital markets về chuỗi cung ứng và hợp tác cung cấp dài hạn.',
     initials: 'MH',
+    photo: '/logos/Mick%20Hawton.webp',
   },
   {
     name: 'Ricardo Rubiano',
@@ -91,6 +94,7 @@ const BUYERS: Buyer[] = [
     interest:
       'Vật liệu cho dự án căn hộ multi-family và mặt bằng thương mại hạng A quy mô lớn — góc nhìn 5 thế hệ về thị trường biên giới Mỹ – Mexico.',
     initials: 'RR',
+    photo: '/logos/Ricardo%20Rubiano.jpg',
   },
   {
     name: 'Lezlie Tram Le',
@@ -120,6 +124,7 @@ const BUYERS: Buyer[] = [
     interest:
       'Phụ trách kết nối nhà máy VN với thị trường Texas trong lĩnh vực vật liệu xây dựng và nội thất.',
     initials: 'LT',
+    photo: '/logos/Lezlie%20Tram.jpg',
   },
   {
     name: 'Kameron Schram',
@@ -141,6 +146,7 @@ const BUYERS: Buyer[] = [
     interest:
       'Đối tác nhà máy lâu dài với cam kết nhất quán về chất lượng và sản phẩm độc đáo phục vụ phân khúc cao cấp.',
     initials: 'KS',
+    photo: '/logos/Cameron%20Schram.jpg',
   },
 ];
 
@@ -181,12 +187,20 @@ export function Buyers() {
                        border border-border-subtle
                        shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
           >
+            {/* Initials fallback — hiện phía sau ảnh, lộ ra nếu ảnh fail */}
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="font-display text-[clamp(80px,18vw,180px)] text-gradient-gold leading-none opacity-80">
                 {buyer.initials}
               </span>
             </div>
-            <div className="absolute -bottom-1/3 -right-1/3 w-2/3 h-2/3 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none" />
+            <img
+              key={buyer.photo}
+              src={buyer.photo}
+              alt={buyer.name}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
             <div className="absolute inset-2 rounded-3xl border border-white/5 pointer-events-none" />
           </div>
         </div>
