@@ -1,4 +1,4 @@
-import { Building2, Users, ShieldCheck, ArrowRight, Handshake } from 'lucide-react';
+import { Building2, ShieldCheck, ArrowRight, Handshake } from 'lucide-react';
 import { Section } from './Section';
 
 const BENEFITS = [
@@ -6,11 +6,6 @@ const BENEFITS = [
     icon: Building2,
     title: 'Tham quan trực tiếp tại xưởng',
     body: 'Dây chuyền · kiểm soát chất lượng · đội kỹ thuật.',
-  },
-  {
-    icon: Users,
-    title: 'Đối thoại trực tiếp với khách mua',
-    body: 'Quy cách kỹ thuật · sản lượng · tiến độ.',
   },
   {
     icon: ShieldCheck,
