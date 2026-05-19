@@ -116,7 +116,7 @@ export function D2CAnimation() {
           <div>
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="w-10 h-px bg-border-subtle"></div>
-              <div className="text-[11px] tracking-[0.2em] uppercase text-text-muted font-medium">
+              <div className="text-[11px] tracking-[0.2em] uppercase text-text-body font-medium">
                 Truyền thống
               </div>
               <div className="w-10 h-px bg-border-subtle"></div>
@@ -175,10 +175,10 @@ export function D2CAnimation() {
       {/* Stats Block */}
       <div className="flex flex-wrap justify-center md:justify-around gap-10 mt-12 pt-10 border-t border-border-subtle/50">
         <div className="text-center max-w-[200px]">
-          <div className="font-display text-4xl lg:text-5xl text-text-muted leading-none mb-4">
+          <div className="font-display text-4xl lg:text-5xl text-text-body leading-none mb-4">
             15–30%
           </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-muted leading-relaxed">
+          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
             Hao hụt lợi nhuận tại
             <br />
             mỗi mắt xích trung gian
@@ -188,7 +188,7 @@ export function D2CAnimation() {
           <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none mb-4">
             0
           </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-muted leading-relaxed">
+          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
             Lớp trung gian phân phối
             <br />
             (D2C Direct)
@@ -198,7 +198,7 @@ export function D2CAnimation() {
           <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none mb-4">
             2–3×
           </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-muted leading-relaxed">
+          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
             Biên lợi nhuận tăng thêm
             <br />
             trả về cho nhà máy

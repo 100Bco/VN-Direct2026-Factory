@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Section } from './Section';
 
 interface Buyer {
@@ -9,7 +8,7 @@ interface Buyer {
   role: string;
   subtitle: string;
   intro: string;
-  bullets: { heading: string; items: string[] }[];
+  bullets: string[];
   interest: string;
   initials: string;
   photo: string;
@@ -21,23 +20,14 @@ const BUYERS: Buyer[] = [
     role: 'Tổng thầu xây dựng — Austin, Texas',
     subtitle: '30 năm xây dựng · Multi-family & HUD specialist',
     intro:
-      '30 năm kinh nghiệm trong ngành xây dựng. Khởi đầu từ cải tạo nhà ở, mở rộng sang xây mới nhà ở đặt riêng, hiện tập trung vào khu căn hộ thuế tín dụng và dự án do Bộ Gia cư & Phát triển Đô thị Hoa Kỳ tài trợ.',
+      '30 năm kinh nghiệm xây dựng — từ cải tạo, custom home đến multi-family thuế tín dụng và dự án HUD-funded.',
     bullets: [
-      {
-        heading: 'Danh mục đang triển khai',
-        items: [
-          'Quy mô $10M – $24M mỗi công trình',
-          'Multi-family tax credit specialist',
-          'HUD-funded housing portfolio',
-        ],
-      },
-      {
-        heading: 'Thị trường',
-        items: ['Corpus Christi', 'Houston', 'Austin', 'San Antonio'],
-      },
+      'Quy mô $10M – $24M mỗi công trình',
+      'Multi-family tax credit specialist',
+      'HUD-funded housing portfolio',
+      'Thị trường: Corpus Christi · Houston · Austin · San Antonio',
     ],
-    interest:
-      'Vật liệu xây dựng số lượng lớn, đạt chuẩn HUD/local code, supply chain ổn định cho dự án quy mô.',
+    interest: 'Vật liệu xây dựng số lượng lớn, đạt chuẩn HUD và quy định địa phương.',
     initials: 'MH',
     photo: '/logos/Michael%20Hough.jpeg',
   },
@@ -46,78 +36,49 @@ const BUYERS: Buyer[] = [
     role: 'Đối tác điều hành, Headwater',
     subtitle: '35 năm bất động sản thương mại & thị trường vốn Bắc Mỹ',
     intro:
-      'Hơn 30 năm trong phát triển kinh doanh và vận hành. Nền tảng chuyên môn trải rộng qua bất động sản thương mại, leadership development, capital markets và công nghệ — mang góc nhìn toàn diện từ phát triển dự án đến chiến lược tài chính.',
+      'Hơn 30 năm phát triển BĐS thương mại, capital markets và vận hành — góc nhìn toàn diện từ dự án đến chiến lược tài chính.',
     bullets: [
-      {
-        heading: 'Vai trò tiêu biểu',
-        items: [
-          'Partner & cựu Chief Strategy Officer · Headwater',
-          'Vice President, Capital Markets · Avison Young (Canada)',
-          'Vice President, Operations · Trig Life Services',
-          'Managing Principal · OneDigital',
-        ],
-      },
+      'Partner & cựu Chief Strategy Officer · Headwater',
+      'VP Capital Markets · Avison Young (Canada)',
+      'VP Operations · Trig Life Services',
+      'Managing Principal · OneDigital',
     ],
     interest:
-      'Vật liệu cho commercial real estate development; góc nhìn capital markets về chuỗi cung ứng và hợp tác cung cấp dài hạn.',
+      'Vật liệu cho commercial real estate; góc nhìn capital markets về chuỗi cung ứng dài hạn.',
     initials: 'MH',
     photo: '/logos/Mick%20Hawton.jpeg',
   },
   {
     name: 'Ricardo Rubiano',
-    role: 'Nhà phát triển bất động sản — Rio Grande Valley, Texas',
-    subtitle: '5 thế hệ làm bất động sản từ 1908 · 760+ căn multi-family đang triển khai',
+    role: 'Nhà phát triển BĐS — Rio Grande Valley, Texas',
+    subtitle: '5 thế hệ làm BĐS từ 1908 · 760+ căn multi-family đang triển khai',
     intro:
-      '23 năm kinh nghiệm trong phát triển bất động sản. Sinh ra ở Texas, lớn lên hai bên biên giới Mỹ – Mexico. Sứ mệnh: "Building a better Valley."',
+      '23 năm kinh nghiệm. Lớn lên hai bên biên giới Mỹ – Mexico. Sứ mệnh: "Building a better Valley."',
     bullets: [
-      {
-        heading: 'Danh mục đang triển khai',
-        items: [
-          '320-unit apartment complex tại Weslaco (đã sở hữu)',
-          '168-unit multi-family tại Pharr (đang lên kế hoạch)',
-          '275-unit multi-family tại Edinburg (đang lên kế hoạch)',
-          "Single-family scale 100+ acres — Water's Edge & Pecan Grove",
-        ],
-      },
-      {
-        heading: 'Class-A retail · 7 thành phố',
-        items: [
-          'Brownsville · Weslaco · San Juan · Harlingen · Pharr · Edinburg · Laredo',
-          'Khách thuê: Olive Garden · Longhorn · AT&T · T-Mobile · Panda Express · Dunkin Donuts',
-        ],
-      },
+      '320-unit apartment tại Weslaco (đã sở hữu)',
+      '168-unit Pharr + 275-unit Edinburg (kế hoạch)',
+      'Class-A retail tại 7 thành phố Rio Grande Valley',
+      'Khách thuê: Olive Garden · AT&T · T-Mobile · Panda Express',
     ],
     interest:
-      'Vật liệu cho dự án căn hộ multi-family và mặt bằng thương mại hạng A quy mô lớn — góc nhìn 5 thế hệ về thị trường biên giới Mỹ – Mexico.',
+      'Vật liệu cho multi-family và mặt bằng thương mại hạng A quy mô lớn.',
     initials: 'RR',
     photo: '/logos/Ricardo%20Rubiano.jpg',
   },
   {
     name: 'Lezlie Tram Le',
-    role: 'CEO, LT Commercial Group · Đại diện 100B tại Texas',
+    role: 'CEO, LT Commercial · Đại diện 100B tại Texas',
     subtitle: '22+ năm bất động sản thương mại Texas',
     intro:
-      'Trực tiếp dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas.',
+      'Dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas — và là cầu nối 100B với thị trường Mỹ.',
     bullets: [
-      {
-        heading: 'Track record',
-        items: [
-          '$55 triệu USD dự án xây dựng mới',
-          '$250+ triệu USD thương vụ M&A',
-          'Hàng trăm tài sản văn phòng, bán lẻ, công nghiệp, nhà ở',
-        ],
-      },
-      {
-        heading: 'Ghi nhận',
-        items: [
-          'Chủ tịch AREAA Austin (2020)',
-          'Chủ tịch Manor EDC',
-          'Austin Under 40 — Bất động sản (2021)',
-        ],
-      },
+      '$55 triệu USD dự án xây dựng mới',
+      'Hơn $250 triệu USD thương vụ M&A',
+      'Chủ tịch AREAA Austin (2020)',
+      'Austin Under 40 — Bất động sản (2021)',
     ],
     interest:
-      'Phụ trách kết nối nhà máy VN với thị trường Texas trong lĩnh vực vật liệu xây dựng và nội thất.',
+      'Phụ trách kết nối nhà máy Việt với thị trường Texas — VLXD và nội thất.',
     initials: 'LT',
     photo: '/logos/Lezlie%20Tram.jpg',
   },
@@ -126,20 +87,15 @@ const BUYERS: Buyer[] = [
     role: 'Founder, Cleo Builders',
     subtitle: 'Boutique luxury custom home builder, Texas',
     intro:
-      'Nhà xây dựng nhà ở cao cấp boutique tại Texas — tập trung craftsmanship, chi tiết thiết kế và dấu ấn riêng cho từng khách hàng.',
+      'Chuyên nhà ở cao cấp đặt riêng — tay nghề thủ công, chi tiết thiết kế, dấu ấn riêng cho từng khách hàng.',
     bullets: [
-      {
-        heading: 'Danh mục đang triển khai ($15M)',
-        items: [
-          '1 dự án 9 căn hộ đang xây',
-          '1 custom home đang xây',
-          '4 custom homes đang thiết kế ($2M – $3,2M/căn)',
-          '1 tenant finish-out lập kế hoạch',
-        ],
-      },
+      '1 dự án 9 căn hộ đang xây',
+      '1 custom home đang xây',
+      '4 custom homes đang thiết kế ($2M – $3,2M/căn)',
+      '1 tenant finish-out đang lập kế hoạch',
     ],
     interest:
-      'Đối tác nhà máy lâu dài với cam kết nhất quán về chất lượng và sản phẩm độc đáo phục vụ phân khúc cao cấp.',
+      'Đối tác nhà máy lâu dài, chất lượng nhất quán cho phân khúc cao cấp.',
     initials: 'KS',
     photo: '/logos/Cameron%20Schram.jpg',
   },
@@ -156,147 +112,155 @@ export function Buyers() {
   return (
     <Section
       id="doan-khach-mua"
-      className="bg-bg-alt border-y border-border-subtle"
+      className="bg-bg-alt border-y border-border-subtle !py-16 lg:!py-20"
     >
-      <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-12
-                   max-w-4xl"
-      >
-        Năm <em className="font-serif italic text-gradient-gold">nhà phát triển bất động sản</em>{' '}
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-10 max-w-4xl">
+        <span className="font-display text-gradient-gold">5</span>{' '}
+        <em className="font-serif italic text-gradient-gold">nhà phát triển bất động sản</em>{' '}
         hàng đầu.
       </h2>
 
-      {/* Carousel */}
-      <div
-        className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start"
-        role="region"
-        aria-roledescription="carousel"
-        aria-label="Đoàn khách mua chiến lược"
-      >
-        {/* Photo panel */}
-        <div className="lg:col-span-5 order-1 lg:order-2 lg:sticky lg:top-28">
-          <div
-            className="relative aspect-square w-full max-w-md mx-auto lg:max-w-none
-                       rounded-3xl overflow-hidden
-                       bg-gradient-to-br from-bg-card-hover via-bg-alt to-bg-dark
-                       border border-border-subtle
-                       shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
-          >
-            {/* Initials fallback — hiện phía sau ảnh, lộ ra nếu ảnh fail */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-[clamp(80px,18vw,180px)] text-gradient-gold leading-none opacity-80">
-                {buyer.initials}
-              </span>
-            </div>
-            <img
-              key={buyer.photo}
-              src={buyer.photo}
-              alt={buyer.name}
-              loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-2 rounded-3xl border border-white/5 pointer-events-none" />
-          </div>
-        </div>
-
-        {/* Text panel */}
-        <div className="lg:col-span-7 order-2 lg:order-1">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <span className="text-xs uppercase tracking-[0.2em] text-text-muted">
-              / {String(BUYERS.length).padStart(2, '0')}
-            </span>
-          </div>
-
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-text-heading leading-snug mb-3">
-            {buyer.name}
-          </h3>
-          <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-2">
-            {buyer.role}
-          </p>
-          <p className="text-sm lg:text-base text-text-muted font-serif italic font-light mb-8 leading-relaxed">
-            {buyer.subtitle}
-          </p>
-
-          <p className="text-base lg:text-lg text-text-body font-light leading-relaxed mb-8 max-w-2xl">
-            {buyer.intro}
-          </p>
-
-          <div className="flex flex-col gap-6 mb-8">
-            {buyer.bullets.map((group) => (
-              <div key={group.heading}>
-                <p className="text-[11px] uppercase tracking-[0.2em] text-text-muted font-semibold mb-3">
-                  {group.heading}
-                </p>
-                <ul className="space-y-2">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-sm lg:text-base text-text-body font-light leading-relaxed"
-                    >
-                      <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="pt-6 border-t border-border-subtle">
-            <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-2">
-              Quan tâm
-            </p>
-            <p className="text-sm lg:text-base text-text-muted font-serif italic font-light leading-relaxed max-w-2xl">
-              {buyer.interest}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Carousel controls */}
-      <div className="mt-12 flex items-center justify-center gap-6">
+      {/* Carousel — relative wrapper for side arrows */}
+      <div className="relative">
+        {/* PREV arrow — left side */}
         <button
           type="button"
           onClick={prev}
           aria-label="Khách mua trước"
-          className="w-12 h-12 rounded-full border border-border-subtle text-text-heading
-                     hover:border-brand-gold hover:text-brand-gold transition-colors
-                     flex items-center justify-center"
+          className="absolute top-1/2 -translate-y-1/2 left-0 lg:-left-4 z-10
+                     w-12 h-12 lg:w-14 lg:h-14 rounded-full
+                     bg-bg-dark/70 hover:bg-bg-dark border border-border-subtle
+                     hover:border-brand-gold transition-colors
+                     flex items-center justify-center backdrop-blur-sm"
         >
-          <ChevronLeft size={20} />
+          <img
+            src="/logos/carbon_next-filled-1.png"
+            alt=""
+            width={24}
+            height={24}
+            className="w-5 h-5 lg:w-6 lg:h-6 object-contain"
+          />
         </button>
 
-        <div className="flex items-center gap-2.5">
-          {BUYERS.map((b, i) => (
-            <button
-              key={b.name}
-              type="button"
-              onClick={() => goTo(i)}
-              aria-label={`Đến slide ${i + 1}: ${b.name}`}
-              aria-current={i === index ? 'true' : undefined}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === index
-                  ? 'w-10 bg-brand-gold'
-                  : 'w-1.5 bg-border-subtle hover:bg-brand-gold/40'
-              }`}
-            />
-          ))}
-        </div>
-
+        {/* NEXT arrow — right side */}
         <button
           type="button"
           onClick={next}
           aria-label="Khách mua tiếp theo"
-          className="w-12 h-12 rounded-full border border-border-subtle text-text-heading
-                     hover:border-brand-gold hover:text-brand-gold transition-colors
-                     flex items-center justify-center"
+          className="absolute top-1/2 -translate-y-1/2 right-0 lg:-right-4 z-10
+                     w-12 h-12 lg:w-14 lg:h-14 rounded-full
+                     bg-bg-dark/70 hover:bg-bg-dark border border-border-subtle
+                     hover:border-brand-gold transition-colors
+                     flex items-center justify-center backdrop-blur-sm"
         >
-          <ChevronRight size={20} />
+          <img
+            src="/logos/carbon_next-filled.png"
+            alt=""
+            width={24}
+            height={24}
+            className="w-5 h-5 lg:w-6 lg:h-6 object-contain"
+          />
         </button>
+
+        {/* Card content */}
+        <div
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center
+                     px-4 lg:px-16"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Đoàn khách mua chiến lược"
+        >
+          {/* Photo panel */}
+          <div className="lg:col-span-5 order-1 lg:order-1">
+            <div
+              className="relative aspect-square w-full max-w-sm mx-auto lg:max-w-none
+                         rounded-3xl overflow-hidden
+                         bg-gradient-to-br from-bg-card-hover via-bg-alt to-bg-dark
+                         border border-border-subtle
+                         shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="font-display text-[clamp(80px,18vw,180px)] text-gradient-gold leading-none opacity-80">
+                  {buyer.initials}
+                </span>
+              </div>
+              <img
+                key={buyer.photo}
+                src={buyer.photo}
+                alt={buyer.name}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-2 rounded-3xl border border-white/5 pointer-events-none" />
+            </div>
+          </div>
+
+          {/* Text panel — uniform height across all buyers */}
+          <div className="lg:col-span-7 order-2 lg:order-2 flex flex-col">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span className="text-xs uppercase tracking-[0.2em] text-text-body">
+                / {String(BUYERS.length).padStart(2, '0')}
+              </span>
+            </div>
+
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light text-text-heading leading-snug mb-2">
+              {buyer.name}
+            </h3>
+            <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-2">
+              {buyer.role}
+            </p>
+            <p className="text-sm lg:text-base text-text-body font-serif italic font-light leading-relaxed mb-5">
+              {buyer.subtitle}
+            </p>
+
+            <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed mb-5">
+              {buyer.intro}
+            </p>
+
+            <ul className="space-y-2 mb-5">
+              {buyer.bullets.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm lg:text-base text-text-body font-light leading-relaxed"
+                >
+                  <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-auto pt-4 border-t border-border-subtle">
+              <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-1.5">
+                Quan tâm
+              </p>
+              <p className="text-sm lg:text-base text-text-body font-serif italic font-light leading-relaxed">
+                {buyer.interest}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Dot indicators — below carousel, centered */}
+      <div className="mt-8 flex items-center justify-center gap-2.5">
+        {BUYERS.map((b, i) => (
+          <button
+            key={b.name}
+            type="button"
+            onClick={() => goTo(i)}
+            aria-label={`Đến slide ${i + 1}: ${b.name}`}
+            aria-current={i === index ? 'true' : undefined}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              i === index
+                ? 'w-10 bg-brand-gold'
+                : 'w-1.5 bg-border-subtle hover:bg-brand-gold/40'
+            }`}
+          />
+        ))}
       </div>
     </Section>
   );
