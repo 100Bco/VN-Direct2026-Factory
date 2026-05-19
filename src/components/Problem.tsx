@@ -6,14 +6,6 @@ export function Problem() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header block — căn giữa */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 lg:mb-20">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-8 h-px bg-border-subtle" />
-            <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold">
-              Vấn đề
-            </p>
-            <div className="w-8 h-px bg-border-subtle" />
-          </div>
-
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6
                        max-w-3xl"
