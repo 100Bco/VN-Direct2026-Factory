@@ -22,7 +22,7 @@ const PHASES: Phase[] = [
     name: 'Đối tác xúc tiến thương mại',
     steps: [
       { n: '01', title: 'Đánh giá nhà máy', detail: 'Tham quan · QC · chứng chỉ.' },
-      { n: '02', title: 'Khảo sát thương mại', detail: 'Giá · MOQ · thanh toán.' },
+      { n: '02', title: 'Khảo sát thương mại', detail: 'Chính sách chiết khấu · Giá · MOQ · Thanh toán.' },
       { n: '03', title: 'Ký hợp đồng', detail: 'Khung 3 bên · chứng nhận đại lý.' },
       { n: '04', title: 'Đơn hàng đầu tiên', detail: 'Sản xuất · QC · vận chuyển.' },
     ],
