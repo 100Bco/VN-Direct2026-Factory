@@ -57,6 +57,21 @@ export function D2CAnimation() {
           50%      { transform: scale(1.05); }
         }
 
+        /* Middle traditional nodes — tan biến cycle để show mô hình cũ đang biến mất */
+        .trad-vanish {
+          transform-origin: center;
+          transform-box: fill-box;
+          animation: vanishCycle 6s ease-in-out infinite;
+        }
+
+        @keyframes vanishCycle {
+          0%       { opacity: 0; transform: translateY(12px) scale(1); filter: blur(0); }
+          10%      { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+          40%      { opacity: 1; transform: scale(1); filter: blur(0); }
+          60%, 70% { opacity: 0; transform: scale(0.7); filter: blur(6px); }
+          90%, 100% { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+
         .delay-0 { animation-delay: 0.1s; }
         .delay-1 { animation-delay: 0.3s; }
         .delay-2 { animation-delay: 0.5s; }
@@ -182,21 +197,21 @@ export function D2CAnimation() {
             </g>
 
             {/* Node 2: Distributor */}
-            <g className="trad-node delay-1">
+            <g className="trad-vanish" style={{ animationDelay: '0s' }}>
               <circle cx="270" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(250 70)"><use href="#iconBox" width="40" height="40" /></g>
               <text x="270" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà phân phối</text>
             </g>
 
             {/* Node 3: Wholesaler */}
-            <g className="trad-node delay-2">
+            <g className="trad-vanish" style={{ animationDelay: '0.3s' }}>
               <circle cx="450" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(430 70)"><use href="#iconTruck" width="40" height="40" /></g>
               <text x="450" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán sỉ</text>
             </g>
 
             {/* Node 4: Retailer */}
-            <g className="trad-node delay-3">
+            <g className="trad-vanish" style={{ animationDelay: '0.6s' }}>
               <circle cx="630" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(610 70)"><use href="#iconShop" width="40" height="40" /></g>
               <text x="630" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán lẻ</text>
