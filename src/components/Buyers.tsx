@@ -135,7 +135,10 @@ const TRIPS: Trip[] = [
           {
             date: '8/6',
             dow: 'Thứ Hai',
-            visits: [{ label: 'EuroStark (EuP Group)' }],
+            visits: [
+              { label: 'EuroStark (EuP Group)' },
+              { label: 'Woodsland' },
+            ],
           },
           {
             date: '9/6',
@@ -143,6 +146,7 @@ const TRIPS: Trip[] = [
             visits: [
               { label: 'Amy Grupo' },
               { label: 'The One & Jager' },
+              { label: 'Anphat Holdings' },
             ],
           },
           {
@@ -150,9 +154,7 @@ const TRIPS: Trip[] = [
             dow: 'Thứ Tư',
             visits: [
               { time: 'Sáng', label: 'Tonmat Group', pill: 'đã xác nhận' },
-              { time: 'Chiều', label: 'Woodsland' },
-              { time: 'Chiều', label: 'Anphat Holdings' },
-              { time: 'Tối', label: 'Bay → TP. HCM' },
+              { time: 'Chiều', label: 'Bay → TP. HCM' },
             ],
           },
         ],
