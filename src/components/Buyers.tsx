@@ -153,7 +153,7 @@ const TRIPS: Trip[] = [
             date: '10/6',
             dow: 'Thứ Tư',
             visits: [
-              { label: 'Tonmat Group', pill: 'đã xác nhận' },
+              { label: 'Tonmat Group' },
               { label: 'Bay → TP. HCM' },
             ],
           },
