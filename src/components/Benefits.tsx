@@ -22,7 +22,7 @@ const BENEFITS: Benefit[] = [
     title: 'Khách hàng đã được thẩm định',
     bullets: [
       'Ngân sách rõ ràng · dự án đang chạy',
-      'Nhu cầu ký kết trong 6 đến 18 tháng',
+      'Nhu cầu ký kết trong 6 - 18 tháng',
       'Không phải khách hàng tiềm năng mơ hồ',
     ],
   },
