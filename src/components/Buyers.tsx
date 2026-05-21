@@ -16,7 +16,6 @@ interface Buyer {
 }
 
 interface Visit {
-  time?: string;
   label: string;
   pill?: string;
 }
@@ -67,9 +66,9 @@ const TRIPS: Trip[] = [
             date: '1/6',
             dow: 'Thứ Hai',
             visits: [
-              { time: 'Sáng', label: 'BM Windows' },
-              { time: 'Sáng', label: 'Dai Dung Corporation' },
-              { time: 'Chiều', label: 'An Cuong Wood' },
+              { label: 'BM Windows' },
+              { label: 'Dai Dung Corporation' },
+              { label: 'An Cuong Wood' },
             ],
           },
           {
@@ -84,8 +83,8 @@ const TRIPS: Trip[] = [
             date: '3/6',
             dow: 'Thứ Tư',
             visits: [
-              { time: 'Sáng', label: 'AA Corporation' },
-              { time: 'Chiều', label: 'Checkout · ra sân bay → Hà Nội' },
+              { label: 'AA Corporation' },
+              { label: 'Checkout · ra sân bay → Hà Nội' },
             ],
           },
         ],
@@ -135,7 +134,10 @@ const TRIPS: Trip[] = [
           {
             date: '8/6',
             dow: 'Thứ Hai',
-            visits: [{ label: 'EuroStark (EuP Group)' }],
+            visits: [
+              { label: 'EuroStark (EuP Group)' },
+              { label: 'Woodsland' },
+            ],
           },
           {
             date: '9/6',
@@ -143,16 +145,15 @@ const TRIPS: Trip[] = [
             visits: [
               { label: 'Amy Grupo' },
               { label: 'The One & Jager' },
+              { label: 'Anphat Holdings' },
             ],
           },
           {
             date: '10/6',
             dow: 'Thứ Tư',
             visits: [
-              { time: 'Sáng', label: 'Tonmat Group', pill: 'đã xác nhận' },
-              { time: 'Chiều', label: 'Woodsland' },
-              { time: 'Chiều', label: 'Anphat Holdings' },
-              { time: 'Tối', label: 'Bay → TP. HCM' },
+              { label: 'Tonmat Group' },
+              { label: 'Bay → TP. HCM' },
             ],
           },
         ],
@@ -165,9 +166,9 @@ const TRIPS: Trip[] = [
             date: '11/6',
             dow: 'Thứ Năm',
             visits: [
-              { time: 'Sáng', label: 'BM Windows' },
-              { time: 'Sáng', label: 'Dai Dung Corporation' },
-              { time: 'Chiều', label: 'An Cuong Wood' },
+              { label: 'BM Windows' },
+              { label: 'Dai Dung Corporation' },
+              { label: 'An Cuong Wood' },
             ],
           },
           {
@@ -620,11 +621,6 @@ export function Buyers() {
                                             className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed flex-wrap"
                                           >
                                             <span className="text-brand-gold mt-0.5 shrink-0">·</span>
-                                            {v.time && (
-                                              <span className="text-[10px] uppercase tracking-[0.18em] text-brand-gold font-semibold pt-0.5 shrink-0">
-                                                {v.time}
-                                              </span>
-                                            )}
                                             <span>{v.label}</span>
                                             {v.pill && (
                                               <span
