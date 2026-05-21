@@ -46,6 +46,17 @@ export function D2CAnimation() {
 
         @keyframes drawIn { to { stroke-dashoffset: 0; } }
 
+        .emblem-100b {
+          transform-origin: 450px 100px;
+          transform-box: view-box;
+          animation: emblemBreath 3.5s ease-in-out infinite;
+        }
+
+        @keyframes emblemBreath {
+          0%, 100% { transform: scale(1); }
+          50%      { transform: scale(1.05); }
+        }
+
         .delay-0 { animation-delay: 0.1s; }
         .delay-1 { animation-delay: 0.3s; }
         .delay-2 { animation-delay: 0.5s; }
@@ -74,6 +85,11 @@ export function D2CAnimation() {
 
           <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#000" floodOpacity="0.8" />
+          </filter>
+
+          {/* Gold glow filter — spotlight effect dành riêng cho 100B emblem */}
+          <filter id="emblemGoldGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor="#C3A374" floodOpacity="0.65" />
           </filter>
 
           <symbol id="iconFactory" viewBox="0 0 24 24">
@@ -223,17 +239,19 @@ export function D2CAnimation() {
               <text x="180" y="158" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Nhà máy</text>
             </g>
 
-            {/* Node 2: 100B EMBLEM (center) */}
+            {/* Node 2: 100B EMBLEM (center) — gold glow + breathing scale */}
             <g className="d2c-node delay-6">
-              <circle cx="450" cy="100" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
-              <image
-                href="/logos/100B%20Emblem.png"
-                x="420"
-                y="70"
-                width="60"
-                height="60"
-                preserveAspectRatio="xMidYMid meet"
-              />
+              <g className="emblem-100b">
+                <circle cx="450" cy="100" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#emblemGoldGlow)" />
+                <image
+                  href="/logos/100B%20Emblem.png"
+                  x="420"
+                  y="70"
+                  width="60"
+                  height="60"
+                  preserveAspectRatio="xMidYMid meet"
+                />
+              </g>
               <text x="450" y="158" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">100B</text>
               <text x="450" y="176" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Đối tác chiến lược</text>
             </g>
