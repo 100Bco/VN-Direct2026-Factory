@@ -134,7 +134,10 @@ const TRIPS: Trip[] = [
           {
             date: '8/6',
             dow: 'Thứ Hai',
-            visits: [{ label: 'Anphat Holdings' }],
+            visits: [
+              { label: 'Anphat Holdings' },
+              { label: 'Woodsland' },
+            ],
           },
           {
             date: '9/6',
