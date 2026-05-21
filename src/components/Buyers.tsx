@@ -15,173 +15,87 @@ interface Buyer {
   pending?: boolean;
 }
 
-interface Day {
-  date: string;
-  dow: string;
-  title: string;
-  items: string[];
+interface Segment {
+  location: string;
+  dates: string;
+  intro?: string;
+  factories?: string[];
+  highlight?: string;
 }
 
 interface Trip {
   label: string;
   dates: string;
-  city: string;
+  note?: string;
   attendees: { initials: string; name: string }[];
-  days: Day[];
+  segments: Segment[];
 }
 
 const TRIPS: Trip[] = [
   {
     label: 'Đợt 1',
     dates: '31/5 – 6/6',
-    city: 'Ho Chi Minh City',
+    note: 'Hai địa điểm: TP. HCM và Hà Nội · Đoàn nhập cảnh ngày 31/5 tại TP. HCM, lịch tham quan chính thức bắt đầu thứ Hai 1/6.',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'KS', name: 'Kameron Schram' },
       { initials: 'MH', name: 'Michael Hough' },
     ],
-    days: [
+    segments: [
       {
-        date: '31/5',
-        dow: 'Thứ Bảy',
-        title: 'Đón đoàn · Định hướng chuyến đi',
-        items: [
-          'Đón đoàn tại sân bay Tân Sơn Nhất',
-          'Nhận phòng · nghỉ ngơi',
-          'Dinner briefing — giới thiệu lịch trình và ngành hàng',
+        location: 'TP. Hồ Chí Minh',
+        dates: '31/5 – 3/6',
+        intro: 'Đoàn nhập cảnh 31/5, bắt đầu lịch tham quan từ thứ Hai 1/6.',
+        factories: [
+          'An Cuong Wood',
+          'BM Windows',
+          'Phu Tai + Vina G7',
+          'Phu Tai Quartz',
+          'Dai Dung Corporation',
+          'AA Corporation',
         ],
       },
       {
-        date: '1/6',
-        dow: 'Chủ Nhật',
-        title: 'Tham quan nhà máy — Gỗ & Nội thất',
-        items: [
-          'An Cuong Wood — ván công nghiệp, nội thất gỗ',
-          'Phu Tai JSC — đồ nội thất xuất khẩu',
-          'Họp tổng kết cuối ngày',
-        ],
-      },
-      {
-        date: '2/6',
-        dow: 'Thứ Hai',
-        title: 'Tham quan nhà máy — Sàn & Vật liệu ốp lát',
-        items: [
-          'Nhà máy sàn SPC / LVT',
-          'Nhà máy đá thạch anh & gạch',
-          'Working session — đánh giá sản phẩm và thương mại',
-        ],
-      },
-      {
-        date: '3/6',
-        dow: 'Thứ Ba',
-        title: 'Tham quan nhà máy — Cửa & Cửa sổ',
-        items: [
-          'Amy Grupo — cửa & vách kính',
-          'Nhà máy cửa uPVC / nhôm',
-          '1-1 session giữa buyer và nhà máy',
-        ],
-      },
-      {
-        date: '4/6',
-        dow: 'Thứ Tư',
-        title: 'Tham quan nhà máy — Thép & Kim loại',
-        items: [
-          'Dai Dung — kết cấu thép, nhà tiền chế',
-          'Tonmat Group — mái thép & tấm ốp',
-          'Họp tổng kết tuần · định hướng Hà Nội',
-        ],
-      },
-      {
-        date: '5/6',
-        dow: 'Thứ Năm',
-        title: 'Working day · Thương thảo & Tổng kết HCM',
-        items: [
-          '1-1 working sessions theo yêu cầu',
-          'Tổng kết đánh giá nhà máy HCM',
-          'Gala dinner — kết nối đoàn và đối tác',
-        ],
-      },
-      {
-        date: '6/6',
-        dow: 'Thứ Sáu',
-        title: 'Bay HCM → Hà Nội',
-        items: [
-          'Chuyến bay buổi sáng',
-          'Nhận phòng tại Hà Nội',
-          'Briefing chiều — lịch trình Hà Nội',
+        location: 'Hà Nội',
+        dates: '4/6 – 6/6',
+        factories: [
+          'Anphat Holdings — AnPro & An Cuong Flooring',
+          'Woodsland',
+          'Tonmat Group',
+          'EuroStark (EuP Group)',
+          'Amy Grupo',
+          'The One & Jager',
         ],
       },
     ],
   },
   {
     label: 'Đợt 2',
-    dates: '7/6 – 12/6',
-    city: 'Hà Nội',
+    dates: '7/6 – 13/6',
+    note: 'Đợt 2 là không gian dành cho những nhà máy chưa kịp tiếp đón ở Đợt 1, hoặc các đối tác cần một buổi gặp gỡ chuyên sâu hơn. Lịch chi tiết sẽ được 100B trao đổi và chốt riêng với từng nhà máy.',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'RR', name: 'Ricardo Rubiano' },
       { initials: 'LD', name: 'Loc Dang' },
     ],
-    days: [
+    segments: [
       {
-        date: '7/6',
-        dow: 'Thứ Bảy',
-        title: 'Tham quan nhà máy — Cửa & Cửa sổ cao cấp',
-        items: [
-          'BM Windows — cửa nhôm, cửa sổ nhập khẩu',
-          'Eurowindow — cửa uPVC & kính cao cấp',
-          'Working session buổi chiều',
-        ],
+        location: 'Hạ Long',
+        dates: '7/6',
+        intro: 'Đoàn join chuyến du thuyền tại Hạ Long trước khi bắt đầu lịch tham quan.',
       },
       {
-        date: '8/6',
-        dow: 'Chủ Nhật',
-        title: 'Tham quan nhà máy — Gỗ & Tủ bếp',
-        items: [
-          'AA Corporation — nội thất, tủ bếp xuất khẩu',
-          'An Phat Holdings — nhựa kỹ thuật, vật liệu xanh',
-          'Họp đánh giá sản phẩm buổi chiều',
-        ],
+        location: 'Hà Nội',
+        dates: '8/6 – 10/6',
+        intro:
+          'Dành cho các nhà máy phía Bắc chưa kịp gặp ở Đợt 1, hoặc các đối tác cần đánh giá vòng 2 chuyên sâu hơn.',
+        highlight: '10/6 · Tonmat Group (đã xác nhận)',
       },
       {
-        date: '9/6',
-        dow: 'Thứ Hai',
-        title: 'Briefing chiến lược — Hoa Phat Group',
-        items: [
-          'Briefing Hoa Phat Group — thép, mái tôn, vật liệu xây dựng',
-          'Không tham quan xưởng — session trao đổi chiến lược',
-          'Buổi chiều: 1-1 thương thảo theo nhà máy',
-        ],
-      },
-      {
-        date: '10/6',
-        dow: 'Thứ Ba',
-        title: 'Working day · Thương thảo thương mại',
-        items: [
-          '1-1 sessions — giá, MOQ, điều khoản',
-          'Review hồ sơ nhà máy và chứng chỉ',
-          'Dự thảo term sheet với các đối tác tiềm năng',
-        ],
-      },
-      {
-        date: '11/6',
-        dow: 'Thứ Tư',
-        title: 'Working day · Finalize & Ký kết',
-        items: [
-          'Hoàn thiện điều khoản hợp tác',
-          'Ký MOU / LOI với các đối tác đã thống nhất',
-          'Closing dinner — toàn bộ đoàn và đối tác nhà máy',
-        ],
-      },
-      {
-        date: '12/6',
-        dow: 'Thứ Năm',
-        title: 'Ngày cuối · Chia tay & Khởi hành',
-        items: [
-          'Buổi sáng tự do',
-          'Check-out · tiễn đoàn ra sân bay',
-          '100B bắt đầu quy trình follow-up sau chuyến đi',
-        ],
+        location: 'TP. Hồ Chí Minh',
+        dates: '11/6 – 13/6',
+        intro:
+          'Slot bổ sung dành cho các nhà máy phía Nam chưa kịp tiếp đón ở Đợt 1, hoặc cần một vòng tham quan thứ hai.',
       },
     ],
   },
@@ -557,41 +471,64 @@ export function Buyers() {
                               ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
                 >
                   <div className="overflow-hidden">
-                    <ul className="border-t border-border-subtle">
-                      {t.days.map((d, di) => (
-                        <li
-                          key={d.date}
-                          className={`grid grid-cols-12 gap-4 lg:gap-6 px-6 lg:px-8 py-5 ${
-                            di < t.days.length - 1 ? 'border-b border-border-subtle/50' : ''
-                          }`}
-                        >
-                          <div className="col-span-12 md:col-span-3 lg:col-span-2 md:border-r md:border-border-subtle/50 md:pr-4">
-                            <p className="font-display text-2xl lg:text-3xl text-gradient-gold leading-none">
-                              {d.date}
-                            </p>
-                            <p className="text-[10px] uppercase tracking-[0.2em] text-text-body font-semibold mt-2">
-                              {d.dow}
-                            </p>
-                          </div>
-                          <div className="col-span-12 md:col-span-9 lg:col-span-10">
-                            <h4 className="text-base lg:text-lg font-bold font-sans text-text-heading leading-snug mb-3">
-                              {d.title}
-                            </h4>
-                            <ul className="space-y-1.5">
-                              {d.items.map((item) => (
-                                <li
-                                  key={item}
-                                  className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed"
+                    <div className="border-t border-border-subtle">
+                      {t.note && (
+                        <p className="px-6 lg:px-8 py-5 text-sm lg:text-base text-text-heading font-serif italic font-light leading-relaxed border-b border-border-subtle/50">
+                          {t.note}
+                        </p>
+                      )}
+
+                      <ul>
+                        {t.segments.map((seg, si) => (
+                          <li
+                            key={seg.location + seg.dates}
+                            className={`grid grid-cols-12 gap-4 lg:gap-6 px-6 lg:px-8 py-5 ${
+                              si < t.segments.length - 1
+                                ? 'border-b border-border-subtle/50'
+                                : ''
+                            }`}
+                          >
+                            <div className="col-span-12 md:col-span-4 lg:col-span-3 md:border-r md:border-border-subtle/50 md:pr-4">
+                              <p className="text-base lg:text-lg font-bold font-sans text-text-heading leading-snug mb-1">
+                                {seg.location}
+                              </p>
+                              <p className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-semibold">
+                                {seg.dates}
+                              </p>
+                            </div>
+                            <div className="col-span-12 md:col-span-8 lg:col-span-9">
+                              {seg.intro && (
+                                <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed mb-3">
+                                  {seg.intro}
+                                </p>
+                              )}
+                              {seg.highlight && (
+                                <span
+                                  className="inline-block mb-3 px-3 py-1.5 rounded-full
+                                             border border-brand-gold/60 bg-brand-gold/10
+                                             text-brand-gold text-[11px] font-semibold leading-snug"
                                 >
-                                  <span className="text-brand-gold mt-0.5 shrink-0">·</span>
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
+                                  {seg.highlight}
+                                </span>
+                              )}
+                              {seg.factories && seg.factories.length > 0 && (
+                                <ul className="space-y-1.5">
+                                  {seg.factories.map((f) => (
+                                    <li
+                                      key={f}
+                                      className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed"
+                                    >
+                                      <span className="text-brand-gold mt-0.5 shrink-0">·</span>
+                                      <span>{f}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
