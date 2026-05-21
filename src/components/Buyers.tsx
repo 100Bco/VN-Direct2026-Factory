@@ -16,7 +16,6 @@ interface Buyer {
 }
 
 interface Visit {
-  time?: string;
   label: string;
   pill?: string;
 }
@@ -622,11 +621,6 @@ export function Buyers() {
                                             className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed flex-wrap"
                                           >
                                             <span className="text-brand-gold mt-0.5 shrink-0">·</span>
-                                            {v.time && (
-                                              <span className="text-[10px] uppercase tracking-[0.18em] text-brand-gold font-semibold pt-0.5 shrink-0">
-                                                {v.time}
-                                              </span>
-                                            )}
                                             <span>{v.label}</span>
                                             {v.pill && (
                                               <span
