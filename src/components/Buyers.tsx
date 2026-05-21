@@ -46,9 +46,8 @@ interface Trip {
 
 const TRIPS: Trip[] = [
   {
-    label: 'Đợt 1',
+    label: 'ĐỢT 1',
     dates: '31/5 – 6/6',
-    note: 'Hai địa điểm: TP. HCM và Hà Nội · Đoàn nhập cảnh ngày 31/5 tại TP. HCM, lịch tham quan chính thức bắt đầu thứ Hai 1/6.',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'KS', name: 'Kameron Schram' },
@@ -121,9 +120,8 @@ const TRIPS: Trip[] = [
     ],
   },
   {
-    label: 'Đợt 2',
+    label: 'ĐỢT 2',
     dates: '7/6 – 13/6',
-    note: 'Đợt 2 là không gian dành cho những nhà máy chưa kịp tiếp đón ở Đợt 1, hoặc các đối tác cần một buổi gặp gỡ chuyên sâu hơn. Lịch chi tiết sẽ được 100B trao đổi và chốt riêng với từng nhà máy.',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'RR', name: 'Ricardo Rubiano' },
@@ -139,7 +137,7 @@ const TRIPS: Trip[] = [
         location: 'Hà Nội',
         dates: '8/6 – 10/6',
         intro:
-          'Vòng tham quan thứ hai cho các nhà máy phía Bắc đã ghé ở Đợt 1, đồng thời mở slot cho các đối tác cần đánh giá chuyên sâu hơn.',
+          'Vòng tham quan thứ hai cho các nhà máy phía Bắc đã ghé ở ĐỢT 1, đồng thời mở slot cho các đối tác cần đánh giá chuyên sâu hơn.',
         highlight: '10/6 · Tonmat Group (đã xác nhận)',
         pendingFactories: [
           'EuroStark (EuP Group)',
@@ -153,7 +151,7 @@ const TRIPS: Trip[] = [
         location: 'TP. Hồ Chí Minh',
         dates: '11/6 – 13/6',
         intro:
-          'Vòng tham quan thứ hai cho các nhà máy phía Nam đã ghé ở Đợt 1 (trừ AA Corporation), hoặc các đối tác cần đánh giá sâu hơn.',
+          'Vòng tham quan thứ hai cho các nhà máy phía Nam đã ghé ở ĐỢT 1 (trừ AA Corporation), hoặc các đối tác cần đánh giá sâu hơn.',
         pendingFactories: [
           'An Cuong Wood',
           'BM Windows',
@@ -253,7 +251,7 @@ export function Buyers() {
   const next = () => goTo(index + 1);
 
   // Accordion state for trip schedule — default: Đợt 1 mở, Đợt 2 đóng
-  const [openTrips, setOpenTrips] = useState<Set<string>>(new Set(['Đợt 1']));
+  const [openTrips, setOpenTrips] = useState<Set<string>>(new Set(['ĐỢT 1']));
   const toggleTrip = (label: string) => {
     setOpenTrips((prev) => {
       const next = new Set(prev);
@@ -450,7 +448,7 @@ export function Buyers() {
           Lịch trình{' '}
           <em className="font-serif italic text-gradient-gold">
             <span className="font-display not-italic">31</span> tháng 5 –{' '}
-            <span className="font-display not-italic">12</span> tháng 6
+            <span className="font-display not-italic">13</span> tháng 6
           </em>
         </h3>
         <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed max-w-3xl mb-10">
