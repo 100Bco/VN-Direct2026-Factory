@@ -48,7 +48,7 @@ const TRIPS: Trip[] = [
   {
     label: 'Đợt 1',
     dates: '31/5 – 6/6',
-    note: 'Hai địa điểm: TP. HCM và Hà Nội · AA Corporation chỉ ghé thăm ở Đợt 1, các nhà máy khác đều được sắp xếp cả 2 đợt để đảm bảo gặp gỡ đầy đủ.',
+    note: 'Hai địa điểm: TP. HCM và Hà Nội · Đoàn nhập cảnh ngày 31/5 tại TP. HCM, lịch tham quan chính thức bắt đầu thứ Hai 1/6.',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'KS', name: 'Kameron Schram' },
@@ -85,7 +85,7 @@ const TRIPS: Trip[] = [
             date: '3/6',
             dow: 'Thứ Tư',
             visits: [
-              { time: 'Sáng', label: 'AA Corporation', pill: 'chỉ Đợt 1' },
+              { time: 'Sáng', label: 'AA Corporation' },
               { time: 'Chiều', label: 'Checkout · ra sân bay → Hà Nội' },
             ],
           },
