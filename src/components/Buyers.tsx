@@ -134,14 +134,16 @@ const TRIPS: Trip[] = [
             visits: [
               { label: 'EuroStark (EuP Group)' },
               { label: 'Anphat Holdings' },
-              { label: 'Amy Grupo' },
-              { label: 'The One & Jager' },
             ],
           },
           {
             date: '9/6',
             dow: 'Thứ Ba',
-            visits: [{ label: 'Join đoàn GAACC' }],
+            visits: [
+              { label: 'Amy Grupo' },
+              { label: 'The One & Jager' },
+              { label: 'Join đoàn GAACC (chiều)' },
+            ],
           },
           {
             date: '10/6',
