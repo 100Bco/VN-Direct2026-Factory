@@ -114,10 +114,6 @@ export function D2CAnimation() {
             <circle cx="11" cy="30" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
             <circle cx="29" cy="30" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
           </symbol>
-          <symbol id="iconCross" viewBox="0 0 24 24">
-            <line x1="4" y1="4" x2="20" y2="20" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
-            <line x1="20" y1="4" x2="4" y2="20" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
-          </symbol>
           <symbol id="arrowShape" viewBox="0 0 28 16" overflow="visible">
             <path
               d="M2 8 L22 8 M16 2 L22 8 L16 14"
@@ -169,28 +165,25 @@ export function D2CAnimation() {
               <text x="90" y="148" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Nhà máy</text>
             </g>
 
-            {/* Node 2: Distributor (struck out) */}
-            <g className="trad-node delay-1" opacity="0.45">
-              <circle cx="270" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" opacity="0.7" />
+            {/* Node 2: Distributor */}
+            <g className="trad-node delay-1">
+              <circle cx="270" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(250 70)"><use href="#iconBox" width="40" height="40" /></g>
-              <use href="#iconCross" x="246" y="66" width="48" height="48" />
-              <text x="270" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500" opacity="0.5">Nhà phân phối</text>
+              <text x="270" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà phân phối</text>
             </g>
 
-            {/* Node 3: Wholesaler (struck out) */}
-            <g className="trad-node delay-2" opacity="0.45">
-              <circle cx="450" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" opacity="0.7" />
+            {/* Node 3: Wholesaler */}
+            <g className="trad-node delay-2">
+              <circle cx="450" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(430 70)"><use href="#iconTruck" width="40" height="40" /></g>
-              <use href="#iconCross" x="426" y="66" width="48" height="48" />
-              <text x="450" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500" opacity="0.5">Nhà bán sỉ</text>
+              <text x="450" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán sỉ</text>
             </g>
 
-            {/* Node 4: Retailer (struck out) */}
-            <g className="trad-node delay-3" opacity="0.45">
-              <circle cx="630" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" opacity="0.7" />
+            {/* Node 4: Retailer */}
+            <g className="trad-node delay-3">
+              <circle cx="630" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(610 70)"><use href="#iconShop" width="40" height="40" /></g>
-              <use href="#iconCross" x="606" y="66" width="48" height="48" />
-              <text x="630" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500" opacity="0.5">Nhà bán lẻ</text>
+              <text x="630" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán lẻ</text>
             </g>
 
             {/* Node 5: Consumer */}
@@ -232,13 +225,13 @@ export function D2CAnimation() {
 
             {/* Node 2: 100B EMBLEM (center) */}
             <g className="d2c-node delay-6">
-              <circle cx="450" cy="100" r="36" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="2" filter="url(#dropShadow)" />
+              <circle cx="450" cy="100" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
               <image
                 href="/logos/100B%20Emblem.png"
-                x="416"
-                y="66"
-                width="68"
-                height="68"
+                x="420"
+                y="70"
+                width="60"
+                height="60"
                 preserveAspectRatio="xMidYMid meet"
               />
               <text x="450" y="158" textAnchor="middle" fill="#C3A374" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="600" letterSpacing="0.05em">100B</text>
