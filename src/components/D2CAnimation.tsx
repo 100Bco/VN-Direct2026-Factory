@@ -189,29 +189,31 @@ export function D2CAnimation() {
             15–30%
           </div>
           <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
-            Hao hụt lợi nhuận tại
+            Biên lợi nhuận
             <br />
-            mỗi mắt xích trung gian
+            mỗi lớp trung gian ăn mất
           </div>
         </div>
         <div className="text-center max-w-[200px]">
           <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none mb-4">
-            0
+            1
           </div>
           <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
-            Lớp trung gian phân phối
+            Đối tác chiến lược duy nhất
             <br />
-            (D2C Direct)
+            không phải trung gian
           </div>
         </div>
         <div className="text-center max-w-[200px]">
-          <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none mb-4">
-            2–3×
+          <div className="font-display text-2xl lg:text-3xl text-gradient-gold leading-tight mb-4">
+            Thương hiệu
+            <br />
+            riêng
           </div>
           <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
-            Biên lợi nhuận tăng thêm
+            Sở hữu kênh · Kiểm soát giá
             <br />
-            trả về cho nhà máy
+            Làm chủ thị trường
           </div>
         </div>
       </div>

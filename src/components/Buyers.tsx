@@ -9,26 +9,24 @@ interface Buyer {
   subtitle: string;
   intro: string;
   bullets: string[];
-  interest: string;
   initials: string;
   photo: string;
+  pending?: boolean;
 }
 
 const BUYERS: Buyer[] = [
   {
     name: 'Lezlie Tram Le',
-    role: 'CEO, LT Commercial · Đại diện 100B tại Texas',
-    subtitle: '22+ năm bất động sản thương mại Texas',
+    role: 'CEO, LT Commercial Group',
+    subtitle: 'Đối tác chiến lược của 100B tại thị trường Mỹ · 22 năm bất động sản thương mại Texas',
     intro:
-      'Dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas — và là cầu nối 100B với thị trường Mỹ.',
+      'Dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas. Đối tác chiến lược của 100B tại thị trường Mỹ.',
     bullets: [
       '$55 triệu USD dự án xây dựng mới',
-      'Hơn $250 triệu USD thương vụ M&A',
+      'Hơn $250 triệu USD thương vụ mua bán',
       'Chủ tịch AREAA Austin (2020)',
       'Austin Under 40 — Bất động sản (2021)',
     ],
-    interest:
-      'Phụ trách kết nối nhà máy Việt với thị trường Texas — VLXD và nội thất.',
     initials: 'LT',
     photo: '/logos/Lezlie%20Tram.jpg',
   },
@@ -37,67 +35,60 @@ const BUYERS: Buyer[] = [
     role: 'Tổng thầu xây dựng — Austin, Texas',
     subtitle: '30 năm xây dựng · Multi-family & HUD specialist',
     intro:
-      '30 năm kinh nghiệm xây dựng — từ cải tạo, custom home đến multi-family thuế tín dụng và dự án HUD-funded.',
+      '30 năm kinh nghiệm xây dựng từ cải tạo, custom home đến multi-family. Có nhu cầu vật liệu ổn định và trực tiếp ra quyết định mua.',
     bullets: [
-      'Quy mô $10M – $24M mỗi công trình',
+      'Quy mô $5M – $24M mỗi công trình',
       'Multi-family tax credit specialist',
       'HUD-funded housing portfolio',
-      'Thị trường: Corpus Christi · Houston · Austin · San Antonio',
+      'Thị trường: Austin · San Antonio',
     ],
-    interest: 'Vật liệu xây dựng số lượng lớn, đạt chuẩn HUD và quy định địa phương.',
     initials: 'MH',
     photo: '/logos/Michael%20Hough.jpeg',
   },
   {
-    name: 'Mick Hawton',
-    role: 'Đối tác điều hành, Headwater',
-    subtitle: '35 năm bất động sản thương mại & thị trường vốn Bắc Mỹ',
+    name: 'Kameron Schram',
+    role: 'Founder, Cleo Builders — Texas',
+    subtitle: 'Boutique luxury custom home builder',
     intro:
-      'Hơn 30 năm phát triển BĐS thương mại, capital markets và vận hành — góc nhìn toàn diện từ dự án đến chiến lược tài chính.',
+      'Chuyên nhà ở trung cao cấp — tay nghề thủ công, chi tiết thiết kế, dấu ấn riêng cho từng khách hàng.',
     bullets: [
-      'Partner & cựu Chief Strategy Officer · Headwater',
-      'VP Capital Markets · Avison Young (Canada)',
-      'VP Operations · Trig Life Services',
-      'Managing Principal · OneDigital',
+      '1 dự án 9 căn hộ sắp xây',
+      '4 custom homes đang thiết kế ($2M – $3,2M/căn)',
+      '1 tenant finish-out đang lập kế hoạch',
     ],
-    interest:
-      'Vật liệu cho commercial real estate; góc nhìn capital markets về chuỗi cung ứng dài hạn.',
-    initials: 'MH',
-    photo: '/logos/Mick%20Hawton.jpeg',
+    initials: 'KS',
+    photo: '/logos/Cameron%20Schram.jpg',
   },
   {
     name: 'Ricardo Rubiano',
-    role: 'Nhà phát triển BĐS — Rio Grande Valley, Texas',
-    subtitle: '5 thế hệ làm BĐS từ 1908 · 760+ căn multi-family đang triển khai',
+    role: 'Chủ đầu tư — Rio Grande Valley, Texas',
+    subtitle: '5 thế hệ làm bất động sản từ 1908 · 600+ căn multi-family đang triển khai',
     intro:
-      '23 năm kinh nghiệm. Lớn lên hai bên biên giới Mỹ – Mexico. Sứ mệnh: "Building a better Valley."',
+      '23 năm kinh nghiệm. Lớn lên hai bên biên giới Mỹ – Mexico. Hiểu rõ thị trường từ nội địa đến xuyên biên giới.',
     bullets: [
       '320-unit apartment tại Weslaco (đã sở hữu)',
       '168-unit Pharr + 275-unit Edinburg (kế hoạch)',
       'Class-A retail tại 7 thành phố Rio Grande Valley',
       'Khách thuê: Olive Garden · AT&T · T-Mobile · Panda Express',
     ],
-    interest:
-      'Vật liệu cho multi-family và mặt bằng thương mại hạng A quy mô lớn.',
     initials: 'RR',
     photo: '/logos/Ricardo%20Rubiano.jpg',
   },
   {
-    name: 'Kameron Schram',
-    role: 'Founder, Cleo Builders',
-    subtitle: 'Boutique luxury custom home builder, Texas',
+    name: 'Mick Hawton',
+    role: 'Giám đốc điều hành, Headwater',
+    subtitle: '35 năm bất động sản thương mại & thị trường Bắc Mỹ',
     intro:
-      'Chuyên nhà ở cao cấp đặt riêng — tay nghề thủ công, chi tiết thiết kế, dấu ấn riêng cho từng khách hàng.',
+      'Hơn 30 năm phát triển bất động sản thương mại, tài chính và vận hành tại Bắc Mỹ.',
     bullets: [
-      '1 dự án 9 căn hộ đang xây',
-      '1 custom home đang xây',
-      '4 custom homes đang thiết kế ($2M – $3,2M/căn)',
-      '1 tenant finish-out đang lập kế hoạch',
+      'Partner & Chief Strategy Officer · Headwater',
+      'Ex-VP Capital Markets · Avison Young (Canada)',
+      'Ex-VP Operations · Trig Life Services',
+      'Ex-Managing Principal · OneDigital',
     ],
-    interest:
-      'Đối tác nhà máy lâu dài, chất lượng nhất quán cho phân khúc cao cấp.',
-    initials: 'KS',
-    photo: '/logos/Cameron%20Schram.jpg',
+    initials: 'MH',
+    photo: '/logos/Mick%20Hawton.jpeg',
+    pending: true,
   },
 ];
 
@@ -111,14 +102,19 @@ export function Buyers() {
 
   return (
     <Section
-      id="doan-khach-mua"
+      id="doan-khach"
       className="bg-bg-alt border-y border-border-subtle !py-16 lg:!py-20"
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-10 max-w-4xl">
-        <span className="font-display text-gradient-gold">5</span>{' '}
-        <em className="font-serif italic text-gradient-gold">nhà phát triển bất động sản</em>{' '}
-        hàng đầu.
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6 max-w-4xl">
+        <span className="font-display text-gradient-gold">5</span> chủ đầu tư và chủ thầu.{' '}
+        <em className="font-serif italic text-gradient-gold">Dự án thật. Ngân sách thật.</em>
       </h2>
+
+      <p className="text-base lg:text-lg text-text-heading font-light leading-relaxed max-w-3xl mb-10">
+        Không phải đoàn tham quan du lịch. Không phải hội thảo. Đây là những người có thẩm quyền
+        ký hợp đồng và họ cất công bay sang Việt Nam với một mục đích duy nhất: tìm đối tác sản
+        xuất để làm việc lâu dài.
+      </p>
 
       {/* Carousel — relative wrapper for side arrows */}
       <div className="relative">
@@ -173,11 +169,12 @@ export function Buyers() {
           {/* Photo panel */}
           <div className="lg:col-span-5 order-1 lg:order-1">
             <div
-              className="relative aspect-square w-full max-w-sm mx-auto lg:max-w-none
+              className={`relative aspect-square w-full max-w-sm mx-auto lg:max-w-none
                          rounded-3xl overflow-hidden
                          bg-gradient-to-br from-bg-card-hover via-bg-alt to-bg-dark
                          border border-border-subtle
-                         shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
+                         shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]
+                         ${buyer.pending ? 'opacity-80' : ''}`}
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="font-display text-[clamp(80px,18vw,180px)] text-gradient-gold leading-none opacity-80">
@@ -196,40 +193,40 @@ export function Buyers() {
             </div>
           </div>
 
-          {/* Text panel — uniform height across all buyers */}
+          {/* Text panel */}
           <div className="lg:col-span-7 order-2 lg:order-2 flex flex-col">
-            {/* Slide counter */}
-            <div className="flex items-baseline gap-3 mb-5">
+            {/* Slide counter + pending badge */}
+            <div className="flex items-center gap-3 mb-5">
               <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <span className="text-xs uppercase tracking-[0.2em] text-text-heading font-semibold">
                 / {String(BUYERS.length).padStart(2, '0')}
               </span>
+              {buyer.pending && (
+                <span className="ml-2 text-[10px] uppercase tracking-[0.12em] font-semibold
+                                 border border-white/20 text-text-body
+                                 px-2.5 py-1 rounded-full">
+                  Đang xác nhận
+                </span>
+              )}
             </div>
 
-            {/* Name */}
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light text-text-heading leading-snug mb-2">
               {buyer.name}
             </h3>
-
-            {/* Role eyebrow */}
             <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-3">
               {buyer.role}
             </p>
-
-            {/* Subtitle — plain white sans, not italic */}
             <p className="text-sm lg:text-base text-text-heading font-medium leading-relaxed mb-5">
               {buyer.subtitle}
             </p>
 
-            {/* Intro */}
             <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed mb-5">
               {buyer.intro}
             </p>
 
-            {/* Bullets */}
-            <ul className="space-y-2.5 mb-6">
+            <ul className="space-y-2.5">
               {buyer.bullets.map((item) => (
                 <li
                   key={item}
@@ -240,16 +237,6 @@ export function Buyers() {
                 </li>
               ))}
             </ul>
-
-            {/* Quan tâm */}
-            <div className="mt-auto pt-4 border-t border-border-subtle">
-              <p className="text-[11px] uppercase tracking-[0.2em] font-semibold text-brand-gold mb-2">
-                Quan tâm
-              </p>
-              <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed">
-                {buyer.interest}
-              </p>
-            </div>
           </div>
         </div>
 

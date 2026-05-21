@@ -3,10 +3,10 @@
 import Script from 'next/script';
 
 const STATS = [
-  { num: '7', text: 'ngày tham quan thực tế tại Việt Nam' },
-  { num: '5', text: 'nhà phát triển bất động sản hàng đầu từ Hoa Kỳ' },
-  { num: '$500M+', text: 'tổng danh mục dự án đang triển khai' },
-  { num: '10–13', text: 'nhà máy được tuyển chọn tham gia' },
+  { num: '14', text: 'Ngày tham quan thực tế tại Việt Nam' },
+  { num: '5', text: 'Chủ đầu tư & chủ thầu hàng đầu từ Texas' },
+  { num: '$50M+', text: 'Tổng giá trị dự án đang triển khai' },
+  { num: '10–13', text: 'Nhà máy được tuyển chọn tham gia' },
 ];
 
 export function Hero() {
@@ -70,21 +70,21 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        {/* Eyebrow pills */}
+        {/* Eyebrow pill */}
         <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-6 md:mb-8">
           <span
             className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em]
                        px-3 py-1.5 border border-brand-gold/60 text-brand-gold
                        font-medium rounded-full whitespace-nowrap bg-black/30 backdrop-blur-sm"
           >
-            Build Better Series — Thư mời tham quan nhà máy
+            Build Better Series — Thư ngỏ hợp tác chiến lược
           </span>
           <span
             className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em]
                        px-3 py-1.5 border border-white/30 text-white
                        font-medium rounded-full whitespace-nowrap bg-black/30 backdrop-blur-sm"
           >
-            31/5 – 06/06
+            31 tháng 5 – 13 tháng 6 · HCM → Hà Nội
           </span>
         </div>
 
@@ -110,12 +110,12 @@ export function Hero() {
                      max-w-3xl mb-10 md:mb-12"
         >
           <span className="text-text-heading font-normal">
-            Đưa nhà máy đến tận tay các nhà phát triển chiến lược tại Texas.
+            Đưa nhà máy Việt Nam đến thẳng chủ đầu tư và chủ thầu tại Texas.
           </span>{' '}
-          Trực tiếp từ nhà máy đến tay người ra quyết định.
+          Thẳng từ xưởng sản xuất đến người ra quyết định.
         </p>
 
-        {/* Stat row — compact pills, căn giữa cả ngang lẫn dọc */}
+        {/* Stat row — compact pills */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 auto-rows-fr">
           {STATS.map(({ num, text }) => (
             <div
