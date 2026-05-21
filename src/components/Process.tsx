@@ -68,11 +68,11 @@ const PHASES: Phase[] = [
 function PhaseCard({ phase }: { phase: Phase }) {
   return (
     <div
-      className={`relative bg-bg-card rounded-2xl p-6 lg:p-8 border transition-colors flex flex-col
+      className={`relative rounded-2xl p-6 lg:p-8 border transition-colors flex flex-col
                   ${
                     phase.highlight
-                      ? 'border-brand-gold/40 hover:border-brand-gold/70'
-                      : 'border-border-subtle hover:border-brand-gold/40'
+                      ? 'bg-[radial-gradient(ellipse_at_top_right,rgba(195,163,116,0.12),rgba(195,163,116,0.04))] border-brand-gold/50 hover:border-brand-gold shadow-[inset_0_0_40px_rgba(195,163,116,0.05)]'
+                      : 'bg-bg-card border-border-subtle hover:border-brand-gold/40'
                   }`}
     >
       {/* Phase header */}
