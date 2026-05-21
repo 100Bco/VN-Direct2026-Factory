@@ -139,11 +139,7 @@ const TRIPS: Trip[] = [
           {
             date: '9/6',
             dow: 'Thứ Ba',
-            visits: [
-              { label: 'Amy Grupo' },
-              { label: 'The One & Jager' },
-              { label: 'Join đoàn GAACC (chiều)' },
-            ],
+            visits: [{ label: 'Join đoàn GAACC' }],
           },
           {
             date: '10/6',
