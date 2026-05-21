@@ -226,8 +226,8 @@ export function D2CAnimation() {
 
           {/* D2C ROW */}
           <svg viewBox="0 0 900 200" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
-            <line x1="222" y1="100" x2="378" y2="100" className="draw-line delay-5" stroke="#C3A374" strokeWidth="1" strokeDasharray="3 4" opacity="0.4" />
-            <line x1="522" y1="100" x2="678" y2="100" className="draw-line delay-6" stroke="#C3A374" strokeWidth="1" strokeDasharray="3 4" opacity="0.4" />
+            <line x1="222" y1="100" x2="378" y2="100" className="draw-line delay-5" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
+            <line x1="522" y1="100" x2="678" y2="100" className="draw-line delay-6" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
 
             <g color="#C3A374" className="d2c-arrow-1"><use href="#arrowShape" x="260" y="92" width="60" height="16" /></g>
             <g color="#C3A374" className="d2c-arrow-2"><use href="#arrowShape" x="560" y="92" width="60" height="16" /></g>
