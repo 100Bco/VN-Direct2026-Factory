@@ -57,7 +57,7 @@ export function D2CAnimation() {
           50%      { transform: scale(1.05); }
         }
 
-        /* Middle traditional nodes — tan biến cycle để show mô hình cũ đang biến mất */
+        /* Middle traditional nodes — fade ra để nhường chỗ cho emblem 100B */
         .trad-vanish {
           transform-origin: center;
           transform-box: fill-box;
@@ -65,9 +65,22 @@ export function D2CAnimation() {
         }
 
         @keyframes vanishCycle {
-          0%, 40%   { opacity: 1; transform: scale(1); filter: blur(0); }
-          55%, 65%  { opacity: 0; transform: scale(0.7); filter: blur(6px); }
-          80%, 100% { opacity: 1; transform: scale(1); filter: blur(0); }
+          0%, 20%   { opacity: 1; transform: scale(1); filter: blur(0); }
+          35%, 75%  { opacity: 0; transform: scale(0.7); filter: blur(6px); }
+          90%, 100% { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+
+        /* Emblem 100B hiện ra thay thế 3 middlemen, phóng to + clear blur */
+        .trad-emblem-swap {
+          transform-origin: center;
+          transform-box: fill-box;
+          animation: emblemSwap 6s ease-in-out infinite;
+        }
+
+        @keyframes emblemSwap {
+          0%, 25%   { opacity: 0; transform: scale(0.4); filter: blur(8px); }
+          40%, 70%  { opacity: 1; transform: scale(1); filter: blur(0); }
+          85%, 100% { opacity: 0; transform: scale(0.4); filter: blur(8px); }
         }
 
         .delay-0 { animation-delay: 0.1s; }
@@ -195,24 +208,38 @@ export function D2CAnimation() {
             </g>
 
             {/* Node 2: Distributor */}
-            <g className="trad-vanish" style={{ animationDelay: '0s' }}>
+            <g className="trad-vanish">
               <circle cx="270" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(250 70)"><use href="#iconBox" width="40" height="40" /></g>
               <text x="270" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà phân phối</text>
             </g>
 
             {/* Node 3: Wholesaler */}
-            <g className="trad-vanish" style={{ animationDelay: '0.3s' }}>
+            <g className="trad-vanish">
               <circle cx="450" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(430 70)"><use href="#iconTruck" width="40" height="40" /></g>
               <text x="450" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán sỉ</text>
             </g>
 
             {/* Node 4: Retailer */}
-            <g className="trad-vanish" style={{ animationDelay: '0.6s' }}>
+            <g className="trad-vanish">
               <circle cx="630" cy="90" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
               <g color="#E0DCD3" transform="translate(610 70)"><use href="#iconShop" width="40" height="40" /></g>
               <text x="630" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán lẻ</text>
+            </g>
+
+            {/* Replacement: 100B emblem hiện ra thay thế 3 middlemen */}
+            <g className="trad-emblem-swap">
+              <circle cx="450" cy="90" r="36" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#emblemGoldGlow)" />
+              <image
+                href="/logos/100B%20Emblem.png"
+                x="416"
+                y="56"
+                width="68"
+                height="68"
+                preserveAspectRatio="xMidYMid meet"
+              />
+              <text x="450" y="148" textAnchor="middle" fill="#C3A374" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="600">100B</text>
             </g>
 
             {/* Node 5: Consumer */}
