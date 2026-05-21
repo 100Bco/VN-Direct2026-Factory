@@ -29,7 +29,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Handshake,
     n: '03',
-    title: 'Đối tác chiến lược — không phải giao dịch đơn lẻ',
+    title: 'Đối tác chiến lược - không giao dịch đơn lẻ',
     bullets: [
       'Quan hệ hợp tác 3 đến 5 năm',
       '100B đồng hành xây kênh D2C bền vững',
