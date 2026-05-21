@@ -38,17 +38,6 @@ export function D2CAnimation() {
           100% { opacity: 0; transform: translateX(18px); }
         }
 
-        .pulse-ring {
-          transform-origin: center;
-          transform-box: fill-box;
-          animation: pulseRing 2.4s ease-in-out infinite;
-        }
-
-        @keyframes pulseRing {
-          0%   { transform: scale(1); opacity: 0.55; }
-          100% { transform: scale(1.5); opacity: 0; }
-        }
-
         .draw-line {
           stroke-dasharray: 400;
           stroke-dashoffset: 400;
@@ -243,16 +232,6 @@ export function D2CAnimation() {
 
             {/* Node 2: 100B EMBLEM (center) */}
             <g className="d2c-node delay-6">
-              <circle
-                cx="450"
-                cy="100"
-                r="40"
-                fill="none"
-                stroke="#C3A374"
-                strokeWidth="1"
-                opacity="0.5"
-                className="pulse-ring"
-              />
               <circle cx="450" cy="100" r="36" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="2" filter="url(#dropShadow)" />
               <image
                 href="/logos/100B%20Emblem.png"
