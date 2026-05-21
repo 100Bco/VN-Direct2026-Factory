@@ -28,12 +28,12 @@ export function Problem() {
             </p>
           </blockquote>
 
-          <p className="text-sm lg:text-base text-text-body font-light leading-relaxed mb-4">
+          <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed mb-4">
             D2C đã thay thế hoàn toàn mô hình phân phối nhiều lớp trong FMCG. Giờ đến lượt vật liệu
             xây dựng và nội thất. Đây là xu thế không thể đảo ngược.
           </p>
 
-          <p className="text-sm lg:text-base text-text-body font-light leading-relaxed">
+          <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed">
             Trong bối cảnh địa chính trị biến động, chuỗi cung ứng toàn cầu đang tái cơ cấu. Nhà
             máy phụ thuộc vào nhà phân phối nước ngoài không kiểm soát được rủi ro. Nhà máy tự xây
             kênh D2C thì có.
