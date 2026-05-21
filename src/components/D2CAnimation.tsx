@@ -65,11 +65,9 @@ export function D2CAnimation() {
         }
 
         @keyframes vanishCycle {
-          0%       { opacity: 0; transform: translateY(12px) scale(1); filter: blur(0); }
-          10%      { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-          40%      { opacity: 1; transform: scale(1); filter: blur(0); }
-          60%, 70% { opacity: 0; transform: scale(0.7); filter: blur(6px); }
-          90%, 100% { opacity: 1; transform: scale(1); filter: blur(0); }
+          0%, 40%   { opacity: 1; transform: scale(1); filter: blur(0); }
+          55%, 65%  { opacity: 0; transform: scale(0.7); filter: blur(6px); }
+          80%, 100% { opacity: 1; transform: scale(1); filter: blur(0); }
         }
 
         .delay-0 { animation-delay: 0.1s; }
