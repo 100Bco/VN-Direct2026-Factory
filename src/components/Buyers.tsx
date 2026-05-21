@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { Section } from './Section';
 
 interface Buyer {
@@ -272,6 +273,17 @@ export function Buyers() {
   const prev = () => goTo(index - 1);
   const next = () => goTo(index + 1);
 
+  // Accordion state for trip schedule — default: Đợt 1 mở, Đợt 2 đóng
+  const [openTrips, setOpenTrips] = useState<Set<string>>(new Set(['Đợt 1']));
+  const toggleTrip = (label: string) => {
+    setOpenTrips((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
+  };
+
   return (
     <Section
       id="doan-khach"
@@ -467,17 +479,26 @@ export function Buyers() {
           khi xác nhận tham gia.
         </p>
 
-        <div className="space-y-6 lg:space-y-8">
-          {TRIPS.map((t) => (
-            <div
-              key={t.label}
-              className="rounded-3xl bg-bg-card/70 border border-border-subtle overflow-hidden"
-            >
-              {/* Trip header */}
-              <div className="p-6 lg:p-8 border-b border-border-subtle">
-                <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-5">
-                  <div>
-                    <div className="flex items-baseline gap-3 mb-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+          {TRIPS.map((t) => {
+            const isOpen = openTrips.has(t.label);
+            const panelId = `trip-${t.label.replace(/\s+/g, '-')}`;
+            return (
+              <div
+                key={t.label}
+                className="rounded-3xl bg-bg-card/70 border border-border-subtle overflow-hidden"
+              >
+                {/* Trip header — clickable to toggle */}
+                <button
+                  type="button"
+                  onClick={() => toggleTrip(t.label)}
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  className="w-full text-left p-6 lg:p-8 hover:bg-bg-card transition-colors
+                             flex items-start justify-between gap-4 group"
+                >
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-baseline gap-3 mb-2 flex-wrap">
                       <span className="text-3xl lg:text-4xl font-display text-gradient-gold leading-none font-medium">
                         {t.label}
                       </span>
@@ -485,72 +506,97 @@ export function Buyers() {
                         {t.dates}
                       </span>
                     </div>
-                    <p className="text-base lg:text-lg font-bold font-sans text-text-heading">
+                    <p className="text-base lg:text-lg font-bold font-sans text-text-heading mb-5">
                       {t.city}
                     </p>
+
+                    <p className="text-[11px] uppercase tracking-[0.2em] text-text-body font-semibold mb-3">
+                      Khách tham gia
+                    </p>
+                    <ul className="flex flex-wrap gap-3">
+                      {t.attendees.map((a) => (
+                        <li
+                          key={a.name}
+                          className="flex items-center gap-2.5 bg-bg-alt rounded-full pl-1 pr-4 py-1
+                                     border border-border-subtle"
+                        >
+                          <span
+                            className="w-8 h-8 rounded-full bg-brand-gold/10 border border-brand-gold/40
+                                       flex items-center justify-center text-[11px] font-semibold text-brand-gold"
+                          >
+                            {a.initials}
+                          </span>
+                          <span className="text-sm font-medium text-text-heading">{a.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Chevron */}
+                  <div
+                    className={`shrink-0 mt-1 w-10 h-10 rounded-full border border-brand-gold/40
+                                flex items-center justify-center transition-all
+                                ${
+                                  isOpen
+                                    ? 'rotate-180 bg-brand-gold/10 border-brand-gold'
+                                    : 'group-hover:border-brand-gold/70'
+                                }`}
+                  >
+                    <ChevronDown
+                      size={18}
+                      className="text-brand-gold"
+                      strokeWidth={2}
+                    />
+                  </div>
+                </button>
+
+                {/* Day-by-day — animated collapse */}
+                <div
+                  id={panelId}
+                  className={`grid transition-[grid-template-rows] duration-500 ease-out
+                              ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+                >
+                  <div className="overflow-hidden">
+                    <ul className="border-t border-border-subtle">
+                      {t.days.map((d, di) => (
+                        <li
+                          key={d.date}
+                          className={`grid grid-cols-12 gap-4 lg:gap-6 px-6 lg:px-8 py-5 ${
+                            di < t.days.length - 1 ? 'border-b border-border-subtle/50' : ''
+                          }`}
+                        >
+                          <div className="col-span-12 md:col-span-3 lg:col-span-2 md:border-r md:border-border-subtle/50 md:pr-4">
+                            <p className="font-display text-2xl lg:text-3xl text-gradient-gold leading-none">
+                              {d.date}
+                            </p>
+                            <p className="text-[10px] uppercase tracking-[0.2em] text-text-body font-semibold mt-2">
+                              {d.dow}
+                            </p>
+                          </div>
+                          <div className="col-span-12 md:col-span-9 lg:col-span-10">
+                            <h4 className="text-base lg:text-lg font-bold font-sans text-text-heading leading-snug mb-3">
+                              {d.title}
+                            </h4>
+                            <ul className="space-y-1.5">
+                              {d.items.map((item) => (
+                                <li
+                                  key={item}
+                                  className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed"
+                                >
+                                  <span className="text-brand-gold mt-0.5 shrink-0">·</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-
-                <p className="text-[11px] uppercase tracking-[0.2em] text-text-body font-semibold mb-3">
-                  Khách tham gia
-                </p>
-                <ul className="flex flex-wrap gap-3">
-                  {t.attendees.map((a) => (
-                    <li
-                      key={a.name}
-                      className="flex items-center gap-2.5 bg-bg-alt rounded-full pl-1 pr-4 py-1
-                                 border border-border-subtle"
-                    >
-                      <span
-                        className="w-8 h-8 rounded-full bg-brand-gold/10 border border-brand-gold/40
-                                   flex items-center justify-center text-[11px] font-semibold text-brand-gold"
-                      >
-                        {a.initials}
-                      </span>
-                      <span className="text-sm font-medium text-text-heading">{a.name}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-
-              {/* Day-by-day */}
-              <ul>
-                {t.days.map((d, di) => (
-                  <li
-                    key={d.date}
-                    className={`grid grid-cols-12 gap-4 lg:gap-6 px-6 lg:px-8 py-5 ${
-                      di < t.days.length - 1 ? 'border-b border-border-subtle/50' : ''
-                    }`}
-                  >
-                    <div className="col-span-12 md:col-span-3 lg:col-span-2 md:border-r md:border-border-subtle/50 md:pr-4">
-                      <p className="font-display text-2xl lg:text-3xl text-gradient-gold leading-none">
-                        {d.date}
-                      </p>
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-text-body font-semibold mt-2">
-                        {d.dow}
-                      </p>
-                    </div>
-                    <div className="col-span-12 md:col-span-9 lg:col-span-10">
-                      <h4 className="text-base lg:text-lg font-bold font-sans text-text-heading leading-snug mb-3">
-                        {d.title}
-                      </h4>
-                      <ul className="space-y-1.5">
-                        {d.items.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed"
-                          >
-                            <span className="text-brand-gold mt-0.5 shrink-0">·</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </Section>
