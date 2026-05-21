@@ -3,7 +3,6 @@ import { Hero } from '@/components/Hero';
 import { Problem } from '@/components/Problem';
 import { Opportunity } from '@/components/Opportunity';
 import { Buyers } from '@/components/Buyers';
-import { Schedule } from '@/components/Schedule';
 import { Process } from '@/components/Process';
 import { Benefits } from '@/components/Benefits';
 import { Criteria } from '@/components/Criteria';
@@ -18,7 +17,6 @@ export default function Page() {
       <Problem />
       <Opportunity />
       <Buyers />
-      <Schedule />
       <Process />
       <Benefits />
       <Criteria />

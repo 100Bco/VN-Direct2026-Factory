@@ -43,7 +43,7 @@ const BUYERS: Buyer[] = [
       'Thị trường: Austin · San Antonio',
     ],
     initials: 'MH',
-    photo: '/logos/Michael%20Hough.jpeg',
+    photo: '/logos/Michael%20Hough.png',
   },
   {
     name: 'Kameron Schram',
@@ -106,7 +106,8 @@ export function Buyers() {
       className="bg-bg-alt border-y border-border-subtle !py-16 lg:!py-20"
     >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6 max-w-4xl">
-        <span className="font-display text-gradient-gold">5</span> chủ đầu tư và chủ thầu.{' '}
+        <span className="font-display text-gradient-gold">5</span> chủ đầu tư và chủ thầu.
+        <br />
         <em className="font-serif italic text-gradient-gold">Dự án thật. Ngân sách thật.</em>
       </h2>
 
@@ -115,6 +116,66 @@ export function Buyers() {
         ký hợp đồng và họ cất công bay sang Việt Nam với một mục đích duy nhất: tìm đối tác sản
         xuất để làm việc lâu dài.
       </p>
+
+      {/* Schedule — 2 đợt */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-12 lg:mb-14">
+        {[
+          {
+            label: 'Đợt 1',
+            dates: '31/5 – 6/6',
+            attendees: [
+              { initials: 'LT', name: 'Lezlie Tram Le' },
+              { initials: 'KS', name: 'Kameron Schram' },
+              { initials: 'MH', name: 'Michael Hough' },
+            ],
+          },
+          {
+            label: 'Đợt 2',
+            dates: '7/6 – 12/6',
+            attendees: [
+              { initials: 'LT', name: 'Lezlie Tram Le' },
+              { initials: 'RR', name: 'Ricardo Rubiano' },
+              { initials: 'LD', name: 'Loc Dang' },
+            ],
+          },
+        ].map((d) => (
+          <div
+            key={d.label}
+            className="relative bg-bg-card rounded-2xl border border-border-subtle
+                       hover:border-brand-gold/40 transition-colors p-6 lg:p-8 overflow-hidden"
+          >
+            <span className="absolute top-0 left-0 w-1 h-full bg-brand-gold" />
+            <div className="flex items-baseline justify-between gap-4 mb-5">
+              <span className="text-[40px] font-display text-gradient-gold leading-none font-medium">
+                {d.label}
+              </span>
+              <span className="text-[11px] uppercase tracking-[0.2em] text-brand-gold font-semibold">
+                {d.dates}
+              </span>
+            </div>
+            <p className="text-[11px] uppercase tracking-[0.2em] text-text-body font-semibold mb-3">
+              Khách tham gia
+            </p>
+            <ul className="flex flex-wrap gap-3">
+              {d.attendees.map((a) => (
+                <li
+                  key={a.name}
+                  className="flex items-center gap-2.5 bg-bg-alt rounded-full pl-1 pr-4 py-1
+                             border border-border-subtle"
+                >
+                  <span
+                    className="w-8 h-8 rounded-full bg-brand-gold/10 border border-brand-gold/40
+                               flex items-center justify-center text-[11px] font-semibold text-brand-gold"
+                  >
+                    {a.initials}
+                  </span>
+                  <span className="text-sm font-medium text-text-heading">{a.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
 
       {/* Carousel — relative wrapper for side arrows */}
       <div className="relative">
