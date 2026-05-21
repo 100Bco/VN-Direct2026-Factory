@@ -112,7 +112,7 @@ const TRIPS: Trip[] = [
             dow: 'Thứ Bảy',
             visits: [
               { label: 'Woodsland' },
-              { label: 'Anphat Holdings — AnPro & An Cuong Flooring' },
+              { label: 'Anphat Holdings' },
             ],
           },
         ],
@@ -121,7 +121,7 @@ const TRIPS: Trip[] = [
   },
   {
     label: 'ĐỢT 2',
-    dates: '7/6 – 13/6',
+    dates: '8/6 – 13/6',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'RR', name: 'Ricardo Rubiano' },
@@ -129,35 +129,60 @@ const TRIPS: Trip[] = [
     ],
     segments: [
       {
-        location: 'Hạ Long',
-        dates: '7/6',
-        intro: 'Đoàn join chuyến du thuyền tại Hạ Long trước khi bắt đầu lịch tham quan vòng hai.',
-      },
-      {
         location: 'Hà Nội',
         dates: '8/6 – 10/6',
-        intro:
-          'Vòng tham quan thứ hai cho các nhà máy phía Bắc đã ghé ở ĐỢT 1, đồng thời mở slot cho các đối tác cần đánh giá chuyên sâu hơn.',
-        highlight: '10/6 · Tonmat Group (đã xác nhận)',
-        pendingFactories: [
-          'EuroStark (EuP Group)',
-          'Amy Grupo',
-          'The One & Jager',
-          'Woodsland',
-          'Anphat Holdings — AnPro & An Cuong Flooring',
+        days: [
+          {
+            date: '8/6',
+            dow: 'Thứ Hai',
+            visits: [{ label: 'EuroStark (EuP Group)' }],
+          },
+          {
+            date: '9/6',
+            dow: 'Thứ Ba',
+            visits: [
+              { label: 'Amy Grupo' },
+              { label: 'The One & Jager' },
+            ],
+          },
+          {
+            date: '10/6',
+            dow: 'Thứ Tư',
+            visits: [
+              { time: 'Sáng', label: 'Tonmat Group', pill: 'đã xác nhận' },
+              { time: 'Chiều', label: 'Woodsland' },
+              { time: 'Chiều', label: 'Anphat Holdings' },
+              { time: 'Tối', label: 'Bay → TP. HCM' },
+            ],
+          },
         ],
       },
       {
         location: 'TP. Hồ Chí Minh',
         dates: '11/6 – 13/6',
-        intro:
-          'Vòng tham quan thứ hai cho các nhà máy phía Nam đã ghé ở ĐỢT 1 (trừ AA Corporation), hoặc các đối tác cần đánh giá sâu hơn.',
-        pendingFactories: [
-          'An Cuong Wood',
-          'BM Windows',
-          'Phu Tai + Vina G7',
-          'Phu Tai Quartz',
-          'Dai Dung Corporation',
+        days: [
+          {
+            date: '11/6',
+            dow: 'Thứ Năm',
+            visits: [
+              { time: 'Sáng', label: 'BM Windows' },
+              { time: 'Sáng', label: 'Dai Dung Corporation' },
+              { time: 'Chiều', label: 'An Cuong Wood' },
+            ],
+          },
+          {
+            date: '12/6',
+            dow: 'Thứ Sáu',
+            visits: [
+              { label: 'Phu Tai + Vina G7' },
+              { label: 'Phu Tai Quartz' },
+            ],
+          },
+          {
+            date: '13/6',
+            dow: 'Thứ Bảy',
+            visits: [{ label: 'Closing dinner · Khởi hành' }],
+          },
         ],
       },
     ],
