@@ -4,7 +4,7 @@ export function Problem() {
   return (
     <section id="thuc-trang" className="py-20 lg:py-28 bg-bg-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-12 lg:mb-16">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-8">
             Thoát bẫy gia công.
             <br />
@@ -21,7 +21,7 @@ export function Problem() {
             không thương hiệu, không dữ liệu khách hàng, không kiểm soát được giá bán cuối.
           </p>
 
-          <blockquote className="border-l-2 border-brand-gold/40 pl-5 my-8">
+          <blockquote className="my-6 max-w-2xl">
             <p className="text-lg lg:text-xl text-text-heading font-serif italic font-light leading-relaxed">
               &ldquo;Mỗi lớp trung gian không chỉ lấy đi 15 đến 30% biên lợi nhuận. Nó cắt đứt mối
               quan hệ với người mua và khiến nhà máy trở nên vô hình trên thị trường.&rdquo;
