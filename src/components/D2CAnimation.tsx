@@ -197,8 +197,8 @@ export function D2CAnimation() {
             <g color="#C3A374" className="d2c-arrow-cycle"><use href="#arrowShape" x="238" y="82" width="60" height="16" /></g>
             <g color="#C3A374" className="d2c-arrow-cycle"><use href="#arrowShape" x="602" y="82" width="60" height="16" /></g>
 
-            {/* Node 1: Factory */}
-            <g className="trad-node delay-0">
+            {/* Node 1: Factory — hiện luôn */}
+            <g>
               <circle cx="90" cy="90" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
               <g color="#C3A374" transform="translate(70 70)"><use href="#iconFactory" width="40" height="40" /></g>
               <text x="90" y="148" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Nhà máy</text>
@@ -240,8 +240,8 @@ export function D2CAnimation() {
               <text x="450" y="166" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Đối tác chiến lược</text>
             </g>
 
-            {/* Node 5: Buyer (Chủ đầu tư & chủ thầu) */}
-            <g className="trad-node delay-4">
+            {/* Node 5: Buyer (Chủ đầu tư & chủ thầu) — hiện luôn */}
+            <g>
               <circle cx="810" cy="90" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
               <g color="#C3A374" transform="translate(790 70)"><use href="#iconPerson" width="40" height="40" /></g>
               <text x="810" y="148" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Chủ đầu tư</text>
