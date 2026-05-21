@@ -1,7 +1,8 @@
 import { ArrowRight, FileText } from 'lucide-react';
 import { Section } from './Section';
 
-const CONTRACT_PDF = '/docs/hop-dong-mau-vn-direct-2026.pdf';
+const CONTRACT_PDF =
+  'https://drive.google.com/file/d/1VDp2lnCxfINLeho7W7p1IBHjbCVIbM5O/view?usp=sharing';
 
 export function About() {
   return (
