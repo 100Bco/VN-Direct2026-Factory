@@ -67,9 +67,9 @@ const TRIPS: Trip[] = [
             date: '1/6',
             dow: 'Thứ Hai',
             visits: [
-              { time: 'Sáng', label: 'BM Windows' },
-              { time: 'Sáng', label: 'Dai Dung Corporation' },
-              { time: 'Chiều', label: 'An Cuong Wood' },
+              { label: 'BM Windows' },
+              { label: 'Dai Dung Corporation' },
+              { label: 'An Cuong Wood' },
             ],
           },
           {
@@ -84,8 +84,8 @@ const TRIPS: Trip[] = [
             date: '3/6',
             dow: 'Thứ Tư',
             visits: [
-              { time: 'Sáng', label: 'AA Corporation' },
-              { time: 'Chiều', label: 'Checkout · ra sân bay → Hà Nội' },
+              { label: 'AA Corporation' },
+              { label: 'Checkout · ra sân bay → Hà Nội' },
             ],
           },
         ],
@@ -153,8 +153,8 @@ const TRIPS: Trip[] = [
             date: '10/6',
             dow: 'Thứ Tư',
             visits: [
-              { time: 'Sáng', label: 'Tonmat Group', pill: 'đã xác nhận' },
-              { time: 'Chiều', label: 'Bay → TP. HCM' },
+              { label: 'Tonmat Group', pill: 'đã xác nhận' },
+              { label: 'Bay → TP. HCM' },
             ],
           },
         ],
@@ -167,9 +167,9 @@ const TRIPS: Trip[] = [
             date: '11/6',
             dow: 'Thứ Năm',
             visits: [
-              { time: 'Sáng', label: 'BM Windows' },
-              { time: 'Sáng', label: 'Dai Dung Corporation' },
-              { time: 'Chiều', label: 'An Cuong Wood' },
+              { label: 'BM Windows' },
+              { label: 'Dai Dung Corporation' },
+              { label: 'An Cuong Wood' },
             ],
           },
           {
