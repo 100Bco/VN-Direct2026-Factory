@@ -469,8 +469,10 @@ export function Buyers() {
         <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light leading-snug mb-3 max-w-4xl">
           Lịch trình{' '}
           <em className="font-serif italic text-gradient-gold">
-            <span className="font-display not-italic">31</span> tháng 5 –{' '}
-            <span className="font-display not-italic">13</span> tháng 6
+            <span className="font-display not-italic">31</span> tháng{' '}
+            <span className="font-display not-italic">5</span> –{' '}
+            <span className="font-display not-italic">13</span> tháng{' '}
+            <span className="font-display not-italic">6</span>
           </em>
         </h3>
         <p className="text-sm lg:text-base text-text-heading font-light leading-relaxed max-w-3xl mb-10">
