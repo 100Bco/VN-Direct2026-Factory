@@ -234,8 +234,8 @@ export function D2CAnimation() {
                 height="60"
                 preserveAspectRatio="xMidYMid meet"
               />
-              <text x="450" y="158" textAnchor="middle" fill="#C3A374" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="600" letterSpacing="0.05em">100B</text>
-              <text x="450" y="178" textAnchor="middle" fill="#C3A374" fontFamily="Cormorant Garamond, serif" fontSize="13" fontStyle="italic" opacity="0.85">Đối tác chiến lược</text>
+              <text x="450" y="158" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">100B</text>
+              <text x="450" y="176" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Đối tác chiến lược</text>
             </g>
 
             {/* Node 3: Buyer (Chủ đầu tư & chủ thầu) */}
