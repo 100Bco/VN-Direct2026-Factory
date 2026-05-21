@@ -267,33 +267,33 @@ export function D2CAnimation() {
         </div>
       </div>
 
-      {/* Stats Block */}
-      <div className="flex flex-wrap justify-center md:justify-around gap-10 mt-12 pt-10 border-t border-border-subtle/50">
-        <div className="text-center max-w-[200px]">
-          <div className="font-display text-4xl lg:text-5xl text-text-body leading-none mb-4">
+      {/* Stats Block — 3-col grid for consistent alignment */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 pt-10 border-t border-border-subtle/50">
+        <div className="text-center flex flex-col items-center">
+          <div className="font-display text-4xl lg:text-5xl text-text-body leading-none h-14 lg:h-16 flex items-center justify-center mb-4">
             15–30%
           </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
+          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed max-w-[220px]">
             Biên lợi nhuận
             <br />
             mỗi lớp trung gian ăn mất
           </div>
         </div>
-        <div className="text-center max-w-[200px]">
-          <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none mb-4">
+        <div className="text-center flex flex-col items-center">
+          <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none h-14 lg:h-16 flex items-center justify-center mb-4">
             1
           </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
+          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed max-w-[220px]">
             Đối tác chiến lược duy nhất
             <br />
             không phải trung gian
           </div>
         </div>
-        <div className="text-center max-w-[200px]">
-          <div className="font-display text-2xl lg:text-3xl text-gradient-gold leading-tight mb-4">
+        <div className="text-center flex flex-col items-center">
+          <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none h-14 lg:h-16 flex items-center justify-center mb-4">
             BRANDING
           </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
+          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed max-w-[220px]">
             Sở hữu kênh · Kiểm soát giá
             <br />
             Làm chủ thị trường
