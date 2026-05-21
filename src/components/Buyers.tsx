@@ -60,7 +60,7 @@ const TRIPS: Trip[] = [
           {
             date: '31/5',
             dow: 'Chủ Nhật',
-            visits: [{ label: 'Đoàn nhập cảnh · Dinner briefing' }],
+            visits: [{ label: 'Đoàn nhập cảnh · Welcome dinner' }],
           },
           {
             date: '1/6',
