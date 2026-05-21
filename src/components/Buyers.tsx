@@ -45,14 +45,15 @@ const TRIPS: Trip[] = [
       {
         location: 'TP. Hồ Chí Minh',
         dates: '31/5 – 3/6',
-        intro: 'Đoàn nhập cảnh 31/5, bắt đầu lịch tham quan từ thứ Hai 1/6.',
+        intro:
+          'Đoàn nhập cảnh 31/5, bắt đầu lịch tham quan từ thứ Hai 1/6. Trừ AA Corporation (chỉ Đợt 1), các nhà máy phía Nam đều được sắp xếp cả 2 đợt để đảm bảo gặp gỡ đầy đủ.',
         factories: [
           'An Cuong Wood',
           'BM Windows',
           'Phu Tai + Vina G7',
           'Phu Tai Quartz',
           'Dai Dung Corporation',
-          'AA Corporation',
+          'AA Corporation · chỉ Đợt 1',
         ],
       },
       {
@@ -95,7 +96,14 @@ const TRIPS: Trip[] = [
         location: 'TP. Hồ Chí Minh',
         dates: '11/6 – 13/6',
         intro:
-          'Slot bổ sung dành cho các nhà máy phía Nam chưa kịp tiếp đón ở Đợt 1, hoặc cần một vòng tham quan thứ hai.',
+          'Vòng tham quan thứ hai cho các nhà máy HCM đã ghé ở Đợt 1 (trừ AA Corporation), đồng thời mở slot cho các đối tác phía Nam cần đánh giá chuyên sâu hơn.',
+        factories: [
+          'An Cuong Wood',
+          'BM Windows',
+          'Phu Tai + Vina G7',
+          'Phu Tai Quartz',
+          'Dai Dung Corporation',
+        ],
       },
     ],
   },
@@ -421,7 +429,7 @@ export function Buyers() {
                       </span>
                     </div>
                     <p className="text-base lg:text-lg font-bold font-sans text-text-heading mb-5">
-                      {t.city}
+                      {t.segments.map((s) => s.location).join(' · ')}
                     </p>
 
                     <p className="text-[11px] uppercase tracking-[0.2em] text-text-body font-semibold mb-3">
