@@ -15,11 +15,24 @@ interface Buyer {
   pending?: boolean;
 }
 
+interface Visit {
+  time?: string;
+  label: string;
+  pill?: string;
+}
+
+interface DayPlan {
+  date: string;
+  dow: string;
+  visits: Visit[];
+}
+
 interface Segment {
   location: string;
   dates: string;
   intro?: string;
-  factories?: string[];
+  days?: DayPlan[];
+  pendingFactories?: string[];
   highlight?: string;
 }
 
@@ -35,7 +48,7 @@ const TRIPS: Trip[] = [
   {
     label: 'Đợt 1',
     dates: '31/5 – 6/6',
-    note: 'Hai địa điểm: TP. HCM và Hà Nội · Đoàn nhập cảnh ngày 31/5 tại TP. HCM, lịch tham quan chính thức bắt đầu thứ Hai 1/6.',
+    note: 'Hai địa điểm: TP. HCM và Hà Nội · AA Corporation chỉ ghé thăm ở Đợt 1, các nhà máy khác đều được sắp xếp cả 2 đợt để đảm bảo gặp gỡ đầy đủ.',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'KS', name: 'Kameron Schram' },
@@ -45,27 +58,64 @@ const TRIPS: Trip[] = [
       {
         location: 'TP. Hồ Chí Minh',
         dates: '31/5 – 3/6',
-        intro:
-          'Đoàn nhập cảnh 31/5, bắt đầu lịch tham quan từ thứ Hai 1/6. Trừ AA Corporation (chỉ Đợt 1), các nhà máy phía Nam đều được sắp xếp cả 2 đợt để đảm bảo gặp gỡ đầy đủ.',
-        factories: [
-          'An Cuong Wood',
-          'BM Windows',
-          'Phu Tai + Vina G7',
-          'Phu Tai Quartz',
-          'Dai Dung Corporation',
-          'AA Corporation · chỉ Đợt 1',
+        days: [
+          {
+            date: '31/5',
+            dow: 'Thứ Bảy',
+            visits: [{ label: 'Đoàn nhập cảnh · Dinner briefing' }],
+          },
+          {
+            date: '1/6',
+            dow: 'Thứ Hai',
+            visits: [
+              { time: 'Sáng', label: 'BM Windows' },
+              { time: 'Sáng', label: 'Dai Dung Corporation' },
+              { time: 'Chiều', label: 'An Cuong Wood' },
+            ],
+          },
+          {
+            date: '2/6',
+            dow: 'Thứ Ba',
+            visits: [
+              { label: 'Phu Tai + Vina G7' },
+              { label: 'Phu Tai Quartz' },
+            ],
+          },
+          {
+            date: '3/6',
+            dow: 'Thứ Tư',
+            visits: [
+              { time: 'Sáng', label: 'AA Corporation', pill: 'chỉ Đợt 1' },
+              { time: 'Chiều', label: 'Checkout · ra sân bay → Hà Nội' },
+            ],
+          },
         ],
       },
       {
         location: 'Hà Nội',
         dates: '4/6 – 6/6',
-        factories: [
-          'Anphat Holdings — AnPro & An Cuong Flooring',
-          'Woodsland',
-          'Tonmat Group',
-          'EuroStark (EuP Group)',
-          'Amy Grupo',
-          'The One & Jager',
+        days: [
+          {
+            date: '4/6',
+            dow: 'Thứ Năm',
+            visits: [{ label: 'EuroStark (EuP Group)' }],
+          },
+          {
+            date: '5/6',
+            dow: 'Thứ Sáu',
+            visits: [
+              { label: 'Amy Grupo' },
+              { label: 'The One & Jager' },
+            ],
+          },
+          {
+            date: '6/6',
+            dow: 'Thứ Bảy',
+            visits: [
+              { label: 'Woodsland' },
+              { label: 'Anphat Holdings — AnPro & An Cuong Flooring' },
+            ],
+          },
         ],
       },
     ],
@@ -83,21 +133,28 @@ const TRIPS: Trip[] = [
       {
         location: 'Hạ Long',
         dates: '7/6',
-        intro: 'Đoàn join chuyến du thuyền tại Hạ Long trước khi bắt đầu lịch tham quan.',
+        intro: 'Đoàn join chuyến du thuyền tại Hạ Long trước khi bắt đầu lịch tham quan vòng hai.',
       },
       {
         location: 'Hà Nội',
         dates: '8/6 – 10/6',
         intro:
-          'Dành cho các nhà máy phía Bắc chưa kịp gặp ở Đợt 1, hoặc các đối tác cần đánh giá vòng 2 chuyên sâu hơn.',
+          'Vòng tham quan thứ hai cho các nhà máy phía Bắc đã ghé ở Đợt 1, đồng thời mở slot cho các đối tác cần đánh giá chuyên sâu hơn.',
         highlight: '10/6 · Tonmat Group (đã xác nhận)',
+        pendingFactories: [
+          'EuroStark (EuP Group)',
+          'Amy Grupo',
+          'The One & Jager',
+          'Woodsland',
+          'Anphat Holdings — AnPro & An Cuong Flooring',
+        ],
       },
       {
         location: 'TP. Hồ Chí Minh',
         dates: '11/6 – 13/6',
         intro:
-          'Vòng tham quan thứ hai cho các nhà máy HCM đã ghé ở Đợt 1 (trừ AA Corporation), đồng thời mở slot cho các đối tác phía Nam cần đánh giá chuyên sâu hơn.',
-        factories: [
+          'Vòng tham quan thứ hai cho các nhà máy phía Nam đã ghé ở Đợt 1 (trừ AA Corporation), hoặc các đối tác cần đánh giá sâu hơn.',
+        pendingFactories: [
           'An Cuong Wood',
           'BM Windows',
           'Phu Tai + Vina G7',
@@ -519,9 +576,53 @@ export function Buyers() {
                                   {seg.highlight}
                                 </span>
                               )}
-                              {seg.factories && seg.factories.length > 0 && (
-                                <ul className="space-y-1.5">
-                                  {seg.factories.map((f) => (
+
+                              {/* Day-by-day plan (Đợt 1 confirmed) */}
+                              {seg.days && seg.days.length > 0 && (
+                                <ul className="space-y-4 mt-2">
+                                  {seg.days.map((dp) => (
+                                    <li key={dp.date} className="grid grid-cols-12 gap-3">
+                                      <div className="col-span-12 sm:col-span-3">
+                                        <p className="font-display text-xl lg:text-2xl text-gradient-gold leading-none">
+                                          {dp.date}
+                                        </p>
+                                        <p className="text-[10px] uppercase tracking-[0.18em] text-text-body font-semibold mt-1">
+                                          {dp.dow}
+                                        </p>
+                                      </div>
+                                      <ul className="col-span-12 sm:col-span-9 space-y-1.5">
+                                        {dp.visits.map((v, vi) => (
+                                          <li
+                                            key={v.label + vi}
+                                            className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed flex-wrap"
+                                          >
+                                            <span className="text-brand-gold mt-0.5 shrink-0">·</span>
+                                            {v.time && (
+                                              <span className="text-[10px] uppercase tracking-[0.18em] text-brand-gold font-semibold pt-0.5 shrink-0">
+                                                {v.time}
+                                              </span>
+                                            )}
+                                            <span>{v.label}</span>
+                                            {v.pill && (
+                                              <span
+                                                className="text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 rounded-full
+                                                           border border-brand-gold/50 text-brand-gold font-semibold"
+                                              >
+                                                {v.pill}
+                                              </span>
+                                            )}
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+
+                              {/* Pending factories (Đợt 2 tentative) */}
+                              {seg.pendingFactories && seg.pendingFactories.length > 0 && (
+                                <ul className="space-y-1.5 mt-2">
+                                  {seg.pendingFactories.map((f) => (
                                     <li
                                       key={f}
                                       className="flex items-start gap-2 text-sm text-text-heading font-light leading-relaxed"
