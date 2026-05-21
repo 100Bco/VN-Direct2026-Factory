@@ -273,9 +273,7 @@ export function D2CAnimation() {
         </div>
         <div className="text-center max-w-[200px]">
           <div className="font-display text-2xl lg:text-3xl text-gradient-gold leading-tight mb-4">
-            Thương hiệu
-            <br />
-            riêng
+            BRANDING RIÊNG
           </div>
           <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed">
             Sở hữu kênh · Kiểm soát giá
