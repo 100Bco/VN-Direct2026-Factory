@@ -13,29 +13,26 @@ export function D2CAnimation() {
           to { opacity: 1; transform: translateY(0); }
         }
 
-        .trad-arrow { opacity: 0; }
-        .trad-arrow-1 { animation: arrowSegTrad 4s ease-in-out infinite; animation-delay: 1.5s; }
-        .trad-arrow-2 { animation: arrowSegTrad 4s ease-in-out infinite; animation-delay: 2.2s; }
-        .trad-arrow-3 { animation: arrowSegTrad 4s ease-in-out infinite; animation-delay: 2.9s; }
-        .trad-arrow-4 { animation: arrowSegTrad 4s ease-in-out infinite; animation-delay: 3.6s; }
-
-        @keyframes arrowSegTrad {
-          0%   { opacity: 0; transform: translateX(-15px); }
-          15%  { opacity: 1; transform: translateX(0); }
-          30%  { opacity: 1; transform: translateX(0); }
-          45%  { opacity: 0; transform: translateX(15px); }
-          100% { opacity: 0; transform: translateX(15px); }
+        /* 4 mũi tên truyền thống — fade ra cùng middlemen */
+        .trad-arrow-cycle {
+          animation: tradArrowCycle 6s ease-in-out infinite;
         }
 
-        .d2c-arrow-1 { animation: d2cArrow 3s ease-in-out infinite; animation-delay: 1.8s; }
-        .d2c-arrow-2 { animation: d2cArrow 3s ease-in-out infinite; animation-delay: 2.4s; }
+        @keyframes tradArrowCycle {
+          0%, 20%   { opacity: 1; }
+          35%, 75%  { opacity: 0; }
+          90%, 100% { opacity: 1; }
+        }
 
-        @keyframes d2cArrow {
-          0%   { opacity: 0; transform: translateX(-18px); }
-          20%  { opacity: 1; transform: translateX(0); }
-          50%  { opacity: 1; transform: translateX(0); }
-          75%  { opacity: 0; transform: translateX(18px); }
-          100% { opacity: 0; transform: translateX(18px); }
+        /* 2 mũi tên D2C — hiện ra cùng emblem 100B */
+        .d2c-arrow-cycle {
+          animation: d2cArrowCycle 6s ease-in-out infinite;
+        }
+
+        @keyframes d2cArrowCycle {
+          0%, 25%   { opacity: 0; }
+          40%, 70%  { opacity: 1; }
+          85%, 100% { opacity: 0; }
         }
 
         .draw-line {
@@ -190,10 +187,15 @@ export function D2CAnimation() {
             <line x1="482" y1="90" x2="598" y2="90" className="draw-line delay-2" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
             <line x1="662" y1="90" x2="778" y2="90" className="draw-line delay-3" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
 
-            <g color="#C3A374" className="trad-arrow trad-arrow-1"><use href="#arrowShape" x="156" y="82" width="48" height="16" /></g>
-            <g color="#C3A374" className="trad-arrow trad-arrow-2"><use href="#arrowShape" x="336" y="82" width="48" height="16" /></g>
-            <g color="#C3A374" className="trad-arrow trad-arrow-3"><use href="#arrowShape" x="516" y="82" width="48" height="16" /></g>
-            <g color="#C3A374" className="trad-arrow trad-arrow-4"><use href="#arrowShape" x="696" y="82" width="48" height="16" /></g>
+            {/* 4 mũi tên truyền thống */}
+            <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="156" y="82" width="48" height="16" /></g>
+            <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="336" y="82" width="48" height="16" /></g>
+            <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="516" y="82" width="48" height="16" /></g>
+            <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="696" y="82" width="48" height="16" /></g>
+
+            {/* 2 mũi tên D2C — Nhà máy → 100B → Chủ đầu tư */}
+            <g color="#C3A374" className="d2c-arrow-cycle"><use href="#arrowShape" x="238" y="82" width="60" height="16" /></g>
+            <g color="#C3A374" className="d2c-arrow-cycle"><use href="#arrowShape" x="602" y="82" width="60" height="16" /></g>
 
             {/* Node 1: Factory */}
             <g className="trad-node delay-0">
