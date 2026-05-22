@@ -1,7 +1,7 @@
 import { ArrowRight, FileText } from 'lucide-react';
 
 const CONTRACT_PDF =
-  'https://drive.google.com/file/d/1VDp2lnCxfINLeho7W7p1IBHjbCVIbM5O/view?usp=sharing';
+  'https://drive.google.com/file/d/1UAZ_Mh1e_OzhwiGqTVaxzTRkU5RfJFJA/view?usp=sharing';
 
 export function About() {
   return (
