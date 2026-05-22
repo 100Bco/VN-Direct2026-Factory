@@ -274,7 +274,6 @@ const BUYERS: Buyer[] = [
     initials: 'MH',
     photo: '/logos/Mick%20Hawton.jpeg',
     website: 'https://headwater-us.com/',
-    pending: true,
   },
   {
     name: 'Loc Dang',
