@@ -68,14 +68,19 @@ const TRIPS: Trip[] = [
           {
             date: '31/5',
             dow: 'Chủ Nhật',
+            visits: [{ label: 'Tự do' }],
+          },
+          {
+            date: '1/6',
+            dow: 'Thứ Hai',
             visits: [
               { label: 'Phu Tai + Vina G7' },
               { label: 'Phu Tai Quartz' },
             ],
           },
           {
-            date: '1/6',
-            dow: 'Thứ Hai',
+            date: '2/6',
+            dow: 'Thứ Ba',
             visits: [
               { label: 'BM Windows' },
               { label: 'Dai Dung Corporation' },
@@ -83,14 +88,12 @@ const TRIPS: Trip[] = [
             ],
           },
           {
-            date: '2/6',
-            dow: 'Thứ Ba',
-            visits: [{ label: 'AA Corporation' }],
-          },
-          {
             date: '3/6',
             dow: 'Thứ Tư',
-            visits: [{ label: 'Bay ra Hà Nội' }],
+            visits: [
+              { label: 'AA Corporation' },
+              { label: 'Bay ra Hà Nội' },
+            ],
           },
         ],
       },
