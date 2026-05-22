@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import { Section } from './Section';
 
 interface Buyer {
@@ -12,6 +12,7 @@ interface Buyer {
   bullets: string[];
   initials: string;
   photo: string;
+  website?: string;
   pending?: boolean;
 }
 
@@ -197,6 +198,7 @@ const BUYERS: Buyer[] = [
     ],
     initials: 'LT',
     photo: '/logos/Lezlie%20Tram.jpg',
+    website: 'https://ltcommercialgroup.com/',
   },
   {
     name: 'Michael Hough',
@@ -226,6 +228,7 @@ const BUYERS: Buyer[] = [
     ],
     initials: 'KS',
     photo: '/logos/Cameron%20Schram.jpg',
+    website: 'https://cleobuilders.com/',
   },
   {
     name: 'Ricardo Rubiano',
@@ -241,6 +244,7 @@ const BUYERS: Buyer[] = [
     ],
     initials: 'RR',
     photo: '/logos/Ricardo%20Rubiano.jpg',
+    website: 'http://rubigroupcapital.com/',
   },
   {
     name: 'Mick Hawton',
@@ -256,7 +260,25 @@ const BUYERS: Buyer[] = [
     ],
     initials: 'MH',
     photo: '/logos/Mick%20Hawton.jpeg',
+    website: 'https://headwater-us.com/',
     pending: true,
+  },
+  {
+    name: 'Loc Dang',
+    role: 'Chủ đầu tư — Austin, Texas',
+    subtitle:
+      'Danh mục bất động sản thương mại $30M+ trải rộng khắp Texas',
+    intro:
+      'Sở hữu và phát triển danh mục bất động sản thương mại đa dạng — từ flex industrial, office tower đến khu dân cư, với nhiều dự án đang triển khai tại các thị trường tăng trưởng cao của Texas.',
+    bullets: [
+      'LBJ Tower, Dallas — 49,000 SF office building, forced equity $7,7M',
+      'Pecan Flex, Pflugerville — 37,000 SF flex industrial, 25 units, bán 100% · ROI 52%',
+      'Kramer Heights, Austin — 26 căn condo 3 tầng, exit value $14,3M',
+      '4 office buildings tại Dallas · Austin · San Antonio · McAllen',
+      'Đang triển khai: Old Goforth (Buda) · Anderson Mill Sports Complex (Austin)',
+    ],
+    initials: 'LD',
+    photo: '/logos/Loc%20Dang%20-%20Edited.jpg',
   },
 ];
 
@@ -417,6 +439,20 @@ export function Buyers() {
                 </li>
               ))}
             </ul>
+
+            {buyer.website && (
+              <a
+                href={buyer.website}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em]
+                           font-semibold text-brand-gold hover:text-text-heading transition-colors
+                           self-start"
+              >
+                <ExternalLink size={13} />
+                {buyer.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+              </a>
+            )}
           </div>
         </div>
 
