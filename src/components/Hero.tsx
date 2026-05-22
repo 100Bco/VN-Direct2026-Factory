@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 const STATS = [
   { num: '14', text: 'Ngày tham quan thực tế tại Việt Nam' },
-  { num: '5', text: 'Chủ đầu tư & chủ thầu hàng đầu từ Texas' },
+  { num: '6', text: 'Chủ đầu tư & chủ thầu hàng đầu từ Texas' },
   { num: '$50M+', text: 'Tổng giá trị dự án đang triển khai' },
   { num: '10–13', text: 'Nhà máy được tuyển chọn tham gia' },
 ];
