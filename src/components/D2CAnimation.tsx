@@ -186,84 +186,71 @@ export function D2CAnimation() {
         Sự chuyển dịch của mô hình phân phối
       </div>
 
-      {/* MOBILE — Vertical layout (md:hidden) */}
+      {/* MOBILE — Horizontal compact (md:hidden) */}
       <div className="md:hidden">
-        <svg viewBox="0 0 280 600" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
-          {/* 4 connector lines (vertical) */}
-          <line x1="80" y1="92" x2="80" y2="152" className="draw-line delay-0" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
-          <line x1="80" y1="208" x2="80" y2="272" className="draw-line delay-1" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
-          <line x1="80" y1="328" x2="80" y2="392" className="draw-line delay-2" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
-          <line x1="80" y1="448" x2="80" y2="508" className="draw-line delay-3" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
+        <svg viewBox="0 0 480 140" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
+          {/* 4 connector lines */}
+          <line x1="72" y1="60" x2="124" y2="60" className="draw-line delay-0" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
+          <line x1="164" y1="60" x2="220" y2="60" className="draw-line delay-1" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
+          <line x1="260" y1="60" x2="316" y2="60" className="draw-line delay-2" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
+          <line x1="356" y1="60" x2="408" y2="60" className="draw-line delay-3" stroke="#937C54" strokeWidth="0.8" strokeDasharray="3 4" opacity="0.2" />
 
-          {/* 4 mũi tên truyền thống (xoay xuống) */}
-          <g color="#C3A374" className="trad-arrow-cycle" transform="translate(80 122) rotate(90)">
-            <use href="#arrowShape" x="-24" y="-8" width="48" height="16" />
-          </g>
-          <g color="#C3A374" className="trad-arrow-cycle" transform="translate(80 240) rotate(90)">
-            <use href="#arrowShape" x="-24" y="-8" width="48" height="16" />
-          </g>
-          <g color="#C3A374" className="trad-arrow-cycle" transform="translate(80 360) rotate(90)">
-            <use href="#arrowShape" x="-24" y="-8" width="48" height="16" />
-          </g>
-          <g color="#C3A374" className="trad-arrow-cycle" transform="translate(80 478) rotate(90)">
-            <use href="#arrowShape" x="-24" y="-8" width="48" height="16" />
-          </g>
+          {/* 4 mũi tên truyền thống */}
+          <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="86" y="52" width="24" height="16" /></g>
+          <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="180" y="52" width="24" height="16" /></g>
+          <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="276" y="52" width="24" height="16" /></g>
+          <g color="#C3A374" className="trad-arrow-cycle"><use href="#arrowShape" x="370" y="52" width="24" height="16" /></g>
 
-          {/* 2 mũi tên D2C (xoay xuống) — Factory→Emblem & Emblem→Buyer */}
-          <g color="#C3A374" className="d2c-arrow-cycle" transform="translate(80 180) rotate(90)">
-            <use href="#arrowShape" x="-30" y="-8" width="60" height="16" />
-          </g>
-          <g color="#C3A374" className="d2c-arrow-cycle" transform="translate(80 420) rotate(90)">
-            <use href="#arrowShape" x="-30" y="-8" width="60" height="16" />
-          </g>
+          {/* 2 mũi tên D2C — Factory → 100B → Buyer */}
+          <g color="#C3A374" className="d2c-arrow-cycle"><use href="#arrowShape" x="116" y="52" width="56" height="16" /></g>
+          <g color="#C3A374" className="d2c-arrow-cycle"><use href="#arrowShape" x="308" y="52" width="56" height="16" /></g>
 
-          {/* Node 1: Factory (cy=60) */}
+          {/* Node 1: Factory */}
           <g>
-            <circle cx="80" cy="60" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
-            <g color="#C3A374" transform="translate(60 40)"><use href="#iconFactory" width="40" height="40" /></g>
-            <text x="130" y="66" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="500">Nhà máy</text>
+            <circle cx="48" cy="60" r="24" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
+            <g color="#C3A374" transform="translate(32 44)"><use href="#iconFactory" width="32" height="32" /></g>
+            <text x="48" y="108" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà máy</text>
           </g>
 
-          {/* Node 2: Distributor (cy=180) */}
+          {/* Node 2: Distributor */}
           <g className="trad-vanish">
-            <circle cx="80" cy="180" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
-            <g color="#E0DCD3" transform="translate(60 160)"><use href="#iconBox" width="40" height="40" /></g>
-            <text x="130" y="186" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Nhà phân phối</text>
+            <circle cx="144" cy="60" r="20" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
+            <g color="#E0DCD3" transform="translate(128 44)"><use href="#iconBox" width="32" height="32" /></g>
+            <text x="144" y="108" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500">Nhà phân phối</text>
           </g>
 
-          {/* Node 3: Wholesaler (cy=300) */}
+          {/* Node 3: Wholesaler */}
           <g className="trad-vanish">
-            <circle cx="80" cy="300" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
-            <g color="#E0DCD3" transform="translate(60 280)"><use href="#iconTruck" width="40" height="40" /></g>
-            <text x="130" y="306" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Nhà bán sỉ</text>
+            <circle cx="240" cy="60" r="20" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
+            <g color="#E0DCD3" transform="translate(224 44)"><use href="#iconTruck" width="32" height="32" /></g>
+            <text x="240" y="108" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500">Nhà bán sỉ</text>
           </g>
 
-          {/* Node 4: Retailer (cy=420) */}
+          {/* Node 4: Retailer */}
           <g className="trad-vanish">
-            <circle cx="80" cy="420" r="28" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
-            <g color="#E0DCD3" transform="translate(60 400)"><use href="#iconShop" width="40" height="40" /></g>
-            <text x="130" y="426" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="500">Nhà bán lẻ</text>
+            <circle cx="336" cy="60" r="20" fill="url(#emblemDark)" stroke="#E0DCD3" strokeWidth="1" filter="url(#dropShadow)" />
+            <g color="#E0DCD3" transform="translate(320 44)"><use href="#iconShop" width="32" height="32" /></g>
+            <text x="336" y="108" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500">Nhà bán lẻ</text>
           </g>
 
-          {/* Strikethrough đỏ trên middlemen */}
-          <line className="trad-strike" x1="58" y1="158" x2="102" y2="202" stroke="#B84A3E" strokeWidth="2.5" strokeLinecap="round" />
-          <line className="trad-strike" x1="58" y1="278" x2="102" y2="322" stroke="#B84A3E" strokeWidth="2.5" strokeLinecap="round" />
-          <line className="trad-strike" x1="58" y1="398" x2="102" y2="442" stroke="#B84A3E" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Strike đỏ trên middlemen */}
+          <line className="trad-strike" x1="122" y1="38" x2="166" y2="82" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" />
+          <line className="trad-strike" x1="218" y1="38" x2="262" y2="82" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" />
+          <line className="trad-strike" x1="314" y1="38" x2="358" y2="82" stroke="#B84A3E" strokeWidth="2" strokeLinecap="round" />
 
-          {/* 100B emblem (cy=300, ở giữa thay thế 3 middlemen) */}
+          {/* 100B emblem replacement at Node 3 position */}
           <g className="trad-emblem-swap">
-            <circle cx="80" cy="300" r="36" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#emblemGoldGlow)" />
-            <image href="/logos/100B%20Emblem.png" x="46" y="266" width="68" height="68" preserveAspectRatio="xMidYMid meet" />
-            <text x="130" y="298" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="500">100B</text>
-            <text x="130" y="316" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500">Đối tác chiến lược</text>
+            <circle cx="240" cy="60" r="24" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#emblemGoldGlow)" />
+            <image href="/logos/100B%20Emblem.png" x="216" y="36" width="48" height="48" preserveAspectRatio="xMidYMid meet" />
+            <text x="240" y="108" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">100B</text>
           </g>
 
-          {/* Node 5: Buyer (cy=540) */}
+          {/* Node 5: Buyer */}
           <g>
-            <circle cx="80" cy="540" r="32" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
-            <g color="#C3A374" transform="translate(60 520)"><use href="#iconPerson" width="40" height="40" /></g>
-            <text x="130" y="536" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="500">Chủ đầu tư</text>
-            <text x="130" y="554" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="14" fontWeight="500">&amp; chủ thầu</text>
+            <circle cx="432" cy="60" r="24" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#dropShadow)" />
+            <g color="#C3A374" transform="translate(416 44)"><use href="#iconPerson" width="32" height="32" /></g>
+            <text x="432" y="104" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500">Chủ đầu tư</text>
+            <text x="432" y="118" textAnchor="middle" fill="#FFFFFF" fontFamily="Inter, sans-serif" fontSize="11" fontWeight="500">&amp; chủ thầu</text>
           </g>
         </svg>
       </div>
