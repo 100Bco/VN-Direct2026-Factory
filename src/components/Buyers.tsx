@@ -6,7 +6,9 @@ import { Section } from './Section';
 
 interface Buyer {
   name: string;
-  role: string;
+  position: string;
+  company?: string;
+  location?: string;
   subtitle: string;
   intro: string;
   bullets: string[];
@@ -186,7 +188,8 @@ const TRIPS: Trip[] = [
 const BUYERS: Buyer[] = [
   {
     name: 'Lezlie Tram Le',
-    role: 'CEO, LT Commercial Group',
+    position: 'CEO',
+    company: 'LT Commercial Group',
     subtitle: 'Đối tác chiến lược của 100B tại thị trường Mỹ · 22 năm bất động sản thương mại Texas',
     intro:
       'Dẫn dắt các dự án phát triển văn phòng, mặt bằng bán lẻ và nhà ở khắp bang Texas. Đối tác chiến lược của 100B tại thị trường Mỹ.',
@@ -202,7 +205,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Michael Hough',
-    role: 'Tổng thầu xây dựng — Austin, Texas',
+    position: 'Tổng thầu xây dựng',
+    location: 'Austin, Texas',
     subtitle: '30 năm xây dựng · Multi-family & HUD specialist',
     intro:
       '30 năm kinh nghiệm xây dựng từ cải tạo, custom home đến multi-family. Có nhu cầu vật liệu ổn định và trực tiếp ra quyết định mua.',
@@ -217,7 +221,9 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Kameron Schram',
-    role: 'Founder, Cleo Builders — Texas',
+    position: 'Founder',
+    company: 'Cleo Builders',
+    location: 'Texas',
     subtitle: 'Boutique luxury custom home builder',
     intro:
       'Chuyên nhà ở trung cao cấp — tay nghề thủ công, chi tiết thiết kế, dấu ấn riêng cho từng khách hàng.',
@@ -232,7 +238,9 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Ricardo Rubiano',
-    role: 'Chủ đầu tư — Rio Grande Valley, Texas',
+    position: 'Chủ đầu tư',
+    company: 'Rubi Group Capital',
+    location: 'Rio Grande Valley, Texas',
     subtitle: '5 thế hệ làm bất động sản từ 1908 · 600+ căn multi-family đang triển khai',
     intro:
       '23 năm kinh nghiệm. Lớn lên hai bên biên giới Mỹ – Mexico. Hiểu rõ thị trường từ nội địa đến xuyên biên giới.',
@@ -248,7 +256,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Mick Hawton',
-    role: 'Giám đốc điều hành, Headwater',
+    position: 'Giám đốc điều hành',
+    company: 'Headwater',
     subtitle: '35 năm bất động sản thương mại & thị trường Bắc Mỹ',
     intro:
       'Hơn 30 năm phát triển bất động sản thương mại, tài chính và vận hành tại Bắc Mỹ.',
@@ -265,7 +274,8 @@ const BUYERS: Buyer[] = [
   },
   {
     name: 'Loc Dang',
-    role: 'Chủ đầu tư — Austin, Texas',
+    position: 'Chủ đầu tư',
+    location: 'Austin, Texas',
     subtitle:
       'Danh mục bất động sản thương mại $30M+ trải rộng khắp Texas',
     intro:
@@ -418,7 +428,28 @@ export function Buyers() {
               {buyer.name}
             </h3>
             <p className="text-xs lg:text-sm text-brand-gold uppercase tracking-[0.18em] font-semibold leading-snug mb-3">
-              {buyer.role}
+              {buyer.position}
+              {buyer.company && (
+                <>
+                  ,{' '}
+                  {buyer.website ? (
+                    <a
+                      href={buyer.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline decoration-brand-gold/30 underline-offset-[3px]
+                                 hover:decoration-brand-gold hover:text-text-heading
+                                 transition-colors inline-flex items-center gap-1"
+                    >
+                      {buyer.company}
+                      <ExternalLink size={11} className="opacity-70" />
+                    </a>
+                  ) : (
+                    buyer.company
+                  )}
+                </>
+              )}
+              {buyer.location && ` — ${buyer.location}`}
             </p>
             <p className="text-sm lg:text-base text-text-heading font-medium leading-relaxed mb-5">
               {buyer.subtitle}
@@ -439,20 +470,6 @@ export function Buyers() {
                 </li>
               ))}
             </ul>
-
-            {buyer.website && (
-              <a
-                href={buyer.website}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em]
-                           font-semibold text-brand-gold hover:text-text-heading transition-colors
-                           self-start"
-              >
-                <ExternalLink size={13} />
-                {buyer.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
-              </a>
-            )}
           </div>
         </div>
 
