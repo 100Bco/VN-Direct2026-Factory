@@ -129,6 +129,7 @@ const TRIPS: Trip[] = [
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'RR', name: 'Ricardo Rubiano' },
+      { initials: 'MH', name: 'Mick Hawton' },
       { initials: 'LD', name: 'Loc Dang' },
     ],
     segments: [
@@ -273,7 +274,6 @@ const BUYERS: Buyer[] = [
     initials: 'MH',
     photo: '/logos/Mick%20Hawton.jpeg',
     website: 'https://headwater-us.com/',
-    pending: true,
   },
   {
     name: 'Loc Dang',
