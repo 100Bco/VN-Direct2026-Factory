@@ -75,14 +75,16 @@ export function Hero() {
           <span
             className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em]
                        px-3 py-1.5 border border-brand-gold/60 text-brand-gold
-                       font-medium rounded-full whitespace-nowrap bg-black/30 backdrop-blur-sm"
+                       font-medium rounded-full bg-black/30 backdrop-blur-sm
+                       whitespace-normal md:whitespace-nowrap"
           >
             Build Better Series — Thư ngỏ hợp tác chiến lược
           </span>
           <span
             className="text-[10px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.2em]
                        px-3 py-1.5 border border-white/30 text-white
-                       font-medium rounded-full whitespace-nowrap bg-black/30 backdrop-blur-sm"
+                       font-medium rounded-full bg-black/30 backdrop-blur-sm
+                       whitespace-normal md:whitespace-nowrap"
           >
             30 tháng 5 – 13 tháng 6 · HCM → Hà Nội
           </span>
