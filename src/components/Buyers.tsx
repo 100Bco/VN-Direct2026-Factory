@@ -307,7 +307,7 @@ export function Buyers() {
       className="bg-bg-alt border-y border-border-subtle !py-16 lg:!py-20"
     >
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light leading-snug mb-6 max-w-4xl">
-        <span className="font-display text-gradient-gold">5</span> chủ đầu tư và chủ thầu.
+        <span className="font-display text-gradient-gold">6</span> chủ đầu tư và chủ thầu.
         <br />
         <em className="font-serif italic text-gradient-gold">Dự án thật. Ngân sách thật.</em>
       </h2>
