@@ -46,7 +46,7 @@ interface Trip {
 const TRIPS: Trip[] = [
   {
     label: 'ĐỢT 1',
-    dates: '31/5 – 6/6',
+    dates: '30/5 – 6/6',
     attendees: [
       { initials: 'LT', name: 'Lezlie Tram Le' },
       { initials: 'KS', name: 'Kameron Schram' },
@@ -55,12 +55,20 @@ const TRIPS: Trip[] = [
     segments: [
       {
         location: 'TP. Hồ Chí Minh',
-        dates: '31/5 – 3/6',
+        dates: '30/5 – 3/6',
         days: [
+          {
+            date: '30/5',
+            dow: 'Thứ Bảy',
+            visits: [{ label: 'Đoàn nhập cảnh · Welcome dinner' }],
+          },
           {
             date: '31/5',
             dow: 'Chủ Nhật',
-            visits: [{ label: 'Đoàn nhập cảnh · Welcome dinner' }],
+            visits: [
+              { label: 'Phu Tai + Vina G7' },
+              { label: 'Phu Tai Quartz' },
+            ],
           },
           {
             date: '1/6',
@@ -74,18 +82,12 @@ const TRIPS: Trip[] = [
           {
             date: '2/6',
             dow: 'Thứ Ba',
-            visits: [
-              { label: 'Phu Tai + Vina G7' },
-              { label: 'Phu Tai Quartz' },
-            ],
+            visits: [{ label: 'AA Corporation' }],
           },
           {
             date: '3/6',
             dow: 'Thứ Tư',
-            visits: [
-              { label: 'AA Corporation' },
-              { label: 'Bay ra Hà Nội' },
-            ],
+            visits: [{ label: 'Bay ra Hà Nội' }],
           },
         ],
       },
@@ -463,7 +465,7 @@ export function Buyers() {
         <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light leading-snug mb-3 max-w-4xl">
           Lịch trình{' '}
           <em className="font-serif italic text-gradient-gold">
-            <span className="font-display not-italic">31</span> tháng{' '}
+            <span className="font-display not-italic">30</span> tháng{' '}
             <span className="font-display not-italic">5</span> –{' '}
             <span className="font-display not-italic">13</span> tháng{' '}
             <span className="font-display not-italic">6</span>

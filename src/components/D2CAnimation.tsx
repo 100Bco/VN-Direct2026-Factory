@@ -80,6 +80,21 @@ export function D2CAnimation() {
           85%, 100% { opacity: 0; transform: scale(0.4); filter: blur(8px); }
         }
 
+        /* Gạch chéo đỏ trên middlemen — báo hiệu sẽ bị thay thế */
+        .trad-strike {
+          stroke-dasharray: 80;
+          stroke-dashoffset: 80;
+          opacity: 0;
+          animation: strikeCycle 6s ease-in-out infinite;
+        }
+
+        @keyframes strikeCycle {
+          0%, 10%   { stroke-dashoffset: 80; opacity: 0; }
+          15%       { opacity: 1; stroke-dashoffset: 80; }
+          25%, 32%  { opacity: 1; stroke-dashoffset: 0; }
+          40%, 100% { opacity: 0; stroke-dashoffset: 0; }
+        }
+
         .delay-0 { animation-delay: 0.1s; }
         .delay-1 { animation-delay: 0.3s; }
         .delay-2 { animation-delay: 0.5s; }
@@ -225,6 +240,11 @@ export function D2CAnimation() {
               <text x="630" y="146" textAnchor="middle" fill="#E0DCD3" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="500">Nhà bán lẻ</text>
             </g>
 
+            {/* Strikethrough đỏ — gạch chéo middlemen ngay trước khi biến mất */}
+            <line className="trad-strike" x1="248" y1="68" x2="292" y2="112" stroke="#B84A3E" strokeWidth="2.5" strokeLinecap="round" />
+            <line className="trad-strike" x1="428" y1="68" x2="472" y2="112" stroke="#B84A3E" strokeWidth="2.5" strokeLinecap="round" />
+            <line className="trad-strike" x1="608" y1="68" x2="652" y2="112" stroke="#B84A3E" strokeWidth="2.5" strokeLinecap="round" />
+
             {/* Replacement: 100B emblem hiện ra thay thế 3 middlemen */}
             <g className="trad-emblem-swap">
               <circle cx="450" cy="90" r="36" fill="url(#emblemDark)" stroke="#C3A374" strokeWidth="1.5" filter="url(#emblemGoldGlow)" />
@@ -251,18 +271,8 @@ export function D2CAnimation() {
         </div>
       </div>
 
-      {/* Stats Block — 3-col grid for consistent alignment */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 pt-10 border-t border-border-subtle/50">
-        <div className="text-center flex flex-col items-center">
-          <div className="font-display text-4xl lg:text-5xl text-text-body leading-none h-14 lg:h-16 flex items-center justify-center mb-4">
-            15–30%
-          </div>
-          <div className="text-[10px] tracking-[0.15em] uppercase text-text-body leading-relaxed max-w-[220px]">
-            Biên lợi nhuận
-            <br />
-            mỗi lớp trung gian ăn mất
-          </div>
-        </div>
+      {/* Stats Block — 2-col grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12 pt-10 border-t border-border-subtle/50">
         <div className="text-center flex flex-col items-center">
           <div className="font-display text-4xl lg:text-5xl text-gradient-gold leading-none h-14 lg:h-16 flex items-center justify-center mb-4">
             1

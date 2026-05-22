@@ -84,7 +84,7 @@ export function Hero() {
                        px-3 py-1.5 border border-white/30 text-white
                        font-medium rounded-full whitespace-nowrap bg-black/30 backdrop-blur-sm"
           >
-            31 tháng 5 – 13 tháng 6 · HCM → Hà Nội
+            30 tháng 5 – 13 tháng 6 · HCM → Hà Nội
           </span>
         </div>
 
