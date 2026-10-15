@@ -90,10 +90,7 @@ const TRIPS: Trip[] = [
           {
             date: '3/6',
             dow: 'Thứ Tư',
-            visits: [
-              { label: 'AA Corporation' },
-              { label: 'Bay ra Hà Nội' },
-            ],
+            visits: [{ label: 'Bay ra Hà Nội' }],
           },
         ],
       },
